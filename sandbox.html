@@ -23,13 +23,31 @@
 <!-- Everything above this line needs to be identical for every page -->
 
   <main>
-    <section>
+    <section class="center">
       <h2>Sandbox</h2>
-      <article>
+      <article class="practice">
+        <p style="text-align:left;">(1) javascript selects the element with the id "click-me" and inserts HTML into the element</p>
+        <p style="text-align:left;">(2) javascript selects the element with the id "click-me", adds an event listener that will perform a function when the element is clicked, the function selects the element with the id "show-me" and inserts HTML into the element</p>
+
+        <hr>
+        <br>
 
         <!-- javasctipt -->
         <div id="click-me"></div>
         <div id="show-me"></div>
+
+      </article>
+      <article class="practice">
+        <p style="text-align:left;">(1) javascript selects the element with the id "button-add", adds an event listener that will perform a function when the element is clicked, the function selects the element with the id "sample-text" and adds the class "sample-text-add" to the element</p>
+        <p style="text-align:left;">(2) javascript selects the element with the id "button-remove", adds an event listener that will perform a function when the element is clicked, the function selects the element with the id "sample-text" and removes the class "sample-text-add" from the element</p>
+
+        <hr>
+        <br>
+
+        <!-- javasctipt -->
+        <button id="button-add" class="btn">Add Class</button>
+        <button id="button-remove" class="btn">Remove Class</button>
+        <div id="sample-text">add and remove style from this text</div>
 
       </article>
     </section>

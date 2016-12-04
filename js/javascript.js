@@ -2,12 +2,30 @@
 
 console.log('Welcome');
 
+/* ---------------------------------------------------------------------------------------------------- */
+
 // insert HTML
 
-document.getElementById('click-me').innerHTML = '<center><button type="button">click me</button></center>';
+document.getElementById('click-me').innerHTML = '<button type="button" class="btn">click me</button>';
 
 // insert HTML on click
 
 document.getElementById('click-me').addEventListener('click', function(){
-    document.getElementById('show-me').innerHTML = '<p style="text-align:center">show me</p>';
+  document.getElementById('show-me').innerHTML = '<div class="button-clicked">the button was clicked</div>';
 });
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+// add style on click
+
+document.getElementById('button-add').addEventListener('click', function(){
+  document.getElementById('sample-text').classList.add('sample-text-add');
+});
+
+// remove style on click
+
+document.getElementById('button-remove').addEventListener('click', function(){
+  document.getElementById('sample-text').classList.remove('sample-text-add');
+});
+
+/* ---------------------------------------------------------------------------------------------------- */

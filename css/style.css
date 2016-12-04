@@ -1,4 +1,8 @@
+/* ---------- Imported Fonts ---------- */
+
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+/* ---------- Primary Structure ---------- */
 
 body {
 	font-family: 'Open Sans', sans-serif;
@@ -9,6 +13,23 @@ header {
 	padding: 40px;
 	width: 100%;
 }
+
+main {
+	margin: 0 auto;
+	min-height: 800px;
+	padding: 40px;
+	width: 800px;
+}
+
+footer {
+	background-color: #EEE;
+	box-shadow: 0 0 5px #CCC;
+	padding: 40px;
+  text-align: center;
+	width: 100%;
+}
+
+/* ---------- Navigation ---------- */
 
 nav {
 	background-color: #EEE;
@@ -31,18 +52,13 @@ nav ul li a {
 	padding: 20px;
 }
 
-main {
-	margin: 0 auto;
-	min-height: 800px;
-	padding: 40px;
-	width: 800px;
-}
+/* ---------- Secondary Structure ---------- */
 
 section {
 	padding: 40px;
 }
 
-section.center-content {
+section.center {
 	text-align: center;
 }
 
@@ -61,13 +77,7 @@ article.practice ul {
 	padding: 0 20px;
 }
 
-footer {
-	background-color: #EEE;
-	box-shadow: 0 0 5px #CCC;
-	padding: 40px;
-  text-align: center;
-	width: 100%;
-}
+/* ---------- Typography and Images ---------- */
 
 h1, h2 {
 	text-align: center;
@@ -84,4 +94,18 @@ p {
 
 img.logo-lang {
 	width: 200px;
+}
+
+/* ---------- Javascript Sandbox Styling ---------- */
+
+.button-clicked {
+	padding: 40px;
+}
+
+#sample-text {
+	padding: 40px;
+}
+
+.sample-text-add {
+	color: #39C;
 }
