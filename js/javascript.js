@@ -29,3 +29,15 @@ document.getElementById('button-remove').addEventListener('click', function(){
 });
 
 /* ---------------------------------------------------------------------------------------------------- */
+
+// collect, append, and display data
+
+document.getElementById("button-submit").addEventListener("click", function() {
+
+  var username = document.getElementById("username").value;
+  var message = "Your name is " + username;
+  document.getElementById("display").innerHTML = message;
+
+});
+
+/* ---------------------------------------------------------------------------------------------------- */
