@@ -6,38 +6,89 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+
 	<header>
 		<h1><a href="index.html">ryanchristo</a></h1>
 	</header>
+
 	<nav>
 		<ul>
-			<li><a href="index.html">index</a></li>
-			<li><a href="posts.html">posts</a></li>
-			<li><a href="practice.html">practice</a></li>
-			<li><a href="projects.html">projects</a></li>
-			<li><a href="sandbox.html">sandbox</a></li>
-			<li><a href="connect.html">connect</a></li>
+			<li><a href="#welcome">welcome</a></li>
+			<li><a href="#about">about</a></li>
+			<li><a href="#skills">skills</a></li>
+			<li><a href="#projects">projects</a></li>
+			<!-- <li><a href="#writing">writing</a></li> -->
+			<li><a href="#connect">connect</a></li>
 		</ul>
 	</nav>
-
-<!-- Everything above this line needs to be identical for every page -->
-
 	<main>
-		<section class="center">
+
+		<section id="welcome" class="center">
 			<h2>Welcome</h2>
-			<p>This is a static website built using HTML, CSS and Javascript</p>
-			<img alt="HTML5" class="logo-lang" src="img/logo-html5.png">
-			<img alt="CSS3" class="logo-lang" src="img/logo-css3.png">
-			<img alt="JavaScript" class="logo-lang" src="img/logo-js.png">
+			<p>I'm an aspiring software developer and entrepreneur.</p>
+			<p>I grew up in the Pacific Northwest. I currently live in Seattle, WA.</p>
+			<p><a href="mailto:ryanelliotchristo@gmail.com">Send me a message</a> or scroll down to learn more.</p>
+			<!-- <form id="email-form">
+				<input type="text"></input>
+				<input type="submit"></input>
+			</form> -->
 		</section>
+
+		<section id="about" class="center">
+			<h2>About</h2>
+			<p style="text-align:left">I love learning new skills and solving problems. I studied classical langauges and literature as an undergrad with an interest in critical and cultural theory. I've always enjoyed assembling and disassembling langauges and discussing theories to better understand how they work.</p>
+			<p style="text-align:left">I love working with people on creative projects. I played bass in a rock band in highschool and I let myself get lost in loops throughout college. I worked on a number of film and video projects throughout college including a series of live music performances and a David Lynch inspired short film.</p>
+			<p style="text-align:left">I love making documentaries and working with non-profits. I helped film a documentary called "Living on One Dollar", a short video called "Alleviating Poverty in Vietnam", and a short film called "Rosa - These Storms". All three projects share inspirtional stories of microfinance borrowers.</p>
+		</section>
+
+		<section id="skills" class="center">
+			<h2>Skills</h2>
+			<p>Here are a few technologies I work with:</p>
+			<img alt="HTML5" class="skill" src="img/logo-html5.png">
+			<img alt="CSS3" class="skill" src="img/logo-css3.png">
+			<img alt="JavaScript" class="skill" src="img/logo-js.png">
+		</section>
+
+		<section id="projects" class="center">
+			<h2>Projects</h2>
+			<p>Here are a few projects I'm working on:</p>
+			<ul class="projects">
+				<li>coming soon</li>
+				<!-- <li><a href="app/blog/index.html">Blog</a></li> -->
+				<!-- <li><a href="app/email/index.html">Email</a></li> -->
+				<!-- <li><a href="app/study/index.html">Study</a></li> -->
+			</ul>
+		</section>
+
+		<!-- <section id="writing" class="center">
+			<h2>Writing</h2>
+			<p>Here are my most recent posts:</p>
+			<ul class="writing">
+				<li><a href="app/blog/post1">post1</a></li>
+				<li><a href="app/blog/post2">post2</a></li>
+				<li><a href="app/blog/post3">post3</a></li>
+			</ul>
+		</section> -->
+
+		<section id="connect" class="center">
+			<h2>Connect</h2>
+			<p>Feel free to connect with me or <a href="mailto:ryanelliotchristo@gmail.com">send me a message</a>:</p>
+			<ul class="connect">
+				<li><a href="https://github.com/ryanchristo" target="_blank">GitHub</a></li>
+				<li><a href="https://www.linkedin.com/in/ryanchristoff" target="_blank">LinkedIn</a></li>
+				<!-- <li><a href="https://angel.co/ryanchristo" target="_blank">AngelList</a></li> -->
+				<!-- <li><a href="https://medium.com/@ryanchristo" target="_blank">Medium</a></li> -->
+				<li><a href="https://twitter.com/ryanechristo" target="_blank">Twitter</a></li>
+			</ul>
+		</section>
+
 	</main>
-
-<!-- Everything below this line needs to be identical for every page -->
-
 	<footer>
-    <p>&copy; 2016 Ryan Christoffersen</p>
+    <p>&copy; 2016 ryanchristo</p>
   </footer>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/javascript.js"></script>
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 </html>

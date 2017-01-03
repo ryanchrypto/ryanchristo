@@ -18,7 +18,7 @@ main {
 	margin: 0 auto;
 	min-height: 800px;
 	padding: 40px;
-	width: 800px;
+	max-width: 800px;
 }
 
 footer {
@@ -50,6 +50,15 @@ nav ul li {
 
 nav ul li a {
 	padding: 20px;
+}
+
+nav.fixed {
+	top: 0px;
+	position: fixed;
+}
+
+main.fixed {
+	padding-top: 100px;
 }
 
 /* ---------- Secondary Structure ---------- */
@@ -92,20 +101,31 @@ p {
 	padding: 10px;
 }
 
-img.logo-lang {
-	width: 200px;
+img.skill {
+	width: 120px;
 }
 
-/* ---------- Javascript Sandbox Styling ---------- */
+/* ---------- Forms ---------- */
 
-.button-clicked {
-	padding: 40px;
+#email-form {
+	display: none;
+	padding: 20px;
 }
 
-#sample-text {
-	padding: 40px;
+/* ---------- Lists ---------- */
+
+ul.connect, ul.projects {
+	padding: 20px;
 }
 
-.sample-text-add {
-	color: #39C;
+ul.connect li, ul.projects li {
+	display: inline-block;
+}
+
+ul.connect li a, ul.projects li a {
+	padding: 20px;
+}
+
+ul.connect li a:hover, ul.projects li a:hover {
+	cursor: pointer;
 }
