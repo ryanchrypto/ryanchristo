@@ -1,99 +1,96 @@
-/* ---------- Imported Fonts ---------- */
+/* ---------- Fonts ---------- */
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
-/* ---------- Primary Structure ---------- */
+/* ---------- Body ---------- */
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	margin: 0 auto;
 }
 
-header {
-	padding: 40px;
-	width: 100%;
+body:hover {
+	cursor: default;;
 }
+
+/* ---------- Header ---------- */
+
+.jumbotron {
+	background: transparent;
+}
+
+#title:hover {
+	cursor: pointer;
+}
+
+/* ---------- Main ---------- */
 
 main {
-	margin: 0 auto;
-	min-height: 800px;
-	padding: 40px;
-	max-width: 800px;
+	padding: 80px;
 }
+
+main.fixed {
+	margin-top: 100px;
+}
+
+/* ---------- Footer ---------- */
 
 footer {
-	background-color: #EEE;
+	background-color: rgba(250, 250, 250, 1);
 	box-shadow: 0 0 5px #CCC;
 	padding: 40px;
-  text-align: center;
 	width: 100%;
 }
 
-/* ---------- Navigation ---------- */
+/* ---------- About Nav ---------- */
 
-nav {
-	background-color: #EEE;
+nav#about {
+	background-color: rgba(250, 250, 250, 1);
 	box-shadow: 0 0 5px #CCC;
+	padding: 5px 0;
 	width: 100%;
 }
 
-nav ul {
+nav#about ul {
 	padding: 0;
 	margin: 0;
-	text-align: center;
 }
 
-nav ul li {
+nav#about ul li {
 	display: inline-block;
 	padding: 20px 0;
 }
 
-nav ul li a {
-	padding: 20px;
+nav#about ul li a {
+	padding: 12px 20px;
 }
 
 nav.fixed {
-	top: 0px;
+	top: 0;
 	position: fixed;
 }
 
-main.fixed {
-	padding-top: 100px;
-}
-
-/* ---------- Secondary Structure ---------- */
+/* ---------- Section ---------- */
 
 section {
-	padding: 40px;
-}
-
-section.center {
-	text-align: center;
-}
-
-article {
 	margin: 0 auto;
 	padding: 40px;
-	width: 600px;
-}
-
-article.practice {
-	box-shadow: 0 0 2px #CCC;
-	margin: 40px auto;
-}
-
-article.practice ul {
-	padding: 0 20px;
+	max-width: 800px;
 }
 
 /* ---------- Typography and Images ---------- */
 
-h1, h2 {
-	text-align: center;
+#photo {
+	padding-bottom: 40px;
+}
+
+#photo img {
+	margin: 0 auto;
+	max-width: 800px;
 }
 
 h2 {
-	margin-bottom: 20px;
+	margin: 40px 0;
+	text-align: center;
 }
 
 p {
@@ -101,31 +98,28 @@ p {
 	padding: 10px;
 }
 
+.blue-text {
+	color: #39C;
+}
+
 img.skill {
 	width: 120px;
 }
 
-/* ---------- Forms ---------- */
-
-#email-form {
-	display: none;
-	padding: 20px;
-}
-
 /* ---------- Lists ---------- */
 
-ul.connect, ul.projects {
+ul.education, ul.resources {
 	padding: 20px;
 }
 
-ul.connect li, ul.projects li {
+ul.education li, ul.resources li {
 	display: inline-block;
 }
 
-ul.connect li a, ul.projects li a {
+ul.education li a, ul.resources li a {
 	padding: 20px;
 }
 
-ul.connect li a:hover, ul.projects li a:hover {
+ul.education li a:hover, ul.resources li a:hover {
 	cursor: pointer;
 }

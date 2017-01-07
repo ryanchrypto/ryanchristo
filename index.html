@@ -3,92 +3,83 @@
 <head>
 	<title>ryanchristo</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
-	<header>
-		<h1><a href="index.html">ryanchristo</a></h1>
+	<header class="jumbotron text-center">
+		<h1 id="title">ryan<span class="blue-text">christo</span></h1>
+		<p><i class="fa fa-code"></i> Full-Stack Developer</p>
 	</header>
 
-	<nav>
-		<ul>
-			<li><a href="#welcome">welcome</a></li>
-			<li><a href="#about">about</a></li>
-			<li><a href="#skills">skills</a></li>
-			<li><a href="#projects">projects</a></li>
-			<!-- <li><a href="#writing">writing</a></li> -->
-			<li><a href="#connect">connect</a></li>
-		</ul>
+	<nav id="main" class="text-center">
+		<button id="about-button" class="btn btn-info"><i class="fa fa-id-card-o"></i> about</button>
+		<button id="blog-button" class="btn btn-info"><i class="fa fa-rss"></i> blog</button>
+		<button id="projects-button" class="btn btn-info"><i class="fa fa-folder-open"></i> projects</button>
+		<button id="resume-button" class="btn btn-info"><i class="fa fa-briefcase"></i> resume</button>
+		<button id="email-button" class="btn btn-info"><i class="fa fa-paper-plane"></i> email</button>
 	</nav>
-	<main>
 
-		<section id="welcome" class="center">
-			<h2>Welcome</h2>
-			<p>I'm an aspiring software developer and entrepreneur.</p>
-			<p>I grew up in the Pacific Northwest. I currently live in Seattle, WA.</p>
-			<p><a href="mailto:ryanelliotchristo@gmail.com">Send me a message</a> or scroll down to learn more.</p>
-			<!-- <form id="email-form">
-				<input type="text"></input>
-				<input type="submit"></input>
-			</form> -->
+	<main id="welcome" class="text-center">
+		<p>Welcome! My name is Ryan Christoffersen.</p>
+		<p>I'm a full-stack developer specializing in Javascript.</p>
+		<p>I'm looking for new opportunities in Seattle, WA.</p>
+	</main>
+
+	<main id="about">
+		<section id="background">
+			<img class="img-responsive" src="img/IMG_9129.JPG" alt="profile picture" />
+			<h2>Background</h2>
+			<p>I love languages, literature and philosophy. I studied classical langauges and literature as an undergraduate with a special interest in Greek and Indian philosophy and critical and cultural theory. I never mastered any one language but over the years I studied bits and pieces of French, Spanish, Greek, Latin, Sanskrit, Arabic and Thai.</p>
+			<p>I love listening to music. I played in a rock band towards the end of highschool and let myself get lost in loops and electric beats throughout college. I don't play much anymore but I still love discovering new music and going to festivals, concerts and local shows.</p>
+			<p>I also love film and filmmaking. I worked on film and video projects throughout college including a series of live music performances and an experimental short film inspired by David Lynch. I also helped film a documentary called "Living on One Dollar", a short video called "Alleviating Poverty in Vietnam", and a short film called "Rosa - These Storms".</p>
 		</section>
-
-		<section id="about" class="center">
-			<h2>About</h2>
-			<p style="text-align:left">I love learning new skills and solving problems. I studied classical langauges and literature as an undergrad with an interest in critical and cultural theory. I've always enjoyed assembling and disassembling langauges and discussing theories to better understand how they work.</p>
-			<p style="text-align:left">I love working with people on creative projects. I played bass in a rock band in highschool and I let myself get lost in loops throughout college. I worked on a number of film and video projects throughout college including a series of live music performances and a David Lynch inspired short film.</p>
-			<p style="text-align:left">I love making documentaries and working with non-profits. I helped film a documentary called "Living on One Dollar", a short video called "Alleviating Poverty in Vietnam", and a short film called "Rosa - These Storms". All three projects share inspirtional stories of microfinance borrowers.</p>
-		</section>
-
-		<section id="skills" class="center">
-			<h2>Skills</h2>
-			<p>Here are a few technologies I work with:</p>
+		<section id="skills" class="text-center">
+			<h2><i class="fa fa-wrench"></i> Skills</h2>
 			<img alt="HTML5" class="skill" src="img/logo-html5.png">
 			<img alt="CSS3" class="skill" src="img/logo-css3.png">
 			<img alt="JavaScript" class="skill" src="img/logo-js.png">
+			<img alt="jQuery" class="skill" src="img/logo-jquery.png">
+			<img alt="React" class="skill" src="img/logo-react.png">
 		</section>
-
-		<section id="projects" class="center">
-			<h2>Projects</h2>
-			<p>Here are a few projects I'm working on:</p>
-			<ul class="projects">
-				<li>coming soon</li>
-				<!-- <li><a href="app/blog/index.html">Blog</a></li> -->
-				<!-- <li><a href="app/email/index.html">Email</a></li> -->
-				<!-- <li><a href="app/study/index.html">Study</a></li> -->
+		<section id="education" class="text-center">
+			<h2><i class="fa fa-university"></i> Education</h2>
+			<ul class="education">
+				<li><a href="#">Western Washington University</a></li>
+				<li><a href="#">International House Bagkok</a></li>
 			</ul>
 		</section>
-
-		<!-- <section id="writing" class="center">
-			<h2>Writing</h2>
-			<p>Here are my most recent posts:</p>
-			<ul class="writing">
-				<li><a href="app/blog/post1">post1</a></li>
-				<li><a href="app/blog/post2">post2</a></li>
-				<li><a href="app/blog/post3">post3</a></li>
-			</ul>
-		</section> -->
-
-		<section id="connect" class="center">
-			<h2>Connect</h2>
-			<p>Feel free to connect with me or <a href="mailto:ryanelliotchristo@gmail.com">send me a message</a>:</p>
-			<ul class="connect">
-				<li><a href="https://github.com/ryanchristo" target="_blank">GitHub</a></li>
-				<li><a href="https://www.linkedin.com/in/ryanchristoff" target="_blank">LinkedIn</a></li>
-				<!-- <li><a href="https://angel.co/ryanchristo" target="_blank">AngelList</a></li> -->
-				<!-- <li><a href="https://medium.com/@ryanchristo" target="_blank">Medium</a></li> -->
-				<li><a href="https://twitter.com/ryanechristo" target="_blank">Twitter</a></li>
+		<section id="resources" class="text-center">
+			<h2><i class="fa fa-book"></i> Resources</h2>
+			<ul class="resources">
+				<li><a href="#">Mozilla Developer's Network</a></li>
+				<li><a href="#">Free Code Camp</a></li>
+				<li><a href="#">Codecademy</a></li>
 			</ul>
 		</section>
-
 	</main>
-	<footer>
-    <p>&copy; 2016 ryanchristo</p>
-  </footer>
 
+	<!-- blog -->
+
+	<!-- project -->
+
+	<!-- resume -->
+
+	<!-- email -->
+
+	<footer class="text-center">
+		<p>Are you interested in working together? Wanna hang out and code?</p>
+		<p>Feel free to connect with me or <a id="email-me-button" href="#">send me a message</a>.</p>
+		<a href="#" style="font-size:40px;padding:12px"><i class="fa fa-github"></i></a>
+		<a href="#" style="font-size:40px;padding:12px"><i class="fa fa-linkedin"></i></a>
+		<a href="#" style="font-size:40px;padding:12px"><i class="fa fa-angellist"></i></a>
+		<a href="#" style="font-size:40px;padding:12px"><i class="fa fa-codepen"></i></a>
+		<a href="#" style="font-size:40px;padding:12px"><i class="fa fa-medium"></i></a>
+		<a href="#" style="font-size:40px;padding:12px"><i class="fa fa-twitter"></i></a>
+		<p style="margin-top:20px"><i class="fa fa-copyright"></i> 2017 ryanchristo</p>
+	</footer>
 	<script src="js/jquery-3.1.1.min.js"></script>
-  <script src="js/main.js"></script>
-
+	<script src="js/main.js"></script>
 </body>
 </html>

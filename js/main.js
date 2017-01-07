@@ -1,22 +1,49 @@
+$('header').hide();
+$('footer').hide();
+$('main#welcome').hide();
+$('main#about').hide();
+
 $(document).ready(function() {
+
+  // main navigation
+
+  $('header').fadeIn(500);
+  $('main#welcome').fadeIn(500);
+  $('footer').fadeIn(500);
+
+  $('#title').on('click', function () {
+    $('main#about').fadeOut(500);
+    setTimeout(function () {
+      $('main#welcome').fadeIn(500, function () {
+        // $('html,body').animate({
+        //   scrollTop: $('header').offset().top
+        // }, 500);
+      });
+    }, 500);
+  });
+
+  $('#about-button').on('click', function () {
+    $('main#welcome').fadeOut(500);
+    setTimeout(function () {
+      $('main#about').fadeIn(500, function () {
+        // $('html,body').animate({
+        //   scrollTop: $('main#about').offset().top
+        // }, 500);
+      });
+    }, 500);
+  });
 
   // fixed navigation after scroll
 
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > $('header').height() + 80) {
-      $('nav').addClass('fixed');
-      $('main').addClass('fixed');
-    } else {
-      $('nav').removeClass('fixed');
-      $('main').removeClass('fixed');
-    }
-  });
-
-  function showEmailForm() {
-    $('#button-email-form').on('click', function() {
-
-    });
-  }
+  // $(window).scroll(function() {
+  //   if ($(this).scrollTop() > $('header').height()) {
+  //     $('nav#main').addClass('fixed');
+  //     $('main').addClass('fixed');
+  //   } else {
+  //     $('nav#main').removeClass('fixed');
+  //     $('main').removeClass('fixed');
+  //   }
+  // });
 
   // konami code
 
