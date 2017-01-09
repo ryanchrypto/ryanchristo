@@ -1,25 +1,40 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
 body {
-  margin-top: 100px;
+  display: none;
 }
 
 body:hover {
-	cursor: default;;
+	cursor: default;
 }
 
 h1, h2, h3 {
 	font-family: 'Open Sans';
+  text-align: center;
 }
 
 h2 {
   font-size: 3em;
-  margin-bottom: 80px;
+  padding-bottom: 80px;
 }
 
 h3 {
   font-size: 2em;
   padding-bottom: 10px;
+}
+
+#home {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#about, #skills, #projects, #contact {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#contact {
+  padding-bottom: 200px;
 }
 
 #about, #projects {
@@ -28,6 +43,11 @@ h3 {
 
 .navbar-brand {
   font-family: 'Open Sans';
+  font-size: 1.6em;
+}
+
+.navbar-button:hover {
+  cursor: pointer;
 }
 
 .jumbotron {
@@ -40,18 +60,20 @@ h3 {
 
 .skill span {
   font-size: 1.6em;
+  font-weight: 300;
 }
 
 .img-skill {
   max-width: 100px;
 }
 
-.project p {
-  padding: 10px 0;
+.project {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.img-project {
-  margin: 40px auto;
+.img-project-xs {
+  padding: 10%;
 }
 
 .contact-link {

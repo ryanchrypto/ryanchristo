@@ -1,49 +1,79 @@
-// $('header').hide();
-// $('footer').hide();
-// $('main#welcome').hide();
-// $('main#about').hide();
-
 $(document).ready(function() {
 
-  // main navigation
+  $('body').fadeIn(500);
 
-  // $('header').fadeIn(500);
-  // $('main#welcome').fadeIn(500);
-  // $('footer').fadeIn(500);
-  //
-  // $('#title').on('click', function () {
-  //   $('main#about').fadeOut(500);
-  //   setTimeout(function () {
-  //     $('main#welcome').fadeIn(500, function () {
-  //       // $('html,body').animate({
-  //       //   scrollTop: $('header').offset().top
-  //       // }, 500);
-  //     });
-  //   }, 500);
-  // });
+  // main navigation smooth scrolling
 
-  // $('#about-button').on('click', function () {
-  //   $('main#welcome').fadeOut(500);
-  //   setTimeout(function () {
-  //     $('main#about').fadeIn(500, function () {
-  //       // $('html,body').animate({
-  //       //   scrollTop: $('main#about').offset().top
-  //       // }, 500);
-  //     });
-  //   }, 500);
-  // });
+  $('#navbar-home').on('click', function () {
+    $('html,body').animate({
+      scrollTop: $('#home').offset().top - $('#navbar').height()
+    }, 500);
+  });
 
-  // fixed navigation after scroll
+  $('#navbar-about').on('click', function () {
+    $('html,body').animate({
+      scrollTop: $('#about').offset().top - $('#navbar').height()
+    }, 500);
+  });
 
-  // $(window).scroll(function() {
-  //   if ($(this).scrollTop() > $('header').height()) {
-  //     $('nav#main').addClass('fixed');
-  //     $('main').addClass('fixed');
-  //   } else {
-  //     $('nav#main').removeClass('fixed');
-  //     $('main').removeClass('fixed');
-  //   }
-  // });
+  $('#navbar-skills').on('click', function () {
+    $('html,body').animate({
+      scrollTop: $('#skills').offset().top - $('#navbar').height()
+    }, 500);
+  });
+
+  $('#navbar-projects').on('click', function () {
+    $('html,body').animate({
+      scrollTop: $('#projects').offset().top - $('#navbar').height()
+    }, 500);
+  });
+
+  $('#navbar-contact').on('click', function () {
+    $('html,body').animate({
+      scrollTop: $('#contact').offset().top - $('#navbar').height()
+    }, 500);
+  });
+
+  // main navigation active navigation buttons
+
+  $(window).on('scroll', function () {
+
+    var top = $(window).scrollTop();
+
+    var home = $('#home').offset().top - $('#navbar').height() - 100;
+    var about = $('#about').offset().top - $('#navbar').height() - 100;
+    var skills = $('#skills').offset().top - $('#navbar').height() - 100;
+    var projects = $('#projects').offset().top - $('#navbar').height() - 100;
+    var contact = $('#contact').offset().top - $('#navbar').height() - 200;
+
+    if (top > about) {
+      $('#navbar-about').addClass('active');
+    } else {
+      $('#navbar-about').removeClass('active');
+    }
+
+    if (top > skills) {
+      $('#navbar-skills').addClass('active');
+      $('#navbar-about').removeClass('active');
+    } else {
+      $('#navbar-skills').removeClass('active');
+    }
+
+    if (top > projects) {
+      $('#navbar-projects').addClass('active');
+      $('#navbar-skills').removeClass('active');
+    } else {
+      $('#navbar-projects').removeClass('active');
+    }
+
+    if (top > contact) {
+      $('#navbar-contact').addClass('active');
+      $('#navbar-projects').removeClass('active');
+    } else {
+      $('#navbar-contact').removeClass('active');
+    }
+
+  });
 
   // konami code
 
