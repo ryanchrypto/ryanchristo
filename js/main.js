@@ -1,37 +1,37 @@
-$('header').hide();
-$('footer').hide();
-$('main#welcome').hide();
-$('main#about').hide();
+// $('header').hide();
+// $('footer').hide();
+// $('main#welcome').hide();
+// $('main#about').hide();
 
 $(document).ready(function() {
 
   // main navigation
 
-  $('header').fadeIn(500);
-  $('main#welcome').fadeIn(500);
-  $('footer').fadeIn(500);
+  // $('header').fadeIn(500);
+  // $('main#welcome').fadeIn(500);
+  // $('footer').fadeIn(500);
+  //
+  // $('#title').on('click', function () {
+  //   $('main#about').fadeOut(500);
+  //   setTimeout(function () {
+  //     $('main#welcome').fadeIn(500, function () {
+  //       // $('html,body').animate({
+  //       //   scrollTop: $('header').offset().top
+  //       // }, 500);
+  //     });
+  //   }, 500);
+  // });
 
-  $('#title').on('click', function () {
-    $('main#about').fadeOut(500);
-    setTimeout(function () {
-      $('main#welcome').fadeIn(500, function () {
-        // $('html,body').animate({
-        //   scrollTop: $('header').offset().top
-        // }, 500);
-      });
-    }, 500);
-  });
-
-  $('#about-button').on('click', function () {
-    $('main#welcome').fadeOut(500);
-    setTimeout(function () {
-      $('main#about').fadeIn(500, function () {
-        // $('html,body').animate({
-        //   scrollTop: $('main#about').offset().top
-        // }, 500);
-      });
-    }, 500);
-  });
+  // $('#about-button').on('click', function () {
+  //   $('main#welcome').fadeOut(500);
+  //   setTimeout(function () {
+  //     $('main#about').fadeIn(500, function () {
+  //       // $('html,body').animate({
+  //       //   scrollTop: $('main#about').offset().top
+  //       // }, 500);
+  //     });
+  //   }, 500);
+  // });
 
   // fixed navigation after scroll
 

@@ -1,125 +1,64 @@
-/* ---------- Fonts ---------- */
-
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 
-/* ---------- Body ---------- */
-
 body {
-	font-family: 'Open Sans', sans-serif;
+  margin-top: 100px;
 }
 
 body:hover {
 	cursor: default;;
 }
 
-/* ---------- Header ---------- */
-
-.jumbotron {
-	background: transparent;
-}
-
-#title:hover {
-	cursor: pointer;
-}
-
-/* ---------- Main ---------- */
-
-main {
-	padding: 80px;
-}
-
-main.fixed {
-	margin-top: 100px;
-}
-
-/* ---------- Footer ---------- */
-
-footer {
-	background-color: rgba(250, 250, 250, 1);
-	box-shadow: 0 0 5px #CCC;
-	padding: 40px;
-	width: 100%;
-}
-
-/* ---------- About Nav ---------- */
-
-nav#about {
-	background-color: rgba(250, 250, 250, 1);
-	box-shadow: 0 0 5px #CCC;
-	padding: 5px 0;
-	width: 100%;
-}
-
-nav#about ul {
-	padding: 0;
-	margin: 0;
-}
-
-nav#about ul li {
-	display: inline-block;
-	padding: 20px 0;
-}
-
-nav#about ul li a {
-	padding: 12px 20px;
-}
-
-nav.fixed {
-	top: 0;
-	position: fixed;
-}
-
-/* ---------- Section ---------- */
-
-section {
-	margin: 0 auto;
-	padding: 40px;
-	max-width: 800px;
-}
-
-/* ---------- Typography and Images ---------- */
-
-#photo {
-	padding-bottom: 40px;
-}
-
-#photo img {
-	margin: 0 auto;
-	max-width: 800px;
+h1, h2, h3 {
+	font-family: 'Open Sans';
 }
 
 h2 {
-	margin: 40px 0;
-	text-align: center;
+  font-size: 3em;
+  margin-bottom: 80px;
 }
 
-p {
-	font-size: 1.2em;
-	padding: 10px;
+h3 {
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+
+#about, #projects {
+  background: rgba(248,248,248,1);
+}
+
+.navbar-brand {
+  font-family: 'Open Sans';
+}
+
+.jumbotron {
+  background: transparent;
 }
 
 .blue-text {
-	color: #39C;
+  color: #39C;
 }
 
-img.skill {
-	width: 120px;
+.skill span {
+  font-size: 1.6em;
 }
 
-/* ---------- Lists ---------- */
-
-ul.education, ul.resources {
-	padding: 20px;
+.img-skill {
+  max-width: 100px;
 }
 
-ul.education li, ul.resources li {
-	display: inline-block;
+.project p {
+  padding: 10px 0;
 }
 
-ul.education li a, ul.resources li a {
-	padding: 20px;
+.img-project {
+  margin: 40px auto;
 }
 
-ul.education li a:hover, ul.resources li a:hover {
-	cursor: pointer;
+.contact-link {
+  font-size: 40px;
+  padding: 12px;
+}
+
+.copyright {
+  margin-top: 40px;
 }
