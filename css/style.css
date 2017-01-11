@@ -39,6 +39,11 @@ h3 {
 
 #about, #projects {
   background: rgba(248,248,248,1);
+  border: 1px solid #e7e7e7;
+}
+
+#skills, #contact {
+  background: rgba(255,255,255,1);
 }
 
 .navbar-brand {
@@ -56,6 +61,13 @@ h3 {
 
 .blue-text {
   color: #39C;
+}
+
+.img-profile {
+  border-radius: 50%;
+  box-shadow: 0 0 2px #AAA;
+  margin: 80px auto;
+  width: 240px;
 }
 
 .skill span {
@@ -83,4 +95,32 @@ h3 {
 
 .copyright {
   margin-top: 40px;
+}
+
+/* parallax */
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax-background img {
+  opacity: 0.1;
+  width: 100%;
+}
+
+.parallax-foreground {
+  position: relative;
+  transform-style: preserve-3d;
 }

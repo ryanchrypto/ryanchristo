@@ -5,48 +5,50 @@ $(document).ready(function() {
   // main navigation smooth scrolling
 
   $('#navbar-home').on('click', function () {
-    $('html,body').animate({
-      scrollTop: $('#home').offset().top - $('#navbar').height()
+    $('.parallax').animate({
+      scrollTop: $('#home').position().top - $('#navbar').height()
     }, 500);
   });
 
   $('#navbar-about').on('click', function () {
-    $('html,body').animate({
-      scrollTop: $('#about').offset().top - $('#navbar').height()
+    $('.parallax').animate({
+      scrollTop: $('#about').position().top - $('#navbar').height()
     }, 500);
   });
 
   $('#navbar-skills').on('click', function () {
-    $('html,body').animate({
-      scrollTop: $('#skills').offset().top - $('#navbar').height()
+    $('.parallax').animate({
+      scrollTop: $('#skills').position().top - $('#navbar').height()
     }, 500);
   });
 
   $('#navbar-projects').on('click', function () {
-    $('html,body').animate({
-      scrollTop: $('#projects').offset().top - $('#navbar').height()
+    $('.parallax').animate({
+      scrollTop: $('#projects').position().top - $('#navbar').height()
     }, 500);
   });
 
   $('#navbar-contact').on('click', function () {
-    $('html,body').animate({
-      scrollTop: $('#contact').offset().top - $('#navbar').height()
+    $('.parallax').animate({
+      scrollTop: $('#contact').position().top - $('#navbar').height()
     }, 500);
   });
 
   // main navigation active navigation buttons
 
-  $(window).on('scroll', function () {
+  $('.parallax').on('scroll', function () {
 
-    var top = $(window).scrollTop();
-
-    var home = $('#home').offset().top - $('#navbar').height() - 100;
-    var about = $('#about').offset().top - $('#navbar').height() - 100;
-    var skills = $('#skills').offset().top - $('#navbar').height() - 100;
-    var projects = $('#projects').offset().top - $('#navbar').height() - 100;
-    var contact = $('#contact').offset().top - $('#navbar').height() - 200;
+    var top = $('.parallax').scrollTop();
+    var home = $('#home').position().top - $('#navbar').height() - 100;
+    var about = $('#about').position().top - $('#navbar').height() - 100;
+    var skills = $('#skills').position().top - $('#navbar').height() - 100;
+    var projects = $('#projects').position().top - $('#navbar').height() - 100;
+    var contact = $('#contact').position().top - $('#navbar').height() - 200;
 
     if (top > about) {
+
+      // $('.parallax-background').html('<img src="img/wallpaper2.jpg"/>');
+
       $('#navbar-about').addClass('active');
     } else {
       $('#navbar-about').removeClass('active');
