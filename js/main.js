@@ -46,9 +46,6 @@ $(document).ready(function() {
     var contact = $('#contact').position().top - $('#navbar').height() - 200;
 
     if (top > about) {
-
-      // $('.parallax-background').html('<img src="img/wallpaper2.jpg"/>');
-
       $('#navbar-about').addClass('active');
     } else {
       $('#navbar-about').removeClass('active');
