@@ -1,0 +1,11 @@
+{
+  "name": "ryanchristo",
+  "version": "0.0.0",
+  "main": "server/server.js",
+  "repository": "https://github.com/ryanchristo/ryanchristo.github.io",
+  "author": "Ryan Christoffersen <ryan@ryanchristo.com> (http://ryanchristo.com)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.0"
+  }
+}
