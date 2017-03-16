@@ -1,0 +1,13 @@
+.button {
+  color: #666;
+  font-size: 0.8em;
+  padding: 10px 12px;
+  text-decoration: none;
+  transition: 0.25s;
+
+  &:hover {
+    color: #000;
+    cursor: pointer;
+  }
+
+}

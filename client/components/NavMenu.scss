@@ -1,0 +1,21 @@
+.list {
+  float: right;
+  list-style: none;
+}
+
+.item {
+  display: inline-block;
+}
+
+.button {
+  color: #666;
+  margin: 0 auto;
+  padding: 10px;
+  transition: 0.25s;
+
+  &:hover {
+    color: #000;
+    cursor: pointer;
+  }
+
+}

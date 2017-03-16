@@ -1,0 +1,22 @@
+.container {
+  width: 90%;
+
+  @media all and (min-width: 600px) {
+    width: 80%;
+  }
+
+}
+
+.title {
+  color: #666;
+  font-size: 2em;
+  margin: 0 auto;
+  padding: 20px 0;
+  transition: 0.25s;
+
+  &:hover {
+    color: #000;
+    cursor: pointer;
+  }
+
+}
