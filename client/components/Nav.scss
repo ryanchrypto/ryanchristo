@@ -10,11 +10,11 @@
 
 }
 
-.title {
-  color: #333;
-  font-size: 2em;
+.brand {
+  color: #666;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 10px 0;
+  text-decoration: none;
   transition: 0.25s;
 
   &:hover {
@@ -22,4 +22,9 @@
     cursor: pointer;
   }
 
+}
+
+.title {
+  font-weight: 300;
+  font-size: 2em;
 }

@@ -3,7 +3,11 @@
   font-size: 1.6em;
   font-weight: 300;
   padding: 20px 0;
-  width: 33%;
+  width: 50%;
+
+  @media all and (min-width: 600px) {
+    width: 33%;
+  }
 
   @media all and (min-width: 1000px) {
     width: 20%;
@@ -14,8 +18,4 @@
 .image {
   filter: grayscale(100%);
   max-width: 100px;
-}
-
-.text {
-
 }

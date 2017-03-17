@@ -1,16 +1,10 @@
 .footer {
   background: #F9F9F9;
-  box-shadow: 0 0 2px #CCC;
-  opacity: 0.99;
+  bottom: 0;
+  box-shadow: 0 0 1px #CCC;
+  opacity: 0.98;
   padding: 40px 0;
+  position: fixed;
   text-align: center;
-}
-
-.links {
-  padding: 20px 0;
-  text-align: center;
-}
-
-.copyright {
-  padding: 20px 0;
+  width: 100%;
 }

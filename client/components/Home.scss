@@ -1,3 +1,19 @@
+.container {
+  animation: fade 0.25s linear;
+}
+
+@keyframes fade {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
 .section {
   align-items: center;
   background-attachment: fixed;
@@ -13,7 +29,7 @@
 
 .section::after {
   content: '';
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.4);
   top: 0;
   left: 0;
   bottom: 0;
@@ -24,10 +40,5 @@
 
 .section1 {
   @extend .section;
-  background-image: url("/img/wallpaper2.jpg");
-}
-
-.section2 {
-  @extend .section;
-  background-image: url("/img/wallpaper1.jpg");
+  background-image: url("/img/wallpaper.jpg");
 }

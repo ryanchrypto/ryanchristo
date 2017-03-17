@@ -9,7 +9,6 @@ import Projects from './Projects'
 import Skills from './Skills'
 import styles from './App.scss'
 
-
 const App = () => (
   <div className={styles.container}>
     <Header />

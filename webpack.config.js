@@ -19,7 +19,7 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-            query: 'presets[]=latest,presets[]=react'
+            query: 'presets[]=latest,presets[]=react,presets[]=stage-2'
           }
         ]
       },

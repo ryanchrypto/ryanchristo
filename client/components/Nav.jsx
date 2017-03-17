@@ -10,12 +10,9 @@ const Nav = ({ mobile, scrollTo, toggle }) => (
         Menu
       </button>
     }
-    <Link to="/">
-      ryanchristo
+    <Link className={styles.brand} to="/">
+      <h1 className={styles.title}>ryanchristo</h1>
     </Link>
-    <a id="navbar-home" className={styles.title} onClick={() => scrollTo('#intro')}>
-      ryanchristo
-    </a>
     <NavMenu
       scrollTo={scrollTo}
     />

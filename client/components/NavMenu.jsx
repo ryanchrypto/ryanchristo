@@ -1,46 +1,30 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './NavMenu.scss'
 
-const NavMenu = ({ scrollTo }) => (
+const NavMenu = () => (
   <ul className={styles.list}>
     <li className={styles.item}>
-      <NavLink activeClassName={styles.active} to="/about">
+      <NavLink activeClassName={styles.active} className={styles.button} to="/about">
         About
       </NavLink>
-      <a className={styles.button} onClick={() => scrollTo('#about')}>
-        About
-      </a>
     </li>
     <li className={styles.item}>
-      <NavLink activeClassName={styles.active} to="/skills">
+      <NavLink activeClassName={styles.active} className={styles.button} to="/skills">
         Skills
       </NavLink>
-      <a className={styles.button} onClick={() => scrollTo('#skills')}>
-        Skills
-      </a>
     </li>
     <li className={styles.item}>
-      <NavLink activeClassName={styles.active} to="/projects">
+      <NavLink activeClassName={styles.active} className={styles.button} to="/projects">
         Projects
       </NavLink>
-      <a className={styles.button} onClick={() => scrollTo('#projects')}>
-        Projects
-      </a>
     </li>
     <li className={styles.item}>
-      <NavLink activeClassName={styles.active} to="/contact">
+      <NavLink activeClassName={styles.active} className={styles.button} to="/contact">
         Contact
       </NavLink>
-      <a className={styles.button} onClick={() => scrollTo('#contact')}>
-        Contact
-      </a>
     </li>
   </ul>
 )
-
-NavMenu.propTypes = {
-  scrollTo: PropTypes.func.isRequired
-}
 
 export default NavMenu
