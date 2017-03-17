@@ -1,9 +1,14 @@
-.container {
-  margin: 0 auto;
-  width: 80%;
-}
+@import '../styles/container.scss';
+@import '../styles/title.scss';
 
-.title {
-  font-weight: 300;
-  text-align: center;
+.content {
+  font-size: 1.2em;
+  line-height: 1.5;
+  padding: 20px 0;
+  text-align: left;
+
+  p {
+    padding: 20px 0;
+  }
+
 }

@@ -1,15 +1,10 @@
-.container {
-  margin: 0 auto;
-  width: 80%;
-}
-
-.title {
-  font-weight: 300;
-  text-align: center;
-}
+@import '../styles/container.scss';
+@import '../styles/title.scss';
 
 .skills {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
 }

@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react'
 import styles from './Skill.scss'
 
 const Skill = ({ image, title }) => (
-  <div className={styles.container}>
+  <div className={styles.skill}>
     <img alt={title} className={styles.image} src={image} />
-    <span>{title}</span>
+    <p className={styles.text}>{title}</p>
   </div>
 )
 

@@ -1,10 +1,20 @@
-.container {
+.skill {
+  display: inline-block;
   font-size: 1.6em;
   font-weight: 300;
-  padding: 20px;
-  width: 20%;
+  padding: 20px 0;
+  width: 33%;
+
+  @media all and (min-width: 1000px) {
+    width: 20%;
+  }
+
 }
 
 .image {
   max-width: 100px;
+}
+
+.text {
+
 }

@@ -1,13 +1,2 @@
-.container {
-  margin: 0 auto;
-  width: 80%;
-}
-
-.title {
-  font-weight: 300;
-  text-align: center;
-}
-
-.links {
-  text-align: center;
-}
+@import '../styles/container.scss';
+@import '../styles/title.scss';
