@@ -1,5 +1,5 @@
 export default [
-  'I am a full stack web developer. I turned focus to development with a desire to create and contribute to projects that have a positive impact on the world. I am inspired by projects related to civic technology, open data, data visualization and natural language processing.'
+  'I am a full stack developer. I am passionate about open source and providing new tech to non-propfits. I am inspired by projects related to civic technology, open data, data visualization and natural language processing.'
 ]
 
 /*

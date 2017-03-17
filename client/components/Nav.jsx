@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react'
+import { Link } from 'react-router-dom'
 import NavMenu from './NavMenu'
 import styles from './Nav.scss'
 
@@ -9,6 +10,9 @@ const Nav = ({ mobile, scrollTo, toggle }) => (
         Menu
       </button>
     }
+    <Link to="/">
+      ryanchristo
+    </Link>
     <a id="navbar-home" className={styles.title} onClick={() => scrollTo('#intro')}>
       ryanchristo
     </a>
