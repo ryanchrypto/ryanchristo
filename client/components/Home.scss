@@ -15,3 +15,8 @@
   @extend .section;
   background-image: url("/img/wallpaper2.jpg");
 }
+
+.section2 {
+  @extend .section;
+  background-image: url("/img/wallpaper1.jpg");
+}

@@ -4,7 +4,7 @@ import projects from '../content/projects'
 import styles from './Projects.scss'
 
 const Projects = () => (
-  <div id="projects" className={styles.container}>
+  <div className={styles.container}>
     <h2 className={styles.title}>Projects</h2>
     <div className={styles.projects}>
       {projects.map(project => (

@@ -5,17 +5,24 @@ import Intro from './Intro'
 import Projects from './Projects'
 import Skills from './Skills'
 import styles from './Home.scss'
-// import parallax from '../styles/parallax.scss'
 
 const Home = () => (
   <div>
-    <div className={styles.section1}>
+    <div id="intro" className={styles.section1}>
       <Intro />
     </div>
-    <About />
-    <Skills />
-    <Projects />
-    <Contact />
+    <div id="about" className={styles.section}>
+      <About />
+    </div>
+    <div id="skills" className={styles.section}>
+      <Skills />
+    </div>
+    <div id="projects" className={styles.section}>
+      <Projects />
+    </div>
+    <div id="contact" className={styles.section2}>
+      <Contact />
+    </div>
   </div>
 )
 
