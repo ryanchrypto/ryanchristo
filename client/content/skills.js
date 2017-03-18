@@ -12,6 +12,10 @@ export default [
     title: 'JavaScript'
   },
   {
+    image: 'img/logo-sass.png',
+    title: 'Sass'
+  },
+  {
     image: 'img/logo-jquery.png',
     title: 'jQuery'
   },
@@ -22,5 +26,13 @@ export default [
   {
     image: 'img/logo-redux.png',
     title: 'Redux'
+  },
+  {
+    image: 'img/logo-node.png',
+    title: 'NodeJS'
+  },
+  {
+    image: 'img/logo-mongo.png',
+    title: 'MongoDB'
   }
 ]
