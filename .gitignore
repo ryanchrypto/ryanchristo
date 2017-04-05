@@ -1,2 +1,3 @@
 node_modules
 public/index.min.js
+public/js/three.min.js

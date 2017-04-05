@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from './Link'
+import LinkIcon from './LinkIcon'
 import links from '../content/links'
 import styles from './Contact.scss'
 
@@ -8,7 +8,7 @@ const Contact = () => (
     <h2 className={styles.title}>Contact</h2>
     <div className={styles.links}>
       {links.map(link => (
-        <Link
+        <LinkIcon
           key={link.link}
           {...link}
         />

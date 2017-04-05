@@ -1,0 +1,31 @@
+.container {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.arrow {
+  background: none;
+  bottom: 20%;
+  color: #CCC;
+  font-family: 'Bilbo';
+  font-size: 12em;
+  font-weight: 300;
+  opacity: 0.8;
+  outline: none;
+  position: absolute;
+  text-align: center;
+  transform: rotate(180deg);
+  transition: 0.25s;
+  width: 100%;
+
+  &:hover {
+    color: #39C;
+    cursor: pointer;
+    opacity: 1;
+  }
+
+}

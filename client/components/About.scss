@@ -2,13 +2,25 @@
 @import '../styles/title.scss';
 
 .content {
-  font-size: 1.2em;
-  line-height: 1.5;
-  padding: 20px 5%;
+  align-items: center;
+  display: flex;
+  font-size: 1.4em;
+  justify-content: center;
+  line-height: 1.4;
+  padding: 5% 0;
   text-align: left;
 
   p {
-    padding: 20px 5%;
+    padding: 2% 0;
   }
 
+}
+
+.text {
+  padding: 0 5%;
+}
+
+.image {
+  padding: 0 5%;
+  width: 200px;
 }

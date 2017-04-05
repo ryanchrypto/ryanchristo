@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Bilbo|Josefin+Sans');
+
 * {
   border: 0;
   margin: 0;
@@ -5,11 +7,71 @@
 }
 
 .container {
-  font-family: sans-serif;
-  font-weight: 300;
+  animation: fadeIn 0.25s ease-in 0.25s forwards;
+  font-family: 'Josefin Sans', sans-serif;
+  opacity: 0;
+  top: 0;
+  user-select: none;
 
   &:hover {
-  	cursor: default;
+    cursor: default;
+  }
+
+}
+
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+.section {
+  align-items: center;
+  animation: zoomIn 1s ease-out forwards;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  min-height: 100vh;
+  padding: 5%;
+  transform: scale(0.9);
+}
+
+@keyframes zoomIn {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+.hidden {
+  @extend .section;
+  animation: zoomOut 1s ease-out forwards;
+  opacity: 1;
+}
+
+@keyframes zoomOut {
+
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
   }
 
 }

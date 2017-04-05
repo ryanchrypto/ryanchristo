@@ -1,17 +1,11 @@
 .container {
-  animation: fade 0.25s linear;
-  margin: 0 auto;
-  padding-bottom: 140px;
-  padding-top: 140px;
+  animation: fadeIn 0.25s linear;
+  margin-bottom: 25%;
+  max-width: 1000px;
   width: 100%;
-
-  @media all and (min-width: 600px) {
-    width: 80%;
-  }
-
 }
 
-@keyframes fade {
+@keyframes fadeIn {
 
   0% {
     opacity: 0;

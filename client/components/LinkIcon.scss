@@ -1,7 +1,7 @@
 .link {
   color: #666;
-  font-size: 1.4em;
-  padding: 10px 12px;
+  font-size: 2.4em;
+  padding: 20px 12px;
   position: relative;
   text-decoration: none;
   transition: 0.25s;
@@ -9,6 +9,7 @@
   &:hover {
     color: #39C;
     cursor: pointer;
+    transform: scale(1.2);
   }
 
 }

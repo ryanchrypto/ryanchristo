@@ -1,30 +1,34 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { PropTypes } from 'react'
 import styles from './NavMenu.scss'
 
-const NavMenu = () => (
+const NavMenu = ({ current, scrollTo }) => (
   <ul className={styles.list}>
     <li className={styles.item}>
-      <NavLink activeClassName={styles.active} className={styles.button} to="/about">
+      <div className={current === 'About' ? styles.active : styles.button} onClick={() => scrollTo('About')}>
         About
-      </NavLink>
+      </div>
     </li>
     <li className={styles.item}>
-      <NavLink activeClassName={styles.active} className={styles.button} to="/skills">
+      <div className={current === 'Skills' ? styles.active : styles.button} onClick={() => scrollTo('Skills')}>
         Skills
-      </NavLink>
+      </div>
     </li>
     <li className={styles.item}>
-      <NavLink activeClassName={styles.active} className={styles.button} to="/projects">
+      <div className={current === 'Projects' ? styles.active : styles.button} onClick={() => scrollTo('Projects')}>
         Projects
-      </NavLink>
+      </div>
     </li>
     <li className={styles.item}>
-      <NavLink activeClassName={styles.active} className={styles.button} to="/contact">
+      <div className={current === 'Contact' ? styles.active : styles.button} onClick={() => scrollTo('Contact')}>
         Contact
-      </NavLink>
+      </div>
     </li>
   </ul>
 )
+
+NavMenu.propTypes = {
+  current: PropTypes.string.isRequired,
+  scrollTo: PropTypes.func.isRequired
+}
 
 export default NavMenu

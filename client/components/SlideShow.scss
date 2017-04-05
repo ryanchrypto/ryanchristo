@@ -1,0 +1,98 @@
+.container {
+  width: 100%;
+}
+
+.arrow {
+  color: #CCC;
+  display: inline-block;
+  font-family: 'Bilbo';
+  font-size: 12em;
+  font-weight: 300;
+  opacity: 0.8;
+  padding: 0 5%;
+  transition: 0.25s;
+
+  &:hover {
+    color: #39C;
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+}
+
+.index {
+  padding: 5% 0;
+  text-align: center;
+}
+
+.indexItem {
+  color: #CCC;
+  font-size: 1.2em;
+  padding: 2%;
+  position: relative;
+  transition: 0.25s;
+
+  &:hover {
+    color: #39C;
+    cursor: pointer;
+  }
+
+}
+
+.slideshow {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.slide {
+  width: 600px;
+}
+
+.slideContainer {
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.slideLeft {
+  @extend .slideContainer;
+  animation: slideLeft 0.25s ease-in;
+}
+
+.slideRight {
+  @extend .slideContainer;
+  animation: slideRight 0.25s ease-in;
+}
+
+@keyframes slideLeft {
+
+  0% {
+    margin-left: 50%;
+    opacity: 1;
+  }
+
+  100% {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+}
+
+@keyframes slideRight {
+
+  0% {
+    margin-right: 50%;
+    opacity: 1;
+  }
+
+  100% {
+    margin-right: 0;
+    opacity: 0;
+  }
+
+}

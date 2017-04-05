@@ -1,18 +1,18 @@
 import React, { PropTypes } from 'react'
-import Button from './Button'
+import Link from './Link'
 import styles from './Project.scss'
 
 const Project = ({ summary, title, link: { production, repository } }) => (
   <div className={styles.container}>
     <h3 className={styles.title}>{title}</h3>
     <p>{summary}</p>
-    <div className={styles.buttons}>
-      <Button link={production}>
+    <div className={styles.links}>
+      <Link link={production}>
         View Project
-      </Button>
-      <Button link={repository}>
+      </Link>
+      <Link link={repository}>
         View GitHub
-      </Button>
+      </Link>
     </div>
   </div>
 )

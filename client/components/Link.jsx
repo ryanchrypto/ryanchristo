@@ -1,19 +1,19 @@
 import React, { PropTypes } from 'react'
 import styles from './Link.scss'
 
-const Link = ({ icon, link }) => (
+const Link = ({ children, link }) => (
   <a
     className={styles.link}
     href={link}
-    rel="noopener noreferrer"
     target="_blank"
+    rel="noopener noreferrer"
   >
-    <i className={icon} />
+    {children}
   </a>
 )
 
 Link.propTypes = {
-  icon: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired
 }
 
