@@ -10,10 +10,7 @@
   "dependencies": {
     "express": "^4.15.2",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-motion": "^0.4.7",
-    "react-router": "^4.0.0",
-    "react-router-dom": "^4.0.0"
+    "react-dom": "^15.4.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.6",

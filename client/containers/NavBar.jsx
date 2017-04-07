@@ -16,7 +16,7 @@ class NavBarContainer extends Component {
     window.removeEventListener('scroll', this.handleScrollEvents)
   }
   handleScrollEvents() {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 400) {
       this.setState({
         showNavBar: true
       })

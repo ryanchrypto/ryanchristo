@@ -1,14 +1,95 @@
 .container {
-  padding: 20px 5%;
+  width: 100%;
 }
 
 .title {
   font-family: 'Bilbo';
-  font-size: 3em;
+  font-size: 2.4em;
   font-weight: 300;
-  text-align: center;
+  margin: 0 auto;
+  padding: 0 10%;
+  text-align: left;
+}
+
+.image {
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px #CCC;
+  width: 300px;
 }
 
 .links {
-  padding: 20px 0;
+  padding: 5% 0;
+}
+
+.slideContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 420px;
+  width: 100%;
+}
+
+.slideContent {
+  align-items: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 2% 0;
+  width: 100%;
+}
+
+.summary {
+  font-size: 1.2em;
+  padding: 2% 10%;
+  text-align: left;
+}
+
+.slideLeft {
+  @extend .slideContainer;
+  animation: slideLeft 0.5s ease-in;
+}
+
+.slideRight {
+  @extend .slideContainer;
+  animation: slideRight 0.5s ease-in;
+}
+
+@keyframes slideLeft {
+
+  0% {
+    margin-left: 500px;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    margin-left: 0;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+@keyframes slideRight {
+
+  0% {
+    margin-left: -500px;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    margin-left: 0;
+    opacity: 1;
+    transform: scale(1);
+  }
+
 }

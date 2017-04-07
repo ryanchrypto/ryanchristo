@@ -1,7 +1,8 @@
+import React from 'react'
 import { render } from 'react-dom'
-import router from './router'
+import App from './containers/App'
 
 render(
-  router,
+  <App />,
   document.getElementById('app')
 )

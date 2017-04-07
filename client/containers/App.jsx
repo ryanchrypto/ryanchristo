@@ -88,7 +88,7 @@ class AppContainer extends Component {
   render() {
     const scrollTo = (id) => {
       const start = window.pageYOffset
-      const end = document.getElementById(id).offsetTop
+      const end = document.getElementById(id).offsetTop - 50
       const distance = end - start
       const duration = 600
       const increment = 20
