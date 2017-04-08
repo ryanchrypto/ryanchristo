@@ -2,7 +2,7 @@ export default [
   {
     id: 'fcc-projects',
     image: 'img/fcc-projects.png',
-    summary: 'I used freeCodeCamp as a relaunching pad. I completed the majority of the projects and I plan to continue to revise and complete the remaining projects over time. The curriculum focuses on full stack Javascript development.',
+    summary: 'I used freeCodeCamp as a warm up. I completed the majority of the projects and I plan to continue to revise and complete the remaining projects over time. The curriculum focuses on full stack Javascript development with React, Node, Express and MongoDB.',
     tags: 'HTML, CSS, SASS, Javascript, React, Redux, Node, Express, MongoDB, Webpack',
     title: 'fcc-projects',
     link: {
@@ -13,7 +13,7 @@ export default [
   {
     id: 'simple-cms',
     image: 'img/simple-cms.png',
-    summary: 'I created simple-cms to act as the foundation for a small business website that I am in the process of rebuilding. The purpose of the project was to get practice with React, Redux, MongoDB and Express on a larger application.',
+    summary: 'I created simple-cms to act as the foundation for a small business website that I am in the process of rebuilding. The goal of the project is to provide a CMS boilerplate and get more practice with React, Redux, Express and MongoDB while working on a larger application.',
     tags: 'HTML, CSS, SASS, Javascript, React, Redux, Node, Express, MongoDB, Webpack',
     title: 'simple-cms',
     link: {
