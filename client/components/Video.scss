@@ -1,0 +1,42 @@
+.container {
+  background-color: rgba(255,255,255,1);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -99;
+}
+
+.bgvid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.1;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-color: rgba(0,0,0,1);
+  background-size: cover;
+}
+
+.bgvid::after {
+  content: '';
+  background: rgba(0,0,0,1);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -100;
+}
+
+@media screen and (max-device-width: 800px) {
+  .bgvid {
+    display: none;
+  }
+}

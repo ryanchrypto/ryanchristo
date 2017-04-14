@@ -2,10 +2,10 @@ import React, { PropTypes } from 'react'
 import NavMenu from './NavMenu'
 import styles from './MainNav.scss'
 
-const MainNav = ({ current, scrollTo, toggleThree }) => (
+const MainNav = ({ current, scrollTo }) => (
   <div className={styles.container}>
     <div className={styles.content}>
-      <h1 className={styles.title} onClick={toggleThree}>ryanchristo</h1>
+      <h1 className={styles.title}>ryanchristo</h1>
       <NavMenu current={current} scrollTo={scrollTo} />
     </div>
   </div>
@@ -13,8 +13,7 @@ const MainNav = ({ current, scrollTo, toggleThree }) => (
 
 MainNav.propTypes = {
   current: PropTypes.string.isRequired,
-  scrollTo: PropTypes.func.isRequired,
-  toggleThree: PropTypes.func.isRequired
+  scrollTo: PropTypes.func.isRequired
 }
 
 export default MainNav

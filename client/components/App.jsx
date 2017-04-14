@@ -2,12 +2,11 @@ import React, { PropTypes } from 'react'
 import About from './About'
 import Arrow from './Arrow'
 import Contact from './Contact'
-import Cursor from '../containers/Cursor'
 import MainNav from './MainNav'
 import NavBar from '../containers/NavBar'
 import Projects from '../containers/Projects'
 import Skills from './Skills'
-import Three from '../containers/Three'
+import Video from './Video'
 import styles from './App.scss'
 
 const App = ({
@@ -17,21 +16,18 @@ const App = ({
   showContact,
   showHome,
   showProjects,
-  showSkills,
-  showThree,
-  toggleThree
+  showSkills
 }) => (
   <div className={styles.container}>
     <NavBar
       current={current}
       scrollTo={scrollTo}
     />
+    <Video />
     <div id="Home" className={showHome ? styles.section : styles.hidden}>
-      <Three showThree={showThree} />
       <MainNav
         current={current}
         scrollTo={scrollTo}
-        toggleThree={toggleThree}
       />
       <Arrow scrollTo={() => scrollTo('About')} />
     </div>
@@ -60,9 +56,7 @@ App.propTypes = {
   showContact: PropTypes.bool.isRequired,
   showHome: PropTypes.bool.isRequired,
   showProjects: PropTypes.bool.isRequired,
-  showSkills: PropTypes.bool.isRequired,
-  showThree: PropTypes.bool.isRequired,
-  toggleThree: PropTypes.func.isRequired
+  showSkills: PropTypes.bool.isRequired
 }
 
 export default App

@@ -1,6 +1,32 @@
 import React, { Component } from 'react'
 import App from '../components/App'
 
+const scrollTo = (id) => {
+  const start = window.pageYOffset
+  const end = document.getElementById(id).offsetTop - 50
+  const distance = end - start
+  const duration = 600
+  const increment = 20
+  let currentTime = 0
+  Math.easeInOutQuad = (currentTime, start, distance, duration) => {
+    currentTime /= (duration / 2)
+    if (currentTime < 1) {
+      return distance / 2 * currentTime * currentTime + start
+    }
+    currentTime--
+    return -distance / 2 * (currentTime * (currentTime - 2) - 1) + start
+  }
+  const animateScroll = () => {
+    currentTime += increment
+    const val = Math.easeInOutQuad(currentTime, start, distance, duration)
+    window.scroll(0, val)
+    if (currentTime < duration) {
+      setTimeout(animateScroll, increment)
+    }
+  }
+  animateScroll()
+}
+
 class AppContainer extends Component {
   constructor(props) {
     super(props)
@@ -12,10 +38,10 @@ class AppContainer extends Component {
       showHome: true,
       showProjects: false,
       showSkills: false,
-      showThree: false
+      playVideo: true
     }
     this.handleScrollEvent = this.handleScrollEvent.bind(this)
-    this.toggleThree = this.toggleThree.bind(this)
+    this.toggleVideo = this.toggleVideo.bind(this)
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScrollEvent)
@@ -80,48 +106,23 @@ class AppContainer extends Component {
       })
     }
   }
-  toggleThree() {
+  toggleVideo() {
     this.setState({
-      showThree: !this.state.showThree
+      playVideo: !this.state.playVideo
     })
   }
   render() {
-    const scrollTo = (id) => {
-      const start = window.pageYOffset
-      const end = document.getElementById(id).offsetTop - 50
-      const distance = end - start
-      const duration = 600
-      const increment = 20
-      let currentTime = 0
-      Math.easeInOutQuad = (currentTime, start, distance, duration) => {
-        currentTime /= (duration / 2)
-        if (currentTime < 1) {
-          return distance / 2 * currentTime * currentTime + start
-        }
-        currentTime--
-        return -distance / 2 * (currentTime * (currentTime - 2) - 1) + start
-      }
-      const animateScroll = () => {
-        currentTime += increment
-        const val = Math.easeInOutQuad(currentTime, start, distance, duration)
-        window.scroll(0, val)
-        if (currentTime < duration) {
-          setTimeout(animateScroll, increment)
-        }
-      }
-      animateScroll()
-    }
     return (
       <App
         current={this.state.current}
+        playVideo={this.state.playVideo}
         scrollTo={scrollTo}
         showAbout={this.state.showAbout}
         showContact={this.state.showContact}
         showHome={this.state.showHome}
         showProjects={this.state.showProjects}
         showSkills={this.state.showSkills}
-        showThree={this.state.showThree}
-        toggleThree={this.toggleThree}
+        toggleVideo={this.toggleVideo}
       />
     )
   }
