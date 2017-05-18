@@ -1,5 +1,16 @@
+@import '../styles/animations.scss';
+
 .container {
-  margin-bottom: 25%;
+  animation: zoomIn 0.25s ease-in 0.25s forwards;
+  margin-bottom: 20%;
+  text-align: center;
+  width: 100vw;
+
+  @media only screen and (min-width: 560px) {
+    padding: 4rem 8rem;
+    width: auto;
+  }
+
 }
 
 .content {
@@ -8,8 +19,17 @@
 
 .title {
   color: #333;
-  font-family: 'Bilbo';
+  font-family: 'Oswald';
   font-size: 6em;
+  font-weight: 300;
+  text-align: center;
+  transition: 0.25s;
+}
+
+.subtitle {
+  color: #666;
+  font-family: 'Oswald';
+  font-size: 2em;
   font-weight: 300;
   padding-bottom: 5%;
   text-align: center;

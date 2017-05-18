@@ -1,19 +1,20 @@
 import React, { PropTypes } from 'react'
-import NavMenu from './NavMenu'
+import MainNavList from './MainNavList'
 import styles from './MainNav.scss'
 
 const MainNav = ({ current, scrollTo }) => (
-  <div className={styles.container}>
+  <div id="mainnav" className={styles.container}>
     <div className={styles.content}>
-      <h1 className={styles.title}>ryanchristo</h1>
-      <NavMenu current={current} scrollTo={scrollTo} />
+      <h1 className={styles.title}>ryan christoffersen</h1>
+      <p className={styles.subtitle}>web developer | digital storyteller</p>
+      <MainNavList current={current} scrollTo={scrollTo} />
     </div>
   </div>
 )
 
 MainNav.propTypes = {
   current: PropTypes.string.isRequired,
-  scrollTo: PropTypes.func.isRequired
+  scrollTo: PropTypes.func.isRequired,
 }
 
 export default MainNav

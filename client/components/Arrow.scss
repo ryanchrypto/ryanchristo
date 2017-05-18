@@ -1,19 +1,18 @@
 .container {
-  height: 100%;
+  bottom: 0;
+  height: 20vh;
   left: 0;
   position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
+  width: 100vw;
+  z-index: 1;
 }
 
 .arrow {
   background: none;
   bottom: 20%;
-  color: #CCC;
-  font-family: 'Bilbo';
+  color: #666;
+  font-family: 'Abel';
   font-size: 12em;
-  font-weight: 300;
   opacity: 0.8;
   outline: none;
   position: absolute;
@@ -23,7 +22,7 @@
   width: 100%;
 
   &:hover {
-    color: #39C;
+    color: #333;
     cursor: pointer;
     opacity: 1;
   }

@@ -1,24 +1,37 @@
 .container {
+  position: relative;
   width: 100%;
 }
 
 .title {
-  font-family: 'Bilbo';
+  font-family: 'Oswald';
   font-size: 2.4em;
   font-weight: 300;
   margin: 0 auto;
-  padding: 0 10%;
+  padding-bottom: 2%;
   text-align: left;
+  width: 100%;
 }
 
 .image {
   border-radius: 2px;
   box-shadow: 1px 1px 1px #CCC;
-  width: 300px;
+  display: inline-block;
+  margin: 5%;
+  width: 400px;
+}
+
+.text {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1px;
+  box-shadow: 0 0 5px rgba(10, 10, 10, 0.1);
+  display: inline-block;
+  padding: 2% 5%;
 }
 
 .links {
   padding: 2% 0;
+  text-align: center;
 }
 
 .slideContainer {
@@ -31,17 +44,16 @@
 
 .slideContent {
   align-items: center;
-  overflow: hidden;
   display: flex;
   justify-content: center;
-  padding: 2% 0;
+  margin-left: 500px;
   width: 100%;
 }
 
 .summary {
   font-size: 1.2em;
   line-height: 1.4;
-  padding: 2% 10%;
+  padding: 2% 0;
   text-align: left;
 }
 

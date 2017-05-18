@@ -3,7 +3,7 @@ import styles from './Video.scss'
 
 const Video = () => (
   <div className={styles.container}>
-    <video className={styles.bgvid} playsInline autoPlay muted loop>
+    <video className={styles.bgvid} playsInline autoplay muted loop>
       <source src="video/bgvideo.mp4" type="video/mp4" />
     </video>
   </div>

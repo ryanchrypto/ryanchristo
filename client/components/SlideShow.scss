@@ -3,9 +3,9 @@
 }
 
 .arrow {
-  color: #CCC;
+  color: #666;
   display: inline-block;
-  font-family: 'Bilbo';
+  font-family: 'Oswald';
   font-size: 12em;
   font-weight: 300;
   opacity: 0.8;
@@ -13,7 +13,7 @@
   transition: 0.25s;
 
   &:hover {
-    color: #39C;
+    color: #333;
     cursor: pointer;
     opacity: 1;
     transform: scale(1.2);

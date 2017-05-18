@@ -1,0 +1,60 @@
+@import '../styles/title.scss';
+
+.container {
+  height: 50vh;
+  position: relative;
+  width: 100%;
+}
+
+@keyframes slideInLeft {
+
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+}
+
+
+.content {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1px;
+  box-shadow: 0 0 5px rgba(10, 10, 10, 0.1);
+  color: #333;
+  font-size: 1.4em;
+  line-height: 1.4;
+  padding: 5%;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  width: 50vw;
+
+  p {
+    padding: 2% 0;
+  }
+
+}
+
+.text {
+  padding: 0 5%;
+}
+
+.name {
+  font-family: 'Oswald'
+}
+
+.image {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1px;
+  box-shadow: 0 0 5px rgba(10, 10, 10, 0.2);
+  left: -25vw;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  width: 300px;
+}

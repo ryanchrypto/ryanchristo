@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Bilbo|Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Abel|Open+Sans:300|Oswald:300|Roboto+Condensed:300');
+@import '../styles/animations.scss';
 
 * {
   border: 0;
@@ -8,7 +9,8 @@
 
 .container {
   animation: fadeIn 0.25s ease-in 0.25s forwards;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
   opacity: 0;
   top: 0;
   user-select: none;
@@ -19,59 +21,70 @@
 
 }
 
-@keyframes fadeIn {
-
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-
-}
-
-.section {
+.background {
   align-items: center;
-  animation: zoomIn 1s ease-out forwards;
   display: flex;
+  height: 100vh;
   justify-content: center;
-  opacity: 0;
-  min-height: 100vh;
-  padding: 5% 0;
-  transform: scale(0.9);
+  position: absolute;
 }
 
-@keyframes zoomIn {
-
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
+.background::after {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  content: '';
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: -1;
 }
 
-.hidden {
-  @extend .section;
-  animation: zoomOut 1s ease-out forwards;
-  opacity: 1;
+.background1 {
+  @extend .background;
 }
 
-@keyframes zoomOut {
+.background2 {
+  @extend .background;
+}
 
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
+.background3 {
+  @extend .background;
+}
 
-  100% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
+.background4 {
+  @extend .background;
+}
 
+.background5 {
+  @extend .background;
+}
+
+.background1::after {
+  @extend .background::after;
+  background-image: url('/img/placeholder-1.jpeg');
+}
+
+.background2::after {
+  @extend .background::after;
+  background-image: url('/img/placeholder-2.jpeg');
+}
+
+.background3::after {
+  @extend .background::after;
+  background-image: url('/img/placeholder-3.jpeg');
+}
+
+.background4::after {
+  @extend .background::after;
+  background-image: url('/img/placeholder-4.jpeg');
+}
+
+.background5::after {
+  @extend .background::after;
+  background-image: url('/img/placeholder-5.jpeg');
 }

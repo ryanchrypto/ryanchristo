@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react'
-import NavMenu from './NavMenu'
+import NavBarList from './NavBarList'
 import styles from './NavBar.scss'
 
 const NavBar = ({ current, scrollTo, showNavBar }) => (
-  <nav className={showNavBar ? styles.container : styles.hidden}>
+  <nav id="navbar" className={showNavBar ? styles.container : styles.hidden}>
     <h1 className={styles.title} onClick={() => scrollTo('Home')}>
-      ryanchristo
+      rc | ryan christoffersen
     </h1>
-    <NavMenu current={current} scrollTo={scrollTo} />
+    <NavBarList current={current} scrollTo={scrollTo} />
   </nav>
 )
 

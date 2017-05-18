@@ -2,15 +2,14 @@
   "extends": "airbnb",
   "globals": {
     "document": "true",
-    "window": "true"
+    "window": "true",
   },
   "plugins": [
     "react",
     "jsx-a11y",
-    "import"
+    "import",
   ],
   "rules": {
-    "comma-dangle": ["error", "never"],
-    "semi": ["error", "never"]
+    "semi": ["error", "never"],
   }
 }

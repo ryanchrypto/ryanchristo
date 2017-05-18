@@ -1,0 +1,82 @@
+.container {
+  align-items: center;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  color: #333;
+  font-family: 'Oswald';
+  font-size: 5em;
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 2px;
+  padding: 2em;
+  position: absolute;
+  text-align: left;
+  top: 0;
+}
+
+.content {
+  animation: slideInLeft 1s forwards;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1px;
+  box-shadow: 0 0 5px rgba(10, 10, 10, 0.1);
+  color: #333;
+  font-size: 1.4em;
+  line-height: 1.4;
+  padding: 5rem;
+  position: absolute;
+  right: 4em;
+  text-align: left;
+  width: 50vw;
+
+  p {
+    padding: 2% 0;
+  }
+
+}
+
+@keyframes slideInLeft {
+
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+}
+
+.text {
+  padding: 0 5%;
+}
+
+.name {
+  font-family: 'Oswald';
+  font-weight: 300;
+}
+
+.city {
+  color: #666;
+  font-family: 'Oswald';
+  font-weight: 300;
+  padding-bottom: 0.5em;
+}
+
+.image {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1px;
+  box-shadow: 0 0 5px rgba(10, 10, 10, 0.2);
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+  width: 300px;
+}

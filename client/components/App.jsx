@@ -1,62 +1,77 @@
 import React, { PropTypes } from 'react'
 import About from './About'
-import Arrow from './Arrow'
-import Contact from './Contact'
-import MainNav from './MainNav'
+import Connect from './Connect'
+import Development from '../containers/Development'
+import DigitalMedia from '../containers/DigitalMedia'
+import Home from './Home'
 import NavBar from '../containers/NavBar'
-import Projects from '../containers/Projects'
-import Skills from './Skills'
-import Video from './Video'
 import styles from './App.scss'
 
 const App = ({
+
   current,
   scrollTo,
   showAbout,
-  showContact,
+  showConnect,
+  showDevelopment,
+  showDigitalMedia,
   showHome,
-  showProjects,
-  showSkills
-}) => (
-  <div className={styles.container}>
-    <NavBar
-      current={current}
-      scrollTo={scrollTo}
-    />
-    <Video />
-    <div id="Home" className={showHome ? styles.section : styles.hidden}>
-      <MainNav
+
+}) => {
+
+  let background
+  if (showHome) {
+    background = styles.background1
+  } else if (showAbout) {
+    background = styles.background2
+  } else if (showDevelopment) {
+    background = styles.background3
+  } else if (showDigitalMedia) {
+    background = styles.background4
+  } else if (showConnect) {
+    background = styles.background5
+  }
+
+  return (
+    <div className={styles.container}>
+      <div className={background} />
+      <NavBar
         current={current}
         scrollTo={scrollTo}
       />
-      <Arrow scrollTo={() => scrollTo('About')} />
+      <Home
+        current={current}
+        scrollTo={scrollTo}
+        showHome={showHome}
+      />
+      <About
+        scrollTo={scrollTo}
+        showAbout={showAbout}
+      />
+      <Development
+        scrollTo={scrollTo}
+        showDevelopment={showDevelopment}
+      />
+      <DigitalMedia
+        scrollTo={scrollTo}
+        showDigitalMedia={showDigitalMedia}
+      />
+      <Connect
+        showConnect={showConnect}
+      />
     </div>
-    <div id="About" className={showAbout ? styles.section : styles.hidden}>
-      <About />
-      <Arrow scrollTo={() => scrollTo('Skills')} />
-    </div>
-    <div id="Skills" className={showSkills ? styles.section : styles.hidden}>
-      <Skills />
-      <Arrow scrollTo={() => scrollTo('Projects')} />
-    </div>
-    <div id="Projects" className={showProjects ? styles.section : styles.hidden}>
-      <Projects />
-      <Arrow scrollTo={() => scrollTo('Contact')} />
-    </div>
-    <div id="Contact" className={showContact ? styles.section : styles.hidden}>
-      <Contact />
-    </div>
-  </div>
-)
+  )
+
+}
 
 App.propTypes = {
   current: PropTypes.string.isRequired,
   scrollTo: PropTypes.func.isRequired,
   showAbout: PropTypes.bool.isRequired,
-  showContact: PropTypes.bool.isRequired,
+  showConnect: PropTypes.bool.isRequired,
+  showDevelopment: PropTypes.bool.isRequired,
+  showDigitalMedia: PropTypes.bool.isRequired,
   showHome: PropTypes.bool.isRequired,
-  showProjects: PropTypes.bool.isRequired,
-  showSkills: PropTypes.bool.isRequired
 }
 
 export default App

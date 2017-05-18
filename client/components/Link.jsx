@@ -14,7 +14,7 @@ const Link = ({ children, link }) => (
 
 Link.propTypes = {
   children: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
+  link: PropTypes.string.isRequired,
 }
 
 export default Link

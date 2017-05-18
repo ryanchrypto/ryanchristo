@@ -1,128 +1,214 @@
 import React, { Component } from 'react'
 import App from '../components/App'
 
-const scrollTo = (id) => {
-  const start = window.pageYOffset
-  const end = document.getElementById(id).offsetTop - 50
-  const distance = end - start
-  const duration = 600
-  const increment = 20
-  let currentTime = 0
-  Math.easeInOutQuad = (currentTime, start, distance, duration) => {
-    currentTime /= (duration / 2)
-    if (currentTime < 1) {
-      return distance / 2 * currentTime * currentTime + start
-    }
-    currentTime--
-    return -distance / 2 * (currentTime * (currentTime - 2) - 1) + start
-  }
-  const animateScroll = () => {
-    currentTime += increment
-    const val = Math.easeInOutQuad(currentTime, start, distance, duration)
-    window.scroll(0, val)
-    if (currentTime < duration) {
-      setTimeout(animateScroll, increment)
-    }
-  }
-  animateScroll()
-}
-
 class AppContainer extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
-      current: 'Home',
+      currentSection: 'Home',
+      lastScrollY: 0,
       positionY: 0,
       showAbout: false,
-      showContact: false,
+      showConnect: false,
+      showDevelopment: false,
+      showDigitalMedia: false,
       showHome: true,
-      showProjects: false,
       showSkills: false,
-      playVideo: true
     }
+    this.animateScroll = this.animateScroll.bind(this)
     this.handleScrollEvent = this.handleScrollEvent.bind(this)
-    this.toggleVideo = this.toggleVideo.bind(this)
+    this.handleScrollTo = this.handleScrollTo.bind(this)
   }
-  componentDidMount() {
+
+  componentWillMount() {
     window.addEventListener('scroll', this.handleScrollEvent)
   }
+
+  componentDidMount() {
+    const background1 = new Image()
+    const background2 = new Image()
+    const background3 = new Image()
+    const background4 = new Image()
+    const background5 = new Image()
+    background1.src = '/public/img/placeholder-1.jpg'
+    background2.src = '/public/img/placeholder-2.jpg'
+    background3.src = '/public/img/placeholder-3.jpg'
+    background4.src = '/public/img/placeholder-4.jpg'
+    background5.src = '/public/img/placeholder-5.jpg'
+  }
+
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScrollEvent)
   }
+
   handleScrollEvent() {
+
     const about = document.getElementById('About').getBoundingClientRect().top
-    const contact = document.getElementById('Contact').getBoundingClientRect().top
+    const connect = document.getElementById('Connect').getBoundingClientRect().top
+    const development = document.getElementById('Development').getBoundingClientRect().top
+    const digitalMedia = document.getElementById('DigitalMedia').getBoundingClientRect().top
     const home = document.getElementById('Home').getBoundingClientRect().top
-    const projects = document.getElementById('Projects').getBoundingClientRect().top
-    const skills = document.getElementById('Skills').getBoundingClientRect().top
-    if (!this.state.showHome && about > 500 && home > -500) {
-      this.setState({
-        current: 'Home',
-        showHome: true
-      })
-    } else if (this.state.showHome && home < -500) {
-      this.setState({
-        showHome: false
-      })
+
+    if (!this.state.scrolling) {
+      this.triggerAnimation()
     }
-    if (!this.state.showAbout && about < 500 && about > -500) {
-      this.setState({
-        current: 'About',
-        showAbout: true
-      })
-    } else if (this.state.showAbout && (about < -500 || about > 500)) {
-      this.setState({
-        showAbout: false
-      })
-    }
-    if (!this.state.showContact && contact < 500 && contact > -500) {
-      this.setState({
-        current: 'Contact',
-        showContact: true
-      })
-    } else if (this.state.showContact && (contact < -500 || contact > 500)) {
-      this.setState({
-        showContact: false
-      })
-    }
-    if (!this.state.showProjects && projects < 500 && projects > -500) {
-      this.setState({
-        current: 'Projects',
-        showProjects: true
-      })
-    } else if (this.state.showProjects && (projects < -500 || projects > 500)) {
-      this.setState({
-        showProjects: false
-      })
-    }
-    if (!this.state.showSkills && skills < 500 && skills > -500) {
-      this.setState({
-        current: 'Skills',
-        showSkills: true
-      })
-    } else if (this.state.showSkills && (skills < -500 || skills > 500)) {
-      this.setState({
-        showSkills: false
-      })
-    }
+
+    setTimeout(function() {
+      if (!this.state.showHome && about > 500 && home > -500) {
+        this.setState({
+          currentSection: 'Home',
+          showHome: true
+        })
+      } else if (this.state.showHome && home < -500) {
+        this.setState({
+          showHome: false
+        })
+      }
+      if (!this.state.showAbout && about < 500 && about > -500) {
+        this.setState({
+          currentSection: 'About',
+          showAbout: true
+        })
+      } else if (this.state.showAbout && (about < -500 || about > 500)) {
+        this.setState({
+          showAbout: false
+        })
+      }
+      if (!this.state.showConnect && connect < 500 && connect > -500) {
+        this.setState({
+          currentSection: 'Connect',
+          showConnect: true
+        })
+      } else if (this.state.showConnect && (connect < -500 || connect > 500)) {
+        this.setState({
+          showConnect: false
+        })
+      }
+      if (!this.state.showDevelopment && development < 500 && development > -500) {
+        this.setState({
+          currentSection: 'Development',
+          showDevelopment: true
+        })
+      } else if (this.state.showDevelopment && (development < -500 || development > 500)) {
+        this.setState({
+          showDevelopment: false
+        })
+      }
+      if (!this.state.showDigitalMedia && digitalMedia < 500 && digitalMedia > -500) {
+        this.setState({
+          currentSection: 'DigitalMedia',
+          showDigitalMedia: true
+        })
+      } else if (this.state.showDigitalMedia && (digitalMedia < -500 || digitalMedia > 500)) {
+        this.setState({
+          showDigitalMedia: false
+        })
+      }
+    }.bind(this), 0)
+
   }
-  toggleVideo() {
+
+  triggerAnimation() {
+
+    const currentScrollY = window.scrollY
+    const currentSection = this.state.currentSection
+    const lastScrollY = this.state.lastScrollY
+
+    if (currentScrollY > lastScrollY) {
+      switch (currentSection) {
+        case 'Home':
+          this.animateScroll('About', lastScrollY)
+          break
+        case 'About':
+          this.animateScroll('Development', lastScrollY)
+          break
+        case 'Development':
+          this.animateScroll('DigitalMedia', lastScrollY)
+          break
+        case 'DigitalMedia':
+          this.animateScroll('Connect', lastScrollY)
+          break
+        default:
+          break
+      }
+    }
+
+    if (currentScrollY < lastScrollY) {
+      switch (currentSection) {
+        case 'About':
+          this.animateScroll('Home', lastScrollY)
+          break
+        case 'Development':
+          this.animateScroll('About', lastScrollY)
+          break
+        case 'DigitalMedia':
+          this.animateScroll('Development', lastScrollY)
+          break
+        case 'Connect':
+          this.animateScroll('DigitalMedia', lastScrollY)
+          break
+        default:
+          break
+      }
+    }
+
+  }
+
+  animateScroll(id, startPosition) {
+    const start = startPosition || window.pageYOffset
+    const end = document.getElementById(id).offsetTop
+    const distance = end - start
+    const duration = 600
+    const increment = 20
+    let currentTime = 0
+    Math.easeInOutQuad = (currentTime, start, distance, duration) => {
+      currentTime /= (duration / 2)
+      if (currentTime < 1) {
+        return distance / 2 * currentTime * currentTime + start
+      }
+      currentTime--
+      return -distance / 2 * (currentTime * (currentTime - 2) - 1) + start
+    }
+    const animate = () => {
+      currentTime += increment
+      const val = Math.easeInOutQuad(currentTime, start, distance, duration)
+      window.scroll(0, val)
+      if (currentTime < duration) {
+        setTimeout(animate, increment)
+      }
+    }
+    animate()
+    document.body.style.overflow = 'hidden'
     this.setState({
-      playVideo: !this.state.playVideo
+      scrolling: true,
     })
+    setTimeout(function() {
+      document.body.style.overflow = 'scroll'
+      this.setState({
+        lastScrollY: end,
+        scrolling: false,
+      })
+    }.bind(this), 1500)
   }
+
+  handleScrollTo(id) {
+    if (!this.state.scrolling) {
+      this.animateScroll(id)
+    }
+  }
+
   render() {
     return (
       <App
-        current={this.state.current}
-        playVideo={this.state.playVideo}
-        scrollTo={scrollTo}
+        current={this.state.currentSection}
+        scrollTo={this.handleScrollTo}
         showAbout={this.state.showAbout}
-        showContact={this.state.showContact}
+        showConnect={this.state.showConnect}
+        showDevelopment={this.state.showDevelopment}
+        showDigitalMedia={this.state.showDigitalMedia}
         showHome={this.state.showHome}
-        showProjects={this.state.showProjects}
         showSkills={this.state.showSkills}
-        toggleVideo={this.toggleVideo}
       />
     )
   }
