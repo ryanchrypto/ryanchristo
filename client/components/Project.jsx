@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react'
 import Link from './Link'
 import styles from './Project.scss'
 
-const Project = ({ current, direction, id, image, summary, tags, title, link: { production, repository } }) => (
+const Project = ({ currentProject, direction, id, image, summary, tags, title, link: { production, repository } }) => (
   <div>
-    {current === id &&
+    {currentProject === id &&
       <div className={direction === 'left' ? styles.slideLeft : styles.slideRight}>
         <div className={styles.container}>
           <div className={styles.slideContainer}>
@@ -34,7 +34,7 @@ const Project = ({ current, direction, id, image, summary, tags, title, link: { 
 )
 
 Project.propTypes = {
-  current: PropTypes.string.isRequired,
+  currentProject: PropTypes.string.isRequired,
   direction: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
@@ -43,8 +43,8 @@ Project.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.shape({
     production: PropTypes.string.isRequired,
-    repository: PropTypes.string
-  }).isRequired
+    repository: PropTypes.string,
+  }).isRequired,
 }
 
 export default Project

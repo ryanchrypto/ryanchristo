@@ -20,15 +20,9 @@
   transition: 0.5s;
 
   &:hover {
-    border-bottom: 1px solid rgba(50, 50, 50, 1);
+    border-bottom: 1px solid rgba(50, 50, 50, 0.5);
     color: #333;
     cursor: pointer;
   }
 
-}
-
-.active {
-  @extend .button;
-  border-bottom: 1px solid rgba(50, 50, 50, 1);
-  color: #333;
 }

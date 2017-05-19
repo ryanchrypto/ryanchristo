@@ -2,7 +2,7 @@ export default [
   {
     id: 'horizonapp',
     image: 'img/horizonapp.png',
-    summary: 'Horizon is an application that uses groups and mutual friends to help users find people and places to stay. I started working on Horizon part-time in April as a Frontend Engineer. So far I have improved efficiency, maintainability and testability by implementing React best practices and building out a Flux architecture. I\'ve also been redesigning the application for an optimized user experience while continuing to debug and implement new features.',
+    summary: 'Horizon is an application that uses groups and mutual friends to help users find people and places to stay. I started working on Horizon part-time in April as a Frontend Engineer. So far I have improved efficiency, maintainability and testability by implementing React best practices and building out a Flux architecture. I\'ve also been redesigning the web application for a more optimized user experience while continuing to debug and implement new features.',
     tags: 'HTML, CSS, LESS, Javascript, jQuery, React, Ruby, Rails',
     title: 'Horizon App',
     link: {

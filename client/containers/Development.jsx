@@ -7,43 +7,43 @@ class DevelopmentContainer extends Component {
     super(props)
     this.state = {
       direction: 'left',
-      current: projects[0].id,
+      currentProject: projects[0].id,
     }
     this.nextProject = this.nextProject.bind(this)
     this.previousProject = this.previousProject.bind(this)
     this.setProject = this.setProject.bind(this)
   }
   setProject(project) {
-    const previous = projects.findIndex(i => i.id === this.state.current)
+    const previous = projects.findIndex(i => i.id === this.state.currentProject)
     const next = projects.findIndex(i => i.id === project.id)
     const direction = previous > next ? 'right' : 'left'
-    if (this.state.current !== project) {
+    if (this.state.currentProject !== project) {
       this.setState({
         direction,
-        current: project.id,
+        currentProject: project.id,
       })
     }
   }
   nextProject() {
-    let next = projects.findIndex(i => i.id === this.state.current) + 1
+    let next = projects.findIndex(i => i.id === this.state.currentProject) + 1
     next = next === projects.length ? next = 0 : next
     this.setState({
       direction: 'left',
-      current: projects[next].id,
+      currentProject: projects[next].id,
     })
   }
   previousProject() {
-    let previous = projects.findIndex(i => i.id === this.state.current) - 1
+    let previous = projects.findIndex(i => i.id === this.state.currentProject) - 1
     previous = previous === -1 ? previous = projects.length - 1 : previous
     this.setState({
       direction: 'right',
-      current: projects[previous].id,
+      currentProject: projects[previous].id,
     })
   }
   render() {
     return (
       <Development
-        current={this.state.current}
+        currentProject={this.state.currentProject}
         direction={this.state.direction}
         nextProject={this.nextProject}
         previousProject={this.previousProject}

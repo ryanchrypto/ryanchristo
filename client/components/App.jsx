@@ -8,70 +8,54 @@ import NavBar from '../containers/NavBar'
 import styles from './App.scss'
 
 const App = ({
-
-  current,
+  currentView,
   scrollTo,
-  showAbout,
-  showConnect,
-  showDevelopment,
-  showDigitalMedia,
-  showHome,
-
 }) => {
-
   let background
-  if (showHome) {
+  if (currentView === 'Home') {
     background = styles.background1
-  } else if (showAbout) {
+  } else if (currentView === 'About') {
     background = styles.background2
-  } else if (showDevelopment) {
+  } else if (currentView === 'Development') {
     background = styles.background3
-  } else if (showDigitalMedia) {
+  } else if (currentView === 'DigitalMedia') {
     background = styles.background4
-  } else if (showConnect) {
+  } else if (currentView === 'Connect') {
     background = styles.background5
   }
-
   return (
     <div className={styles.container}>
       <div className={background} />
       <NavBar
-        current={current}
+        currentView={currentView}
         scrollTo={scrollTo}
       />
       <Home
-        current={current}
+        currentView={currentView}
         scrollTo={scrollTo}
-        showHome={showHome}
       />
       <About
+        currentView={currentView}
         scrollTo={scrollTo}
-        showAbout={showAbout}
       />
       <Development
+        currentView={currentView}
         scrollTo={scrollTo}
-        showDevelopment={showDevelopment}
       />
       <DigitalMedia
+        currentView={currentView}
         scrollTo={scrollTo}
-        showDigitalMedia={showDigitalMedia}
       />
       <Connect
-        showConnect={showConnect}
+        currentView={currentView}
       />
     </div>
   )
-
 }
 
 App.propTypes = {
-  current: PropTypes.string.isRequired,
+  currentView: PropTypes.string.isRequired,
   scrollTo: PropTypes.func.isRequired,
-  showAbout: PropTypes.bool.isRequired,
-  showConnect: PropTypes.bool.isRequired,
-  showDevelopment: PropTypes.bool.isRequired,
-  showDigitalMedia: PropTypes.bool.isRequired,
-  showHome: PropTypes.bool.isRequired,
 }
 
 export default App

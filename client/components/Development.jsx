@@ -3,50 +3,51 @@ import Arrow from './Arrow'
 import Project from './Project'
 import styles from './Development.scss'
 
-const Development = ({ current, direction, nextProject, previousProject, scrollTo, setProject, showDevelopment, projects }) => (
+const Development = ({ currentProject, currentView, direction, nextProject, previousProject, scrollTo, setProject, projects }) => (
   <div id="Development" className={styles.container}>
-    <h2 className={showDevelopment ? styles.title : styles.hidden}>development |</h2>
-    <div className={showDevelopment ? styles.index : styles.hidden}>
+    <h2 className={currentView === 'Development' ? styles.title : styles.hidden}>development |</h2>
+    <div className={currentView === 'Development' ? styles.index : styles.hidden}>
       {projects.map(project => (
         <span
           key={project.id}
-          className={current === project.id ? styles.activeIndexItem : styles.indexItem}
+          className={currentProject === project.id ? styles.activeIndexItem : styles.indexItem}
           onClick={() => setProject(project)}
         >
           {project.title}
         </span>
       ))}
     </div>
-    <div className={showDevelopment ? styles.leftArrowContainer : styles.hidden}>
+    <div className={currentView === 'Development' ? styles.leftArrowContainer : styles.hidden}>
       <div className={styles.leftArrow} onClick={previousProject}>
         {'<'}
       </div>
     </div>
     <div className={styles.slideshow}>
-      <div className={showDevelopment ? styles.projects : styles.hidden}>
+      <div className={currentView === 'Development' ? styles.projects : styles.hidden}>
         {projects.map(project => (
           <Project
             key={project.id}
-            current={current}
+            currentProject={currentProject}
             direction={direction}
             {...project}
           />
         ))}
       </div>
     </div>
-    <div className={showDevelopment ? styles.rightArrowContainer : styles.hidden}>
+    <div className={currentView === 'Development' ? styles.rightArrowContainer : styles.hidden}>
       <div className={styles.rightArrow} onClick={nextProject}>
         {'>'}
       </div>
     </div>
-    <div className={showDevelopment ? styles.downArrowContainer : styles.hidden}>
+    <div className={currentView === 'Development' ? styles.downArrowContainer : styles.hidden}>
       <Arrow scrollTo={() => scrollTo('DigitalMedia')} />
     </div>
   </div>
 )
 
 Development.propTypes = {
-  current: PropTypes.string.isRequired,
+  currentProject: PropTypes.string.isRequired,
+  currentView: PropTypes.string.isRequired,
   direction: PropTypes.string.isRequired,
   nextProject: PropTypes.func.isRequired,
   previousProject: PropTypes.func.isRequired,
@@ -64,7 +65,6 @@ Development.propTypes = {
       title: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
-  showDevelopment: PropTypes.bool.isRequired,
 }
 
 export default Development
