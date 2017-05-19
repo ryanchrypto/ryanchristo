@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import App from '../components/App'
+import Loader from '../components/Loader'
 
 class AppContainer extends Component {
 
@@ -7,6 +8,8 @@ class AppContainer extends Component {
     super(props)
     this.state = {
       currentSection: 'Home',
+      loaded: 0,
+      loading: true,
       lastScrollY: 0,
       positionY: 0,
       showAbout: false,
@@ -26,20 +29,50 @@ class AppContainer extends Component {
   }
 
   componentDidMount() {
+
     const background1 = new Image()
     const background2 = new Image()
     const background3 = new Image()
     const background4 = new Image()
     const background5 = new Image()
-    background1.src = '/public/img/placeholder-1.jpg'
-    background2.src = '/public/img/placeholder-2.jpg'
-    background3.src = '/public/img/placeholder-3.jpg'
-    background4.src = '/public/img/placeholder-4.jpg'
-    background5.src = '/public/img/placeholder-5.jpg'
+
+    background1.src = '/img/placeholder-1.jpeg'
+    background2.src = '/img/placeholder-2.jpeg'
+    background3.src = '/img/placeholder-3.jpeg'
+    background4.src = '/img/placeholder-4.jpeg'
+    background5.src = '/img/placeholder-5.jpeg'
+
+    background1.onload = () => {
+      this.updateLoading()
+    }
+    background2.onload = () => {
+      this.updateLoading()
+    }
+    background3.onload = () => {
+      this.updateLoading()
+    }
+    background4.onload = () => {
+      this.updateLoading()
+    }
+    background5.onload = () => {
+      this.updateLoading()
+    }
+
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScrollEvent)
+  }
+
+  updateLoading() {
+    this.setState({
+      loaded: this.state.loaded + 1,
+    })
+    if (this.state.loaded === 5) {
+      this.setState({
+        loading: false,
+      })
+    }
   }
 
   handleScrollEvent() {
@@ -199,6 +232,9 @@ class AppContainer extends Component {
   }
 
   render() {
+    if (this.state.loading) {
+      return <Loader />
+    }
     return (
       <App
         current={this.state.currentSection}
