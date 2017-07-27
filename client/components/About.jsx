@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react'
-import Arrow from './Arrow'
 import styles from './About.scss'
 
-const About = ({ currentView, scrollTo }) => (
+const About = ({ currentView }) => (
   <div id="About" className={styles.container}>
     <h2 className={currentView === 'About' ? styles.title : styles.hidden}>about |</h2>
     <div className={currentView === 'About' ? styles.content : styles.hidden}>
@@ -17,18 +16,14 @@ const About = ({ currentView, scrollTo }) => (
           {'I\'ve worked on film, videography and photography projects in the past and hope to work on more in the future. I\'m passionate about projects related to international development and social justice. I\'m best known for working on a documentary film called Living on One Dollar and a short film called Rosa - These Storms.'}
         </p>
         <p>
-          {'Click or scroll down to check out some of the projects I\'ve worked on. If you would like to connect, shoot me an email.'}
+          {'Scroll down to check out some of the projects I\'ve worked on. If you would like to connect, shoot me an email.'}
         </p>
       </div>
-    </div>
-    <div className={currentView === 'About' ? styles.downArrowContainer : styles.hidden}>
-      <Arrow scrollTo={() => scrollTo('Development')} />
     </div>
   </div>
 )
 
 About.propTypes = {
-  scrollTo: PropTypes.func.isRequired,
   currentView: PropTypes.string.isRequired,
 }
 

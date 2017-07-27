@@ -58,25 +58,3 @@
   top: 0;
   width: 300px;
 }
-
-.arrow {
-  background: transparent;
-  bottom: 5%;
-  color: #666;
-  font-family: 'Oswald';
-  font-size: 8em;
-  opacity: 0.8;
-  outline: none;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  transition: 0.25s;
-  width: 75vw;
-
-  &:hover {
-    color: #333;
-    cursor: pointer;
-    opacity: 1;
-  }
-
-}

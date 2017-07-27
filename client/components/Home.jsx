@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import Arrow from './Arrow'
 import MainNav from './MainNav'
 import styles from './Home.scss'
 
@@ -8,9 +7,6 @@ const Home = ({ scrollTo }) => (
     <div>
       <MainNav
         scrollTo={scrollTo}
-      />
-      <Arrow
-        scrollTo={() => scrollTo('About')}
       />
     </div>
   </div>

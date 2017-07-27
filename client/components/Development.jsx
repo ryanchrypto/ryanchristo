@@ -1,9 +1,16 @@
 import React, { PropTypes } from 'react'
-import Arrow from './Arrow'
 import Project from './Project'
 import styles from './Development.scss'
 
-const Development = ({ currentProject, currentView, direction, nextProject, previousProject, scrollTo, setProject, projects }) => (
+const Development = ({
+  currentProject,
+  currentView,
+  direction,
+  nextProject,
+  previousProject,
+  setProject,
+  projects
+}) => (
   <div id="Development" className={styles.container}>
     <h2 className={currentView === 'Development' ? styles.title : styles.hidden}>development |</h2>
     <div className={currentView === 'Development' ? styles.index : styles.hidden}>
@@ -39,9 +46,6 @@ const Development = ({ currentProject, currentView, direction, nextProject, prev
         {'>'}
       </div>
     </div>
-    <div className={currentView === 'Development' ? styles.downArrowContainer : styles.hidden}>
-      <Arrow scrollTo={() => scrollTo('DigitalMedia')} />
-    </div>
   </div>
 )
 
@@ -51,7 +55,6 @@ Development.propTypes = {
   direction: PropTypes.string.isRequired,
   nextProject: PropTypes.func.isRequired,
   previousProject: PropTypes.func.isRequired,
-  scrollTo: PropTypes.func.isRequired,
   setProject: PropTypes.func.isRequired,
   projects: PropTypes.arrayOf(
     PropTypes.shape({

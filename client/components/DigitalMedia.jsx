@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import Arrow from './Arrow'
 import Project from './Project'
 import styles from './DigitalMedia.scss'
 
@@ -9,7 +8,6 @@ const DigitalMedia = ({
   direction,
   nextProject,
   previousProject,
-  scrollTo,
   setProject,
   projects
 }) => (
@@ -48,9 +46,6 @@ const DigitalMedia = ({
         {'>'}
       </div>
     </div>
-    <div className={currentView === 'DigitalMedia' ? styles.downArrowContainer : styles.hidden}>
-      <Arrow scrollTo={() => scrollTo('Connect')} />
-    </div>
   </div>
 )
 
@@ -72,7 +67,6 @@ DigitalMedia.propTypes = {
       title: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
-  scrollTo: PropTypes.func.isRequired,
   setProject: PropTypes.func.isRequired,
 }
 
