@@ -1,5 +1,4 @@
 node_modules
 
-public/img
+public/js
 public/video
-public/index.min.js
