@@ -11,6 +11,17 @@ export default [
     },
   },
   {
+    id: 'ushahidi',
+    image: 'img/ushahidi.png',
+    summary: 'Ushahidi is a non-profit organization based in Nairobi, Kenya that builds software with a social purpose. I recently started contributing to one of their open source projects also called Ushahidi, which is a crowdsourcing application that makes it easy to collect and visualize data on a map. The application has been used for a variety of purposes from relief efforts during a natural disaster to election monitoring.',
+    tags: 'HTML, CSS, Javascript, AngularJS, Leaflet, PHP',
+    title: 'Ushahidi',
+    link: {
+      production: 'https://ushahidi.com',
+      repository: 'https://github.com/ushahidi',
+    },
+  },
+  {
     id: 'joglonorthwest',
     image: 'img/joglonorthwest.png',
     summary: 'Joglo Northwest is a family owned business that sells Indonesian art, furniture and stone. I built my first dynamic website for Joglo several years ago using HTML, CSS, PHP and MySQL and this year I decided to rebuild the website to accomadate for new ideas and to simplify how content is managed and updated. I built the new site using the latest Javascript technologies and my very own simple-cms as the foundation.',
