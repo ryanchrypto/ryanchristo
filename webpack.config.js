@@ -1,6 +1,11 @@
 const autoprefixer = require('autoprefixer')
 const path = require('path')
 const precss = require('precss')
+const webpack = require('webpack')
+
+new webpack.DefinePlugin({
+  'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+})
 
 module.exports = {
   target: 'web',
