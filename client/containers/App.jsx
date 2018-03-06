@@ -63,7 +63,7 @@ class AppContainer extends Component {
         isScrolling: false,
         lastScroll: end,
       })
-    }, 1400)
+    }, 2200)
   }
 
   handleScrollEvent() {
