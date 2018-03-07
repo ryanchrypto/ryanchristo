@@ -28,7 +28,7 @@ export default [
     tags: 'HTML, CSS, SASS, Javascript, React, Redux, Node, Express, MongoDB, Webpack',
     title: 'Joglo Northwest',
     link: {
-      production: 'http://new.joglonorthwest.com',
+      production: 'https://joglonorthwest.com',
       repository: null,
     },
   },
