@@ -4,24 +4,32 @@ import styles from './MainNavList.scss'
 const MainNavList = ({ scrollTo }) => (
   <ul className={styles.list}>
     <li className={styles.item}>
-      <div className={styles.button} onClick={() => scrollTo('About')}>
+      <div className={styles.link} onClick={() => scrollTo('About')}>
         About
       </div>
     </li>
     <li className={styles.item}>
-      <div className={styles.button} onClick={() => scrollTo('Development')}>
-        Development
+      <div className={styles.link} onClick={() => scrollTo('Software')}>
+        Software
       </div>
     </li>
     <li className={styles.item}>
-      <div className={styles.button} onClick={() => scrollTo('DigitalMedia')}>
-        Storytelling
+      <div className={styles.link} onClick={() => scrollTo('Media')}>
+        Media
       </div>
     </li>
     <li className={styles.item}>
-      <div className={styles.button} onClick={() => scrollTo('Connect')}>
+      <div className={styles.link} onClick={() => scrollTo('Connect')}>
         Connect
       </div>
+    </li>
+    <li className={styles.item}>
+      {'|'}
+    </li>
+    <li className={styles.item}>
+      <a className={styles.link} href="https://medium.com/@ryanchristo" rel="noopener noreferrer" target="_blank">
+        Blog
+      </a>
     </li>
   </ul>
 )

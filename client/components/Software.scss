@@ -5,11 +5,6 @@
 }
 
 .container {
-  align-items: center;
-  display: flex;
-  padding-top: 8vh;
-  min-height: 92vh;
-  justify-content: center;
   position: relative;
   width: 100%;
 }
@@ -21,32 +16,22 @@
   font-size: 4em;
   font-weight: 300;
   letter-spacing: 2px;
-  position: absolute;
-
+  padding: 2rem;
   text-align: center;
-  top: 10vh;
-
-  @media only screen and (min-width: 900px) {
-    left: 10%;
-    text-align: left;
-    top: 15%;
-  }
-
 }
 
 .index {
   animation: slideInDown 1s forwards;
-  right: 20%;
-  position: absolute;
-  top: 20%;
+  text-align: center;
 }
 
 .indexItem {
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   color: #666;
-  font-family: 'Oswald';
+  font-family: 'Open Sans';
   font-size: 1.2em;
-  padding: 1%;
+  margin: 0.5rem;
+  padding: 0.5rem;
   position: relative;
   transition: 0.25s;
 
@@ -67,11 +52,8 @@
 }
 
 .slideshow {
-  min-height: 50vh;
   overflow: hidden;
-  padding: 2%;
-  position: absolute;
-  top: 25%;
+  padding: 2rem;
 }
 
 .projects {

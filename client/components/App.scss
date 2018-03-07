@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Abel|Open+Sans:300|Oswald:300|Roboto+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Abel|Open+Sans:300,400|Oswald:300');
 @import '../styles/animations.scss';
 
 * {
@@ -19,72 +19,4 @@
     cursor: default;
   }
 
-}
-
-.background {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  position: absolute;
-}
-
-.background::after {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  content: '';
-  opacity: 0.2;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: fixed;
-  z-index: -1;
-}
-
-.background1 {
-  @extend .background;
-}
-
-.background2 {
-  @extend .background;
-}
-
-.background3 {
-  @extend .background;
-}
-
-.background4 {
-  @extend .background;
-}
-
-.background5 {
-  @extend .background;
-}
-
-.background1::after {
-  @extend .background::after;
-  background-image: url('/img/placeholder-1.jpeg');
-}
-
-.background2::after {
-  @extend .background::after;
-  background-image: url('/img/placeholder-2.jpeg');
-}
-
-.background3::after {
-  @extend .background::after;
-  background-image: url('/img/placeholder-3.jpeg');
-}
-
-.background4::after {
-  @extend .background::after;
-  background-image: url('/img/placeholder-4.jpeg');
-}
-
-.background5::after {
-  @extend .background::after;
-  background-image: url('/img/placeholder-5.jpeg');
 }

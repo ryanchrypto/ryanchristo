@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import DigitalMedia from '../components/DigitalMedia'
+import Media from '../components/Media'
 import projects from '../content/digitalMedia'
 
-class DigitalMediaContainer extends Component {
+class MediaContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -42,7 +42,7 @@ class DigitalMediaContainer extends Component {
   }
   render() {
     return (
-      <DigitalMedia
+      <Media
         currentProject={this.state.currentProject}
         direction={this.state.direction}
         nextProject={this.nextProject}
@@ -55,4 +55,4 @@ class DigitalMediaContainer extends Component {
   }
 }
 
-export default DigitalMediaContainer
+export default MediaContainer

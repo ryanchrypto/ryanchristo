@@ -6,7 +6,7 @@ const MainNav = ({ scrollTo }) => (
   <div id="mainnav" className={styles.container}>
     <div className={styles.content}>
       <h1 className={styles.title}>ryan christoffersen</h1>
-      <p className={styles.subtitle}>full stack developer | digital storyteller</p>
+      <p className={styles.subtitle}>software developer | media producer | critical thinker</p>
       <MainNavList scrollTo={scrollTo} />
     </div>
   </div>

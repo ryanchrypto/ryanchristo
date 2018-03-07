@@ -34,7 +34,7 @@
   transition: 0.25s;
 
   &:hover {
-    color: #39C;
+    color: rgba(51, 153, 204, 1);
     cursor: pointer;
   }
 
@@ -78,7 +78,7 @@
 
   100% {
     margin-left: 0;
-    opacity: 0;
+    opacity: 0.1;
   }
 
 }
@@ -92,7 +92,7 @@
 
   100% {
     margin-right: 0;
-    opacity: 0;
+    opacity: 0.1;
   }
 
 }

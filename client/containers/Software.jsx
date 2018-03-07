@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
-import Development from '../components/Development'
+import Software from '../components/Software'
 import projects from '../content/development'
 
-class DevelopmentContainer extends Component {
+class SoftwareContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -42,7 +42,7 @@ class DevelopmentContainer extends Component {
   }
   render() {
     return (
-      <Development
+      <Software
         currentProject={this.state.currentProject}
         direction={this.state.direction}
         nextProject={this.nextProject}
@@ -55,4 +55,4 @@ class DevelopmentContainer extends Component {
   }
 }
 
-export default DevelopmentContainer
+export default SoftwareContainer

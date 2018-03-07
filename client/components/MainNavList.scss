@@ -5,23 +5,23 @@
 }
 
 .item {
+  color: #FFF;
   display: inline-block;
+  font-family: 'Open Sans';
+  font-size: 1.5em;
+  font-weight: 400;
 }
 
-.button {
-  border-bottom: 1px solid rgba(50, 50, 50, 0);
-  color: #666;
-  font-family: 'Open Sans';
-  font-size: 1.4em;
-  font-weight: 600;
+.link {
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  color: #FFF;
   padding: 8px 16px;
   text-decoration: none;
   text-transform: lowercase;
   transition: 0.5s;
 
   &:hover {
-    border-bottom: 1px solid rgba(50, 50, 50, 0.5);
-    color: #333;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
     cursor: pointer;
   }
 

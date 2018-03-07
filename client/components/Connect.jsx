@@ -3,10 +3,10 @@ import LinkIcon from './LinkIcon'
 import links from '../content/links'
 import styles from './Connect.scss'
 
-const Connect = ({ currentView }) => (
+const Connect = ({ showConnect }) => (
   <div id="Connect" className={styles.container}>
-    <h2 className={currentView === 'Connect' ? styles.title : ''}>connect |</h2>
-    <div className={currentView === 'Connect' ? styles.content : ''}>
+    <h2 className={showConnect ? styles.title : ''}>connect |</h2>
+    <div className={showConnect ? styles.content : ''}>
       <div className={styles.links}>
         {links.map(link => (
           <LinkIcon
@@ -23,7 +23,7 @@ const Connect = ({ currentView }) => (
 )
 
 Connect.propTypes = {
-  currentView: PropTypes.string.isRequired,
+  showConnect: PropTypes.bool.isRequired,
 }
 
 export default Connect

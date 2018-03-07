@@ -4,24 +4,32 @@ import styles from './NavBarList.scss'
 const NavBarList = ({ currentView, scrollTo }) => (
   <ul className={styles.list}>
     <li className={styles.item}>
-      <div className={currentView === 'About' ? styles.active : styles.button} onClick={() => scrollTo('About')}>
+      <div className={currentView === 'About' ? styles.active : styles.link} onClick={() => scrollTo('About')}>
         About
       </div>
     </li>
     <li className={styles.item}>
-      <div className={currentView === 'Development' ? styles.active : styles.button} onClick={() => scrollTo('Development')}>
-        Development
+      <div className={currentView === 'Software' ? styles.active : styles.link} onClick={() => scrollTo('Software')}>
+        Software
       </div>
     </li>
     <li className={styles.item}>
-      <div className={currentView === 'DigitalMedia' ? styles.active : styles.button} onClick={() => scrollTo('DigitalMedia')}>
-        Storytelling
+      <div className={currentView === 'Media' ? styles.active : styles.link} onClick={() => scrollTo('Media')}>
+        Media
       </div>
     </li>
     <li className={styles.item}>
-      <div className={currentView === 'Connect' ? styles.active : styles.button} onClick={() => scrollTo('Connect')}>
+      <div className={currentView === 'Connect' ? styles.active : styles.link} onClick={() => scrollTo('Connect')}>
         Connect
       </div>
+    </li>
+    <li className={styles.divider}>
+      {'|'}
+    </li>
+    <li className={styles.item}>
+      <a className={styles.link} href="https://medium.com/@ryanchristo" rel="noopener noreferrer" target="_blank">
+        Blog
+      </a>
     </li>
   </ul>
 )

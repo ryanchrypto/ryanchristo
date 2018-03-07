@@ -1,60 +1,117 @@
-@import '../styles/title.scss';
+@import '../styles/animations.scss';
+
+.hidden {
+  opacity: 0;
+}
 
 .container {
-  height: 50vh;
   position: relative;
   width: 100%;
 }
 
-@keyframes slideInLeft {
-
-  0% {
-    opacity: 0;
-    transform: translate(100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-
-}
-
-
-.content {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 1px;
-  box-shadow: 0 0 5px rgba(10, 10, 10, 0.1);
+.title {
+  animation: slideInRight 1s forwards;
   color: #333;
-  font-size: 1.4em;
-  line-height: 1.4;
-  padding: 5%;
-  position: absolute;
-  right: 0;
-  text-align: left;
-  width: 50vw;
+  font-family: 'Oswald';
+  font-size: 4em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding: 2rem;
+  text-align: center;
+}
 
-  p {
-    padding: 2% 0;
+.index {
+  animation: slideInDown 1s forwards;
+  text-align: center;
+}
+
+.indexItem {
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  color: #666;
+  font-family: 'Open Sans';
+  font-size: 1.2em;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  position: relative;
+  transition: 0.25s;
+
+  &:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    color: #333;
+    cursor: pointer;
+    transform: scale(1.2);
   }
 
 }
 
-.text {
-  padding: 0 5%;
+.activeIndexItem {
+  @extend .indexItem;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+  color: #333;
+  transform: scale(1.2);
 }
 
-.name {
-  font-family: 'Oswald'
+.slideshow {
+  overflow: hidden;
+  padding: 2rem;
 }
 
-.image {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 1px;
-  box-shadow: 0 0 5px rgba(10, 10, 10, 0.2);
-  left: -25vw;
-  padding: 1em;
+.projects {
+  animation: slideInDown 1s forwards;
+  padding: 1em;  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  width: 80%;
+}
+
+.arrowContainer {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding: 0 2.5%;
   position: absolute;
+  width: 5%;
+  z-index: 10;
+}
+
+.leftArrowContainer {
+  @extend .arrowContainer;
+  animation: slideInRight 1s forwards;
+  left: 0;
   top: 0;
-  width: 300px;
+}
+
+.rightArrowContainer {
+  @extend .arrowContainer;
+  animation: slideInLeft 1s forwards;
+  right: 0;
+  top: 0;
+}
+
+.arrow {
+  color: #666;
+  font-family: 'Oswald';
+  font-size: 8em;
+  font-weight: 300;
+  opacity: 0.8;
+  transition: 0.25s;
+
+  &:hover {
+    color: #333;
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+}
+
+.leftArrow {
+  @extend .arrow;
+}
+
+.rightArrow {
+  @extend .arrow;
 }

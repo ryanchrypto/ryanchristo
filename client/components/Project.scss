@@ -8,38 +8,29 @@
   font-size: 2.4em;
   font-weight: 300;
   margin: 0 auto;
-  padding-bottom: 2%;
+  padding-bottom: 1rem;
   text-align: left;
   width: 100%;
 }
 
 .image {
   border-radius: 2px;
-  box-shadow: 1px 1px 1px #CCC;
+  box-shadow: 0 0 5px rgba(10, 10, 10, 0.1);
   display: inline-block;
-  margin: 5%;
-  width: 400px;
+  width: 80%;
 }
 
 .text {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 1px;
-  box-shadow: 0 0 5px rgba(10, 10, 10, 0.1);
-  display: inline-block;
-  padding: 2% 5%;
+  padding: 2rem;
 }
 
 .links {
-  padding: 2% 0;
+  padding: 2rem;
   text-align: center;
 }
 
 .slideContainer {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  min-height: 380px;
-  width: 100%;
+  text-align: center;
 }
 
 .slideContent {
@@ -47,6 +38,7 @@
   display: flex;
   justify-content: center;
   margin-left: 500px;
+  text-align: center;
   width: 100%;
 }
 
@@ -70,19 +62,11 @@
 @keyframes slideLeft {
 
   0% {
-    margin-left: 500px;
     opacity: 0;
-    transform: scale(0.8);
-  }
-
-  50% {
-    transform: scale(0.8);
   }
 
   100% {
-    margin-left: 0;
     opacity: 1;
-    transform: scale(1);
   }
 
 }
@@ -90,19 +74,11 @@
 @keyframes slideRight {
 
   0% {
-    margin-left: -500px;
     opacity: 0;
-    transform: scale(0.8);
-  }
-
-  50% {
-    transform: scale(0.8);
   }
 
   100% {
-    margin-left: 0;
     opacity: 1;
-    transform: scale(1);
   }
 
 }

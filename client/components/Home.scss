@@ -1,60 +1,9 @@
-@import '../styles/animations.scss';
-
 .container {
   align-items: center;
+  background: rgba(50, 50, 50, 1);
   display: flex;
   height: 100vh;
   justify-content: center;
   position: relative;
   width: 100%;
-}
-
-.title {
-  animation: slideInRight 1s forwards;
-  color: #333;
-  font-family: 'Oswald';
-  font-size: 4em;
-  font-weight: 300;
-  left: 0;
-  letter-spacing: 2px;
-  padding: 4em;
-  position: absolute;
-  text-align: left;
-  top: 0;
-}
-
-.content {
-  animation: slideInLeft 1s forwards;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 1px;
-  box-shadow: 0 0 5px rgba(10, 10, 10, 0.1);
-  top: 10rem;
-  color: #333;
-  font-size: 1.4em;
-  line-height: 1.4;
-  padding: 2rem;
-  position: absolute;
-  right: 6em;
-  text-align: left;
-  width: 50vw;
-
-  p {
-    padding: 2% 0;
-  }
-
-}
-
-.text {
-  padding: 0 5%;
-}
-
-.image {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 1px;
-  box-shadow: 0 0 5px rgba(10, 10, 10, 0.2);
-  left: 0;
-  padding: 1em;
-  position: absolute;
-  top: 0;
-  width: 300px;
 }

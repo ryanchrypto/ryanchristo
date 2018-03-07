@@ -8,31 +8,30 @@
   display: inline-block;
 }
 
-.button {
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
+.link {
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
   color: #000;
   font-family: 'Open Sans';
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 400;
   padding: 10px;
   text-decoration: none;
   text-transform: lowercase;
   transition: 0.5s;
 
   &:hover {
-    border-bottom: 1px solid rgba(0, 0, 0, 1);
-    color: #333;
+    border-bottom: 2px solid rgba(50, 50, 50, 1);
     cursor: pointer;
   }
 
 }
 
 .active {
-  @extend .button;
-  border-bottom: 1px solid rgba(0, 0, 0, 1);
-  color: #333;
+  @extend .link;
+  border-bottom: 2px solid rgba(50, 50, 50, 1);
 }
 
 .divider {
+  display: inline-block;
   padding: 0.5em;
 }
