@@ -8,6 +8,11 @@ class AppContainer extends Component {
     super(props)
     this.state = {
       currentView: 'Home',
+      showAbout: false,
+      showConnect: false,
+      showHome: false,
+      showMedia: false,
+      showSoftware: false,
       imagesLoaded: 0,
       isLoading: true,
       isScrolling: false,
@@ -53,59 +58,64 @@ class AppContainer extends Component {
       }
     }
     animate()
-    document.body.style.overflow = 'hidden'
-    this.setState({
-      isScrolling: true,
-    })
-    setTimeout(() => {
-      document.body.style.overflow = 'scroll'
-      this.setState({
-        isScrolling: false,
-        lastScroll: end,
-      })
-    }, 2200)
+    // document.body.style.overflow = 'hidden'
+    // this.setState({
+    //   isScrolling: true,
+    // })
+    // setTimeout(() => {
+    //   document.body.style.overflow = 'scroll'
+    //   this.setState({
+    //     isScrolling: false,
+    //     lastScroll: end,
+    //   })
+    // }, 2200)
   }
 
   handleScrollEvent() {
     const about = document.getElementById('About').getBoundingClientRect().top
     const connect = document.getElementById('Connect').getBoundingClientRect().top
-    const development = document.getElementById('Development').getBoundingClientRect().top
-    const digitalMedia = document.getElementById('DigitalMedia').getBoundingClientRect().top
     const home = document.getElementById('Home').getBoundingClientRect().top
-    if (!this.state.isScrolling) {
-      this.triggerAnimation()
-    }
+    const media = document.getElementById('Media').getBoundingClientRect().top
+    const software = document.getElementById('Software').getBoundingClientRect().top
+    // if (!this.state.isScrolling) {
+    //   this.triggerAnimation()
+    // }
     if (home > -500) {
       this.setState({
         currentView: 'Home',
+        showHome: true,
       })
     }
     if (about < 500 && about > -500) {
       this.setState({
         currentView: 'About',
+        showAbout: true,
       })
     }
-    if (development < 500 && development > -500) {
+    if (software < 500 && software > -500) {
       this.setState({
-        currentView: 'Development',
+        currentView: 'Software',
+        showSoftware: true,
       })
     }
-    if (digitalMedia < 500 && digitalMedia > -500) {
+    if (media < 500 && media > -500) {
       this.setState({
-        currentView: 'DigitalMedia',
+        currentView: 'Media',
+        showMedia: true,
       })
     }
     if (connect < 500) {
       this.setState({
         currentView: 'Connect',
+        showConnect: true,
       })
     }
   }
 
   handleScrollTo(id) {
-    if (!this.state.isScrolling) {
+    // if (!this.state.isScrolling) {
       this.animateScroll(id)
-    }
+    // }
   }
 
   preloadImages() {
@@ -136,47 +146,47 @@ class AppContainer extends Component {
     }
   }
 
-  triggerAnimation() {
-    const currentScroll = window.scrollY
-    const currentView = this.state.currentView
-    const lastScroll = this.state.lastScroll
-    if (currentScroll > lastScroll) {
-      switch (currentView) {
-        case 'Home':
-          this.animateScroll('About', lastScroll)
-          break
-        case 'About':
-          this.animateScroll('Development', lastScroll)
-          break
-        case 'Development':
-          this.animateScroll('DigitalMedia', lastScroll)
-          break
-        case 'DigitalMedia':
-          this.animateScroll('Connect', lastScroll)
-          break
-        default:
-          break
-      }
-    }
-    if (currentScroll < lastScroll) {
-      switch (currentView) {
-        case 'About':
-          this.animateScroll('Home', lastScroll)
-          break
-        case 'Development':
-          this.animateScroll('About', lastScroll)
-          break
-        case 'DigitalMedia':
-          this.animateScroll('Development', lastScroll)
-          break
-        case 'Connect':
-          this.animateScroll('DigitalMedia', lastScroll)
-          break
-        default:
-          break
-      }
-    }
-  }
+  // triggerAnimation() {
+  //   const currentScroll = window.scrollY
+  //   const currentView = this.state.currentView
+  //   const lastScroll = this.state.lastScroll
+  //   if (currentScroll > lastScroll) {
+  //     switch (currentView) {
+  //       case 'Home':
+  //         this.animateScroll('About', lastScroll)
+  //         break
+  //       case 'About':
+  //         this.animateScroll('Software', lastScroll)
+  //         break
+  //       case 'Software':
+  //         this.animateScroll('Media', lastScroll)
+  //         break
+  //       case 'Media':
+  //         this.animateScroll('Connect', lastScroll)
+  //         break
+  //       default:
+  //         break
+  //     }
+  //   }
+  //   if (currentScroll < lastScroll) {
+  //     switch (currentView) {
+  //       case 'About':
+  //         this.animateScroll('Home', lastScroll)
+  //         break
+  //       case 'Software':
+  //         this.animateScroll('About', lastScroll)
+  //         break
+  //       case 'Media':
+  //         this.animateScroll('Software', lastScroll)
+  //         break
+  //       case 'Connect':
+  //         this.animateScroll('Media', lastScroll)
+  //         break
+  //       default:
+  //         break
+  //     }
+  //   }
+  // }
 
   updateLoading() {
     this.setState({
@@ -196,6 +206,11 @@ class AppContainer extends Component {
     return (
       <App
         currentView={this.state.currentView}
+        showAbout={this.state.showAbout}
+        showConnect={this.state.showConnect}
+        showHome={this.state.showHome}
+        showMedia={this.state.showMedia}
+        showSoftware={this.state.showSoftware}
         scrollTo={this.handleScrollTo}
       />
     )
