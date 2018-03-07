@@ -924,7 +924,7 @@ bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
 
 boom@2.x.x:
   version "2.10.1"
-  resolved "https://registry.yarnpkg.com/boom/-/boom-2.10.1.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
+  resolved "https://registry.yarnpkg.com/boom/-/boom-2.10.1.tgzrgba(51, 153, 204, 1)8918ceff5799f83f9492a848f625add0c766f"
   dependencies:
     hoek "2.x.x"
 
