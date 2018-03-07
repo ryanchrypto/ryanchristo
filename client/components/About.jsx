@@ -22,14 +22,6 @@ const About = ({ showAbout }) => (
           </p>
         </div>
       </div>
-      <div className={showAbout ? styles.text : styles.hidden}>
-        <p>
-          <strong>{'Technical Skills'}</strong>
-        </p>
-        <p>
-          {'I specialize in building applications with React, Redux, Webpack, PostCSS, Node, Express and MongoDB. I recently turned focus to developing decentalized applications with Web3, Truffle, Solidity and Ethereum. I also have experience with AngularJS, Ruby, Rails, PHP, SQL and PostreSQL. Scroll down to check out some of my projects.'}
-        </p>
-      </div>
     </div>
   </div>
 )
