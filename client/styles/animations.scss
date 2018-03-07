@@ -13,8 +13,8 @@
 @keyframes slideInDown {
 
   0% {
-    opacity: 0;
-    transform: translate(0, -100%);
+    opacity: 1;
+    transform: translate(0, -20%);
   }
 
   100% {
@@ -27,8 +27,8 @@
 @keyframes slideInLeft {
 
   0% {
-    opacity: 0;
-    transform: translate(100%, 0);
+    opacity: 1;
+    transform: translate(20%, 0);
   }
 
   100% {
@@ -41,8 +41,8 @@
 @keyframes slideInRight {
 
   0% {
-    opacity: 0;
-    transform: translate(-100%, 0);
+    opacity: 1;
+    transform: translate(-20%, 0);
   }
 
   100% {
@@ -55,8 +55,8 @@
 @keyframes slideInUp {
 
   0% {
-    opacity: 0;
-    transform: translate(0, 100%);
+    opacity: 1;
+    transform: translate(0, 20%);
   }
 
   100% {
