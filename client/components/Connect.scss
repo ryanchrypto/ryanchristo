@@ -11,7 +11,7 @@
 }
 
 .title {
-  animation: contentInDown 1s forwards;
+  animation: contentDownIn 1s forwards;
   color: #FFF;
   font-family: 'Oswald';
   font-size: 4em;
@@ -23,8 +23,13 @@
   top: 20%;
 }
 
+.titleHidden {
+  @extend .title;
+  animation: contentDownOut 1s forwards;
+}
+
 .content {
-  animation: contentInUp 1s forwards;
+  animation: contentUpIn 1s forwards;
   color: #FFF;
   font-size: 1.4em;
   line-height: 1.4;
@@ -38,6 +43,11 @@
     padding: 2% 0;
   }
 
+}
+
+.contentHidden {
+  @extend .content;
+  animation: contentUpOut 1s forwards;
 }
 
 .links {

@@ -1,16 +1,12 @@
 @import '../styles/animations.scss';
 
-.hidden {
-  opacity: 0;
-}
-
 .container {
   position: relative;
   width: 100%;
 }
 
 .title {
-  animation: contentInRight 1s forwards;
+  animation: contentRightIn 1s forwards;
   color: #333;
   font-family: 'Oswald';
   font-size: 4em;
@@ -20,9 +16,19 @@
   text-align: center;
 }
 
+.titleHidden {
+  @extend .title;
+  animation: contentRightOut 1s forwards;
+}
+
 .index {
-  animation: contentInDown 1s forwards;
+  animation: contentDownIn 1s forwards;
   text-align: center;
+}
+
+.indexHidden {
+  @extend .index;
+  animation: contentDownOut 1s forwards;
 }
 
 .indexItem {
@@ -57,13 +63,18 @@
 }
 
 .projects {
-  animation: contentInDown 1s forwards;
+  animation: contentDownIn 1s forwards;
   padding: 1em;  align-items: center;
   display: flex;
   justify-content: center;
   margin: 0 auto;
   position: relative;
   width: 900px;
+}
+
+.projectsHidden {
+  @extend .projects;
+  animation: contentDownOut 1s forwards;
 }
 
 .arrowContainer {
@@ -79,16 +90,26 @@
 
 .leftArrowContainer {
   @extend .arrowContainer;
-  animation: contentInRight 1s forwards;
+  animation: contentRightIn 1s forwards;
   left: 0;
   top: 0;
 }
 
+.leftArrowContainerHidden {
+  @extend .leftArrowContainer;
+  animation: contentRightOut 1s forwards;
+}
+
 .rightArrowContainer {
   @extend .arrowContainer;
-  animation: contentInLeft 1s forwards;
+  animation: contentLeftIn 1s forwards;
   right: 0;
   top: 0;
+}
+
+.rightArrowContainerHidden {
+  @extend .rightArrowContainer;
+  animation: contentLeftOut 1s forwards;
 }
 
 .arrow {

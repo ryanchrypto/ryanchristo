@@ -12,8 +12,10 @@ const Media = ({
   projects,
 }) => (
   <div id="media" className={styles.container}>
-    <h2 className={showMedia ? styles.title : styles.hidden}>media |</h2>
-    <div className={showMedia ? styles.index : styles.hidden}>
+    <h2 className={showMedia ? styles.title : styles.titleHidden}>
+      {'media |'}
+    </h2>
+    <div className={showMedia ? styles.index : styles.indexHidden}>
       {projects.map(project => (
         <span
           key={project.id}
@@ -24,13 +26,13 @@ const Media = ({
         </span>
       ))}
     </div>
-    <div className={showMedia ? styles.leftArrowContainer : styles.hidden}>
+    <div className={showMedia ? styles.leftArrowContainer : styles.leftArrowContainerHidden}>
       <div className={styles.leftArrow} onClick={previousProject}>
         {'<'}
       </div>
     </div>
     <div className={styles.slideshow}>
-      <div className={showMedia ? styles.projects : styles.hidden}>
+      <div className={showMedia ? styles.projects : styles.projectsHidden}>
         {projects.map(project => (
           <Project
             key={project.id}
@@ -41,7 +43,7 @@ const Media = ({
         ))}
       </div>
     </div>
-    <div className={showMedia ? styles.rightArrowContainer : styles.hidden}>
+    <div className={showMedia ? styles.rightArrowContainer : styles.rightArrowContainerHidden}>
       <div className={styles.rightArrow} onClick={nextProject}>
         {'>'}
       </div>

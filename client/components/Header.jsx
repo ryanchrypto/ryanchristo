@@ -3,7 +3,7 @@ import HeaderNav from './HeaderNav'
 import styles from './Header.scss'
 
 const Header = ({ currentView, animateScroll, showHeader }) => (
-  <header className={showHeader ? styles.header : styles.hidden}>
+  <header className={showHeader ? styles.header : styles.headerHidden}>
     <button className={styles.title} onClick={() => animateScroll('home')}>
       {'rc | ryan christoffersen'}
     </button>

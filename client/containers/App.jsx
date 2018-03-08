@@ -9,12 +9,12 @@ class AppContainer extends Component {
     super(props)
     this.state = {
       currentView: 'home',
-      loadedImages: 0,
-      loading: true,
+      imagesLoaded: 0,
+      imagesLoading: true,
       showAbout: false,
       showConnect: false,
       showHeader: false,
-      showHome: false,
+      showHome: true,
       showMedia: false,
       showSoftware: false,
     }
@@ -42,48 +42,62 @@ class AppContainer extends Component {
     const media = document.getElementById('media').getBoundingClientRect().top
     const software = document.getElementById('software').getBoundingClientRect().top
 
-    // show and hide header
-    if (window.scrollY > 500) {
-      this.setState({
-        showHeader: true,
-      })
-    } else {
-      this.setState({
-        showHeader: false,
-      })
-    }
+    // set intial view and show
+    let currentView = this.state.currentView
+    let showAbout = this.state.showAbout
+    let showConnect = this.state.showConnect
+    let showHeader = this.state.showHeader
+    let showHome = this.state.showHome
+    let showMedia = this.state.showMedia
+    let showSoftware = this.state.showSoftware
 
-    // set current view and show element section elements
+    // determine view and show
+    if (window.scrollY > 500) {
+      showHeader = true
+    } else {
+      showHeader = false
+    }
     if (home > -500) {
-      this.setState({
-        currentView: 'home',
-        showHome: true,
-      })
+      currentView = 'home'
+      showHome = true
+    } else {
+      showHome = false
     }
     if (about < 500 && about > -500) {
-      this.setState({
-        currentView: 'about',
-        showAbout: true,
-      })
+      currentView = 'about'
+      showAbout = true
+    } else {
+      showAbout = false
     }
     if (software < 500 && software > -500) {
-      this.setState({
-        currentView: 'software',
-        showSoftware: true,
-      })
+      currentView = 'software'
+      showSoftware = true
+    } else {
+      showSoftware = false
     }
     if (media < 500 && media > -500) {
-      this.setState({
-        currentView: 'media',
-        showMedia: true,
-      })
+      currentView = 'media'
+      showMedia = true
+    } else {
+      showMedia = false
     }
     if (connect < 500) {
-      this.setState({
-        currentView: 'connect',
-        showConnect: true,
-      })
+      currentView = 'connect'
+      showConnect = true
+    } else {
+      showConnect = false
     }
+
+    // update state
+    this.setState({
+      currentView,
+      showAbout,
+      showConnect,
+      showHeader,
+      showHome,
+      showMedia,
+      showSoftware,
+    })
 
   }
 
@@ -101,12 +115,12 @@ class AppContainer extends Component {
     const updateLoading = () => {
       // update loaded images
       this.setState({
-        loadedImages: this.state.loadedImages + 1,
+        imagesLoaded: this.state.imagesLoaded + 1,
       })
       // set loading to false if all images have loaded
-      if (this.state.loadedImages === 2) {
+      if (this.state.imagesLoaded === 2) {
         this.setState({
-          loading: false,
+          imagesLoading: false,
         })
       }
     }
@@ -122,7 +136,7 @@ class AppContainer extends Component {
   }
 
   render() {
-    if (this.state.loading) {
+    if (this.state.imagesLoading) {
       return <Loader />
     }
     return (

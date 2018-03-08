@@ -1,3 +1,5 @@
+@import '../styles/animations.scss';
+
 .container {
   align-items: center;
   background: #FFF;
@@ -12,7 +14,7 @@
 }
 
 .spinner {
-  animation: fade 1s linear infinite;
+  animation: spinnerFade 1s linear infinite;
   border-radius: 50%;
   color: #666;
   display: inline-block;
@@ -29,7 +31,7 @@
   }
 
   &:after {
-    animation: spin 1s linear infinite;
+    animation: spinnerSpin 1s linear infinite;
     border: 2px solid transparent;
     border-top-color: #666;
     border-bottom-color: #666;
@@ -38,28 +40,4 @@
     top: -2px;
   }
 
-}
-
-@keyframes fade {
-  0% {
-    opacity: 0.2;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.2;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg) scale(1)
-  }
-  50% {
-    transform: rotate(135deg) scale(1.2)
-  }
-  100% {
-    transform: rotate(360deg) scale(1)
-  }
 }

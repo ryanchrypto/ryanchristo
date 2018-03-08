@@ -10,10 +10,15 @@
 }
 
 .content {
-  animation: zoomIn 0.5s ease 0.5s forwards;
+  animation: contentZoomIn 1s forwards;
   margin-bottom: 12%;
   opacity: 0;
   text-align: center;
+}
+
+.contentHidden {
+  @extend .content;
+  animation: contentZoomOut 1s forwards;
 }
 
 .title {

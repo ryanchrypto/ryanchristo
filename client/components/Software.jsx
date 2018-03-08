@@ -12,8 +12,10 @@ const Software = ({
   projects,
 }) => (
   <div id="software" className={styles.container}>
-    <h2 className={showSoftware ? styles.title : styles.hidden}>software |</h2>
-    <div className={showSoftware ? styles.index : styles.hidden}>
+    <h2 className={showSoftware ? styles.title : styles.titleHidden}>
+      {'software |'}
+    </h2>
+    <div className={showSoftware ? styles.index : styles.indexHidden}>
       {projects.map(project => (
         <span
           key={project.id}
@@ -24,13 +26,13 @@ const Software = ({
         </span>
       ))}
     </div>
-    <div className={showSoftware ? styles.leftArrowContainer : styles.hidden}>
+    <div className={showSoftware ? styles.leftArrowContainer : styles.leftArrowContainerHidden}>
       <div className={styles.leftArrow} onClick={previousProject}>
         {'<'}
       </div>
     </div>
     <div className={styles.slideshow}>
-      <div className={showSoftware ? styles.projects : styles.hidden}>
+      <div className={showSoftware ? styles.projects : styles.projectsHidden}>
         {projects.map(project => (
           <Project
             key={project.id}
@@ -41,7 +43,7 @@ const Software = ({
         ))}
       </div>
     </div>
-    <div className={showSoftware ? styles.rightArrowContainer : styles.hidden}>
+    <div className={showSoftware ? styles.rightArrowContainer : styles.rightArrowContainerHidden}>
       <div className={styles.rightArrow} onClick={nextProject}>
         {'>'}
       </div>

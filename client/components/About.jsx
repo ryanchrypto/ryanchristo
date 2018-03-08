@@ -4,10 +4,16 @@ import styles from './About.scss'
 const About = ({ showAbout }) => (
   <div id="about" className={styles.container}>
     <div className={styles.content}>
-      <h2 className={showAbout ? styles.title : styles.hidden}>about |</h2>
+      <h2 className={showAbout ? styles.title : styles.titleHidden}>
+        {'about |'}
+      </h2>
       <div className={styles.intro}>
-        <img className={showAbout ? styles.profile : styles.profileHidden} alt="Ryan Christoffersen" src="/img/profile.jpg" />
-        <div className={showAbout ? styles.text : styles.hidden}>
+        <img
+          alt="Ryan Christoffersen"
+          className={showAbout ? styles.profile : styles.profileHidden}
+          src="/img/profile.jpg"
+        />
+        <div className={showAbout ? styles.text : styles.textHidden}>
           <p>
             <strong>{'Software Developer'}</strong>
             {'. Currently developing applications on the Ethereum platform. Interested in open source projects and decentralized technology.'}

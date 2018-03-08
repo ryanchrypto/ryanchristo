@@ -2,7 +2,7 @@
 
 .header {
   align-items: center;
-  animation: navDown 0.5s ease forwards;
+  animation: headerDown 0.5s ease forwards;
   background: rgba(255, 255, 255, 1);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   display: flex;
@@ -14,9 +14,9 @@
   z-index: 1;
 }
 
-.hidden {
+.headerHidden {
   @extend .header;
-  animation: navUp 0.5s ease forwards;
+  animation: headerUp 0.5s ease forwards;
 }
 
 .title {
