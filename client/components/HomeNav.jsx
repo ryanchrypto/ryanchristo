@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
-import styles from './MainNavList.scss'
+import styles from './HomeNav.scss'
 
-const MainNavList = ({ scrollTo }) => (
+const HomeNav = ({ scrollTo }) => (
   <ul className={styles.list}>
     <li className={styles.item}>
       <div className={styles.link} onClick={() => scrollTo('About')}>
@@ -34,8 +34,8 @@ const MainNavList = ({ scrollTo }) => (
   </ul>
 )
 
-MainNavList.propTypes = {
+HomeNav.propTypes = {
   scrollTo: PropTypes.func.isRequired,
 }
 
-export default MainNavList
+export default HomeNav

@@ -1,11 +1,25 @@
 import React, { PropTypes } from 'react'
-import MainNav from './MainNav'
+import HomeNav from './HomeNav'
 import styles from './Home.scss'
 
 const Home = ({ scrollTo }) => (
   <div id="Home" className={styles.container}>
-    <div>
-      <MainNav
+    <div className={styles.content}>
+      <h1 className={styles.title}>
+        {'ryan christoffersen'}
+      </h1>
+      <p className={styles.subtitle}>
+        {'software developer'}
+        <span className={styles.divider}>
+          {'|'}
+        </span>
+        {'media activist'}
+        <span className={styles.divider}>
+          {'|'}
+        </span>
+        {'critical thinker'}
+      </p>
+      <HomeNav
         scrollTo={scrollTo}
       />
     </div>
