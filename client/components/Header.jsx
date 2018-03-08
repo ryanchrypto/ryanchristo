@@ -3,18 +3,21 @@ import HeaderNav from './HeaderNav'
 import styles from './Header.scss'
 
 const Header = ({ currentView, scrollTo, showHeader }) => (
-  <nav className={showHeader ? styles.container : styles.hidden}>
-    <h1 className={styles.title} onClick={() => scrollTo('home')}>
-      rc | ryan christoffersen
-    </h1>
-    <HeaderNav currentView={currentView} scrollTo={scrollTo} />
-  </nav>
+  <header className={showHeader ? styles.header : styles.hidden}>
+    <button className={styles.title} onClick={() => scrollTo('home')}>
+      {'rc | ryan christoffersen'}
+    </button>
+    <HeaderNav
+      currentView={currentView}
+      scrollTo={scrollTo}
+    />
+  </header>
 )
 
 Header.propTypes = {
   currentView: PropTypes.string.isRequired,
   scrollTo: PropTypes.func.isRequired,
-  showHeader: PropTypes.bool.isRequired
+  showHeader: PropTypes.bool.isRequired,
 }
 
 export default Header

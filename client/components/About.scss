@@ -28,7 +28,7 @@
 }
 
 .title {
-  animation: slideInDown 1s forwards;
+  animation: contentInDown 1s forwards;
   color: rgba(50, 50, 50, 1);
   font-family: 'Oswald';
   font-size: 3em;
@@ -46,7 +46,7 @@
 }
 
 .profile {
-  animation: slideInLeft 1s forwards;
+  animation: contentInLeft 1s forwards;
   box-shadow: 0 0 2px rgba(100, 100, 100, 1);
   display: inline-block;
   width: 16rem;
@@ -58,7 +58,7 @@
 }
 
 .text {
-  animation: slideInLeft 1s forwards;
+  animation: contentInLeft 1s forwards;
   font-size: 1.2rem;
   padding: 0 5%;
 }

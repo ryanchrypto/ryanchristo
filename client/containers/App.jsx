@@ -65,7 +65,7 @@ class AppContainer extends Component {
     const home = document.getElementById('home').getBoundingClientRect().top
     const media = document.getElementById('media').getBoundingClientRect().top
     const software = document.getElementById('software').getBoundingClientRect().top
-    if (window.scrollY > 300) {
+    if (window.scrollY > 500) {
       this.setState({
         showHeader: true,
       })

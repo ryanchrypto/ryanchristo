@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Software from '../components/Software'
-import projects from '../content/development'
+import projects from '../content/software'
 
 class SoftwareContainer extends Component {
   constructor(props) {

@@ -11,7 +11,7 @@
 }
 
 .title {
-  animation: slideInDown 1s forwards;
+  animation: contentInDown 1s forwards;
   color: #FFF;
   font-family: 'Oswald';
   font-size: 4em;
@@ -24,7 +24,7 @@
 }
 
 .content {
-  animation: slideInUp 1s forwards;
+  animation: contentInUp 1s forwards;
   color: #FFF;
   font-size: 1.4em;
   line-height: 1.4;

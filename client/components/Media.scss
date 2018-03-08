@@ -10,7 +10,7 @@
 }
 
 .title {
-  animation: slideInRight 1s forwards;
+  animation: contentInRight 1s forwards;
   color: #333;
   font-family: 'Oswald';
   font-size: 4em;
@@ -21,7 +21,7 @@
 }
 
 .index {
-  animation: slideInDown 1s forwards;
+  animation: contentInDown 1s forwards;
   text-align: center;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .projects {
-  animation: slideInDown 1s forwards;
+  animation: contentInDown 1s forwards;
   padding: 1em;  align-items: center;
   display: flex;
   justify-content: center;
@@ -79,14 +79,14 @@
 
 .leftArrowContainer {
   @extend .arrowContainer;
-  animation: slideInRight 1s forwards;
+  animation: contentInRight 1s forwards;
   left: 0;
   top: 0;
 }
 
 .rightArrowContainer {
   @extend .arrowContainer;
-  animation: slideInLeft 1s forwards;
+  animation: contentInLeft 1s forwards;
   right: 0;
   top: 0;
 }

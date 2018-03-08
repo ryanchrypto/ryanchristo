@@ -1,95 +1,90 @@
 @keyframes fadeIn {
-
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
-
+}
+@keyframes navDown {
+  0% {
+    margin-top: -100px;
+  }
+  100% {
+    margin-top: 0;
+  }
 }
 
-@keyframes slideInDown {
-
+@keyframes navUp {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -100px;
+  }
+}
+@keyframes contentInDown {
   0% {
     opacity: 1;
     transform: translate(0, -20%);
   }
-
   100% {
     opacity: 1;
     transform: translate(0, 0);
   }
-
 }
 
-@keyframes slideInLeft {
-
+@keyframes contentInLeft {
   0% {
     opacity: 1;
     transform: translate(20%, 0);
   }
-
   100% {
     opacity: 1;
     transform: translate(0, 0);
   }
-
 }
 
-@keyframes slideInRight {
-
+@keyframes contentInRight {
   0% {
     opacity: 1;
     transform: translate(-20%, 0);
   }
-
   100% {
     opacity: 1;
     transform: translate(0, 0);
   }
-
 }
 
-@keyframes slideInUp {
-
+@keyframes contentInUp {
   0% {
     opacity: 1;
     transform: translate(0, 20%);
   }
-
   100% {
     opacity: 1;
     transform: translate(0, 0);
   }
-
 }
 
 @keyframes zoomIn {
-
   0% {
     opacity: 0;
     transform: scale(0.9);
   }
-
   100% {
     opacity: 1;
     transform: scale(1);
   }
-
 }
 
 @keyframes zoomOut {
-
   0% {
     opacity: 1;
     transform: scale(1);
   }
-
   100% {
     opacity: 0;
     transform: scale(0.9);
   }
-
 }

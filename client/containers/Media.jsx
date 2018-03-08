@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Media from '../components/Media'
-import projects from '../content/digitalMedia'
+import projects from '../content/media'
 
 class MediaContainer extends Component {
   constructor(props) {
