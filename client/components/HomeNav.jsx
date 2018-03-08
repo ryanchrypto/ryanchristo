@@ -1,25 +1,25 @@
 import React, { PropTypes } from 'react'
 import styles from './HomeNav.scss'
 
-const HomeNav = ({ scrollTo }) => (
+const HomeNav = ({ animateScroll }) => (
   <ul className={styles.list}>
     <li className={styles.item}>
-      <button className={styles.link} onClick={() => scrollTo('about')}>
+      <button className={styles.link} onClick={() => animateScroll('about')}>
         {'about'}
       </button>
     </li>
     <li className={styles.item}>
-      <button className={styles.link} onClick={() => scrollTo('software')}>
+      <button className={styles.link} onClick={() => animateScroll('software')}>
         {'software'}
       </button>
     </li>
     <li className={styles.item}>
-      <button className={styles.link} onClick={() => scrollTo('media')}>
+      <button className={styles.link} onClick={() => animateScroll('media')}>
         {'media'}
       </button>
     </li>
     <li className={styles.item}>
-      <button className={styles.link} onClick={() => scrollTo('connect')}>
+      <button className={styles.link} onClick={() => animateScroll('connect')}>
         {'connect'}
       </button>
     </li>
@@ -37,7 +37,7 @@ const HomeNav = ({ scrollTo }) => (
 )
 
 HomeNav.propTypes = {
-  scrollTo: PropTypes.func.isRequired,
+  animateScroll: PropTypes.func.isRequired,
 }
 
 export default HomeNav

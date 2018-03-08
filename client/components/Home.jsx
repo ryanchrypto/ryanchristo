@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import HomeNav from './HomeNav'
 import styles from './Home.scss'
 
-const Home = ({ scrollTo }) => (
+const Home = ({ animateScroll }) => (
   <div id="home" className={styles.container}>
     <div className={styles.content}>
       <h1 className={styles.title}>
@@ -20,14 +20,14 @@ const Home = ({ scrollTo }) => (
         {'critical thinker'}
       </p>
       <HomeNav
-        scrollTo={scrollTo}
+        animateScroll={animateScroll}
       />
     </div>
   </div>
 )
 
 Home.propTypes = {
-  scrollTo: PropTypes.func.isRequired,
+  animateScroll: PropTypes.func.isRequired,
 }
 
 export default Home

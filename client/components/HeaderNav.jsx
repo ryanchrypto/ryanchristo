@@ -1,25 +1,25 @@
 import React, { PropTypes } from 'react'
 import styles from './HeaderNav.scss'
 
-const HeaderNav = ({ currentView, scrollTo }) => (
+const HeaderNav = ({ currentView, animateScroll }) => (
   <ul className={styles.list}>
     <li className={styles.item}>
-      <button className={currentView === 'about' ? styles.active : styles.link} onClick={() => scrollTo('about')}>
+      <button className={currentView === 'about' ? styles.active : styles.link} onClick={() => animateScroll('about')}>
         {'about'}
       </button>
     </li>
     <li className={styles.item}>
-      <button className={currentView === 'software' ? styles.active : styles.link} onClick={() => scrollTo('software')}>
+      <button className={currentView === 'software' ? styles.active : styles.link} onClick={() => animateScroll('software')}>
         {'software'}
       </button>
     </li>
     <li className={styles.item}>
-      <button className={currentView === 'media' ? styles.active : styles.link} onClick={() => scrollTo('media')}>
+      <button className={currentView === 'media' ? styles.active : styles.link} onClick={() => animateScroll('media')}>
         {'media'}
       </button>
     </li>
     <li className={styles.item}>
-      <button className={currentView === 'connect' ? styles.active : styles.link} onClick={() => scrollTo('connect')}>
+      <button className={currentView === 'connect' ? styles.active : styles.link} onClick={() => animateScroll('connect')}>
         {'connect'}
       </button>
     </li>
@@ -38,7 +38,7 @@ const HeaderNav = ({ currentView, scrollTo }) => (
 
 HeaderNav.propTypes = {
   currentView: PropTypes.string.isRequired,
-  scrollTo: PropTypes.func.isRequired,
+  animateScroll: PropTypes.func.isRequired,
 }
 
 export default HeaderNav

@@ -9,7 +9,7 @@ import styles from './App.scss'
 
 const App = ({
   currentView,
-  scrollTo,
+  animateScroll,
   showAbout,
   showConnect,
   showHeader,
@@ -20,23 +20,23 @@ const App = ({
   <div className={styles.container}>
     <Header
       currentView={currentView}
-      scrollTo={scrollTo}
+      animateScroll={animateScroll}
       showHeader={showHeader}
     />
     <Home
-      scrollTo={scrollTo}
+      animateScroll={animateScroll}
       showHome={showHome}
     />
     <About
-      scrollTo={scrollTo}
+      animateScroll={animateScroll}
       showAbout={showAbout}
     />
     <Software
-      scrollTo={scrollTo}
+      animateScroll={animateScroll}
       showSoftware={showSoftware}
     />
     <Media
-      scrollTo={scrollTo}
+      animateScroll={animateScroll}
       showMedia={showMedia}
     />
     <Connect
@@ -47,7 +47,7 @@ const App = ({
 
 App.propTypes = {
   currentView: PropTypes.string.isRequired,
-  scrollTo: PropTypes.func.isRequired,
+  animateScroll: PropTypes.func.isRequired,
   showConnect: PropTypes.bool.isRequired,
   showAbout: PropTypes.bool.isRequired,
   showHeader: PropTypes.bool.isRequired,

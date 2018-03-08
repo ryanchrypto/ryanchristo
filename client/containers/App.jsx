@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import App from '../components/App'
 import Loader from '../components/Loader'
+import animateScroll from '../helpers/animateScroll'
 
 class AppContainer extends Component {
 
@@ -18,7 +19,6 @@ class AppContainer extends Component {
       showSoftware: false,
     }
     this.handleScrollEvent = this.handleScrollEvent.bind(this)
-    this.handleScrollTo = this.handleScrollTo.bind(this)
   }
 
   componentWillMount() {
@@ -33,38 +33,16 @@ class AppContainer extends Component {
     window.removeEventListener('scroll', this.handleScrollEvent)
   }
 
-  animateScroll(id, startPosition) {
-    const start = startPosition || window.pageYOffset
-    const end = document.getElementById(id).offsetTop
-    const distance = end - start
-    const duration = 600
-    const increment = 20
-    let currentTime = 0
-    Math.easeInOutQuad = (currentTime, start, distance, duration) => {
-      currentTime /= (duration / 2)
-      if (currentTime < 1) {
-        return distance / 2 * currentTime * currentTime + start
-      }
-      currentTime--
-      return -distance / 2 * (currentTime * (currentTime - 2) - 1) + start
-    }
-    const animate = () => {
-      currentTime += increment
-      const val = Math.easeInOutQuad(currentTime, start, distance, duration)
-      window.scroll(0, val)
-      if (currentTime < duration) {
-        setTimeout(animate, increment)
-      }
-    }
-    animate()
-  }
-
   handleScrollEvent() {
+
+    // set element location
     const about = document.getElementById('about').getBoundingClientRect().top
     const connect = document.getElementById('connect').getBoundingClientRect().top
     const home = document.getElementById('home').getBoundingClientRect().top
     const media = document.getElementById('media').getBoundingClientRect().top
     const software = document.getElementById('software').getBoundingClientRect().top
+
+    // show and hide header
     if (window.scrollY > 500) {
       this.setState({
         showHeader: true,
@@ -74,6 +52,8 @@ class AppContainer extends Component {
         showHeader: false,
       })
     }
+
+    // set current view and show element section elements
     if (home > -500) {
       this.setState({
         currentView: 'home',
@@ -104,49 +84,41 @@ class AppContainer extends Component {
         showConnect: true,
       })
     }
-  }
 
-  handleScrollTo(id) {
-    this.animateScroll(id)
   }
 
   preloadImages() {
+
+    // create images
     const background1 = new Image()
     const background2 = new Image()
-    const background3 = new Image()
-    const background4 = new Image()
-    const background5 = new Image()
-    background1.src = '/img/placeholder-1.jpeg'
-    background2.src = '/img/placeholder-2.jpeg'
-    background3.src = '/img/placeholder-3.jpeg'
-    background4.src = '/img/placeholder-4.jpeg'
-    background5.src = '/img/placeholder-5.jpeg'
+
+    // append source to images
+    background1.src = '/img/background-1.jpg'
+    background2.src = '/img/background-2.jpg'
+
+    // update loading state
+    const updateLoading = () => {
+      // update loaded images
+      this.setState({
+        loadedImages: this.state.loadedImages + 1,
+      })
+      // set loading to false if all images have loaded
+      if (this.state.loadedImages === 2) {
+        this.setState({
+          loading: false,
+        })
+      }
+    }
+
+    // listen to loading events
     background1.onload = () => {
-      this.updateLoading()
+      updateLoading()
     }
     background2.onload = () => {
-      this.updateLoading()
+      updateLoading()
     }
-    background3.onload = () => {
-      this.updateLoading()
-    }
-    background4.onload = () => {
-      this.updateLoading()
-    }
-    background5.onload = () => {
-      this.updateLoading()
-    }
-  }
 
-  updateLoading() {
-    this.setState({
-      loadedImages: this.state.loadedImages + 1,
-    })
-    if (this.state.loadedImages === 5) {
-      this.setState({
-        loading: false,
-      })
-    }
   }
 
   render() {
@@ -162,7 +134,7 @@ class AppContainer extends Component {
         showHome={this.state.showHome}
         showMedia={this.state.showMedia}
         showSoftware={this.state.showSoftware}
-        scrollTo={this.handleScrollTo}
+        animateScroll={animateScroll}
       />
     )
   }

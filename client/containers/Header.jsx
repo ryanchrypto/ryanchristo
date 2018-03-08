@@ -6,7 +6,7 @@ class HeaderContainer extends Component {
     return (
       <Header
         currentView={this.props.currentView}
-        scrollTo={this.props.scrollTo}
+        animateScroll={this.props.animateScroll}
         showHeader={this.props.showHeader}
       />
     )
@@ -16,7 +16,7 @@ class HeaderContainer extends Component {
 
 HeaderContainer.propTypes = {
   currentView: PropTypes.string.isRequired,
-  scrollTo: PropTypes.func.isRequired,
+  animateScroll: PropTypes.func.isRequired,
   showHeader: PropTypes.bool.isRequired,
 }
 

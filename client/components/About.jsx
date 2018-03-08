@@ -6,7 +6,7 @@ const About = ({ showAbout }) => (
     <div className={styles.content}>
       <h2 className={showAbout ? styles.title : styles.hidden}>about |</h2>
       <div className={styles.intro}>
-        <img className={showAbout ? styles.profile : styles.profileHidden} alt="Ryan Christoffersen" src="/img/profile_2016.jpg" />
+        <img className={showAbout ? styles.profile : styles.profileHidden} alt="Ryan Christoffersen" src="/img/profile.jpg" />
         <div className={showAbout ? styles.text : styles.hidden}>
           <p>
             <strong>{'Software Developer'}</strong>
