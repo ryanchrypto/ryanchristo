@@ -1,3 +1,5 @@
+@import '../styles/animations.scss';
+
 .container {
   align-items: center;
   background: rgba(50, 50, 50, 1);
@@ -6,8 +8,6 @@
   justify-content: center;
   position: relative;
 }
-
-@import '../styles/animations.scss';
 
 .content {
   animation: zoomIn 0.5s ease 0.5s forwards;
@@ -21,7 +21,7 @@
   font-family: 'Oswald';
   font-size: 5em;
   font-weight: 300;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
 }
 
 .subtitle {
@@ -29,7 +29,7 @@
   font-family: 'Oswald';
   font-size: 2.2em;
   font-weight: 300;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
 }
 
 .divider {

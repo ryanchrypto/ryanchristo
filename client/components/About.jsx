@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import styles from './About.scss'
 
 const About = ({ showAbout }) => (
-  <div id="About" className={styles.container}>
+  <div id="about" className={styles.container}>
     <div className={styles.content}>
       <h2 className={showAbout ? styles.title : styles.hidden}>about |</h2>
       <div className={styles.intro}>

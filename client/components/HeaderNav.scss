@@ -1,0 +1,6 @@
+@import '../styles/navigation.scss';
+
+.active {
+  @extend .link;
+  border-bottom: 2px solid rgba(50, 50, 50, 1);
+}

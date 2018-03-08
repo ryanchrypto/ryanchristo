@@ -1,25 +1,25 @@
 import React, { PropTypes } from 'react'
-import styles from './HomeNav.scss'
+import styles from './HeaderNav.scss'
 
-const HomeNav = ({ scrollTo }) => (
+const HeaderNav = ({ currentView, scrollTo }) => (
   <ul className={styles.list}>
     <li className={styles.item}>
-      <button className={styles.link} onClick={() => scrollTo('about')}>
+      <button className={currentView === 'about' ? styles.active : styles.link} onClick={() => scrollTo('about')}>
         {'about'}
       </button>
     </li>
     <li className={styles.item}>
-      <button className={styles.link} onClick={() => scrollTo('software')}>
+      <button className={currentView === 'software' ? styles.active : styles.link} onClick={() => scrollTo('software')}>
         {'software'}
       </button>
     </li>
     <li className={styles.item}>
-      <button className={styles.link} onClick={() => scrollTo('media')}>
+      <button className={currentView === 'media' ? styles.active : styles.link} onClick={() => scrollTo('media')}>
         {'media'}
       </button>
     </li>
     <li className={styles.item}>
-      <button className={styles.link} onClick={() => scrollTo('connect')}>
+      <button className={currentView === 'connect' ? styles.active : styles.link} onClick={() => scrollTo('connect')}>
         {'connect'}
       </button>
     </li>
@@ -36,8 +36,9 @@ const HomeNav = ({ scrollTo }) => (
   </ul>
 )
 
-HomeNav.propTypes = {
+HeaderNav.propTypes = {
+  currentView: PropTypes.string.isRequired,
   scrollTo: PropTypes.func.isRequired,
 }
 
-export default HomeNav
+export default HeaderNav

@@ -11,7 +11,7 @@ const Media = ({
   showMedia,
   projects,
 }) => (
-  <div id="Media" className={styles.container}>
+  <div id="media" className={styles.container}>
     <h2 className={showMedia ? styles.title : styles.hidden}>media |</h2>
     <div className={showMedia ? styles.index : styles.hidden}>
       {projects.map(project => (

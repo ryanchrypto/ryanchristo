@@ -11,7 +11,7 @@ const Software = ({
   showSoftware,
   projects,
 }) => (
-  <div id="Software" className={styles.container}>
+  <div id="software" className={styles.container}>
     <h2 className={showSoftware ? styles.title : styles.hidden}>software |</h2>
     <div className={showSoftware ? styles.index : styles.hidden}>
       {projects.map(project => (

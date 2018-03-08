@@ -3,7 +3,7 @@ import About from './About'
 import Connect from './Connect'
 import Home from './Home'
 import Media from '../containers/Media'
-import NavBar from '../containers/NavBar'
+import Header from './Header'
 import Software from '../containers/Software'
 import styles from './App.scss'
 
@@ -12,14 +12,16 @@ const App = ({
   scrollTo,
   showAbout,
   showConnect,
+  showHeader,
   showHome,
   showMedia,
   showSoftware,
 }) => (
   <div className={styles.container}>
-    <NavBar
+    <Header
       currentView={currentView}
       scrollTo={scrollTo}
+      showHeader={showHeader}
     />
     <Home
       scrollTo={scrollTo}
@@ -48,6 +50,7 @@ App.propTypes = {
   scrollTo: PropTypes.func.isRequired,
   showConnect: PropTypes.bool.isRequired,
   showAbout: PropTypes.bool.isRequired,
+  showHeader: PropTypes.bool.isRequired,
   showHome: PropTypes.bool.isRequired,
   showMedia: PropTypes.bool.isRequired,
   showSoftware: PropTypes.bool.isRequired,

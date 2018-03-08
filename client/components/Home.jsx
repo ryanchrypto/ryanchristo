@@ -3,7 +3,7 @@ import HomeNav from './HomeNav'
 import styles from './Home.scss'
 
 const Home = ({ scrollTo }) => (
-  <div id="Home" className={styles.container}>
+  <div id="home" className={styles.container}>
     <div className={styles.content}>
       <h1 className={styles.title}>
         {'ryan christoffersen'}

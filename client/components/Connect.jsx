@@ -4,7 +4,7 @@ import links from '../content/links'
 import styles from './Connect.scss'
 
 const Connect = ({ showConnect }) => (
-  <div id="Connect" className={styles.container}>
+  <div id="connect" className={styles.container}>
     <h2 className={showConnect ? styles.title : ''}>connect |</h2>
     <div className={showConnect ? styles.content : ''}>
       <div className={styles.links}>
