@@ -6,7 +6,7 @@
 }
 
 .title {
-  animation: contentRightIn 1s forwards;
+  animation: contentDownIn 1s forwards;
   color: #333;
   font-family: 'Oswald';
   font-size: 4em;
@@ -18,7 +18,7 @@
 
 .titleHidden {
   @extend .title;
-  animation: contentRightOut 1s forwards;
+  animation: contentDownOut 1s forwards;
 }
 
 .index {
@@ -63,7 +63,7 @@
 }
 
 .projects {
-  animation: contentDownIn 1s forwards;
+  animation: contentUpIn 1s forwards;
   padding: 1em;  align-items: center;
   display: flex;
   justify-content: center;
@@ -74,7 +74,7 @@
 
 .projectsHidden {
   @extend .projects;
-  animation: contentDownOut 1s forwards;
+  animation: contentUpOut 1s forwards;
 }
 
 .arrowContainer {

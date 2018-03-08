@@ -88,16 +88,26 @@ class AppContainer extends Component {
       showConnect = false
     }
 
-    // update state
-    this.setState({
-      currentView,
-      showAbout,
-      showConnect,
-      showHeader,
-      showHome,
-      showMedia,
-      showSoftware,
-    })
+    // update state if view or show changed
+    if (
+      currentView !== this.state.currentView ||
+      showAbout !== this.state.showAbout ||
+      showConnect !== this.state.showConnect ||
+      showHeader !== this.state.showHeader ||
+      showHome !== this.state.showHome ||
+      showMedia !== this.state.showMedia ||
+      showSoftware !== this.state.showSoftware
+    ) {
+      this.setState({
+        currentView,
+        showAbout,
+        showConnect,
+        showHeader,
+        showHome,
+        showMedia,
+        showSoftware,
+      })
+    }
 
   }
 
