@@ -13,11 +13,13 @@ a {
 }
 
 button {
+  border: none;
   outline: none;
 }
 
 .container {
   animation: appIn 0.25s ease-in 0.25s forwards;
+  background: rgba(50, 50, 50, 1);
   font-family: 'Open Sans', sans-serif;
   font-size: 0.9em;
   opacity: 0;

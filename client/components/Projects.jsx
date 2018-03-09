@@ -5,9 +5,11 @@ const Projects = ({
   nextProject,
   previousProject,
   projects,
+  projectsId,
   selectedId,
   setProject,
   showProjects,
+  slideshowId,
 }) => (
   <div className={styles.projects}>
     <div className={showProjects ? styles.index : styles.indexHidden}>
@@ -21,10 +23,11 @@ const Projects = ({
         </button>
       ))}
     </div>
-    <div className={showProjects ? styles.slideshow : styles.slideshowHidden}>
+    <div id={slideshowId} className={showProjects ? styles.slideshow : styles.slideshowHidden}>
       <div className={styles.slideshowContent}>
         {projects.map(project => (
           <button
+            id={project.id}
             key={project.id}
             className={selectedId === project.id ? styles.activeImage : styles.image}
             onClick={() => setProject(project)}
@@ -38,7 +41,7 @@ const Projects = ({
         ))}
       </div>
     </div>
-    <div id={`${projects[0].type}-project`} className={showProjects ? styles.project : styles.projectHidden}>
+    <div id={projectsId} className={showProjects ? styles.project : styles.projectHidden}>
       <div className={showProjects ? styles.leftArrowContainer : styles.leftArrowContainerHidden}>
         <button className={styles.leftArrow} onClick={previousProject}>
           {'<'}
@@ -47,8 +50,16 @@ const Projects = ({
       {projects.map(project => (
         <div key={project.id}>
           {selectedId === project.id &&
-            <div className={styles.text}>
-              <h3 className={styles.title}>{project.title}</h3>
+            <div className={showProjects ? styles.text : styles.textHidden}>
+              <h3 className={showProjects ? styles.title : styles.titleHidden}>
+                {project.title}
+              </h3>
+              <img
+                alt={project.title}
+                className={styles.projectImage}
+                key={project.id}
+                src={project.image}
+              />
               <p className={styles.summary}>{project.summary}</p>
               <p className={styles.summary}>{project.tags}</p>
               <div className={styles.links}>
@@ -58,7 +69,7 @@ const Projects = ({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View Slideshow
+                  View Project
                 </a>
                 {project.link.repository &&
                   <a
@@ -99,9 +110,11 @@ Projects.propTypes = {
       title: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
+  projectsId: PropTypes.string.isRequired,
   selectedId: PropTypes.string.isRequired,
   setProject: PropTypes.func.isRequired,
   showProjects: PropTypes.bool.isRequired,
+  slideshowId: PropTypes.string.isRequired,
 }
 
 export default Projects
