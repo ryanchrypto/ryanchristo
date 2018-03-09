@@ -12,7 +12,7 @@ const Connect = ({ showConnect }) => (
         {links.map(link => (
           <a
             className={styles.link}
-            href={link}
+            href={link.link}
             key={link.link}
             rel="noopener noreferrer"
             target="_blank"
