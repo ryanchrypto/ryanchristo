@@ -1,20 +1,24 @@
 import React, { PropTypes } from 'react'
-import LinkIcon from './LinkIcon'
-import links from '../content/links'
+import links from '../content/connect'
 import styles from './Connect.scss'
 
 const Connect = ({ showConnect }) => (
   <div id="connect" className={styles.container}>
     <h2 className={showConnect ? styles.title : styles.titleHidden}>
-      {'connect |'}
+      {'connect'}
     </h2>
     <div className={showConnect ? styles.content : styles.contentHidden}>
       <div className={styles.links}>
         {links.map(link => (
-          <LinkIcon
+          <a
+            className={styles.link}
+            href={link}
             key={link.link}
-            {...link}
-          />
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i className={link.icon} />
+          </a>
         ))}
       </div>
       <a className={styles.email} href="mailto:ryan@ryanchristo.com">

@@ -1,60 +1,19 @@
 @import '../styles/animations.scss';
-
-.hidden {
-  opacity: 0;
-}
-
-.container {
-  align-items: center;
-  background: rgba(255, 255, 255, 1);
-  display: flex;
-  justify-content: center;
-}
+@import '../styles/content.scss';
 
 .content {
-  color: #333;
-  font-size: 1.4rem;
-  font-weight: 300;
-  min-height: 50vh;
-  line-height: 1.4;
-  padding: 5rem;
-  text-align: left;
-  width: 900px;
-
-  p {
-    padding: 1rem 0;
-  }
-
-}
-
-.title {
-  animation: contentDownIn 1s forwards;
-  color: rgba(50, 50, 50, 1);
-  font-family: 'Oswald';
-  font-size: 3em;
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-.titleHidden {
-  @extend .title;
-  animation: contentDownOut 1s forwards;
-}
-
-.intro {
   align-items: center;
   display: flex;
-  font-size: 0.9em;
   justify-content: center;
-  padding: 2rem;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 2em 0;
 }
 
 .profile {
   animation: contentRightIn 1s forwards;
   box-shadow: 0 0 2px rgba(100, 100, 100, 1);
-  display: inline-block;
-  width: 16rem;
+  width: 20em;
 }
 
 .profileHidden {
@@ -64,8 +23,11 @@
 
 .text {
   animation: contentLeftIn 1s forwards;
-  font-size: 1.2rem;
-  padding: 0 5%;
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-left: 2em;
+  padding: 2em;
+  text-align: left;
 }
 
 .textHidden {

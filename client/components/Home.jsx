@@ -4,11 +4,11 @@ import styles from './Home.scss'
 
 const Home = ({ animateScroll, showHome }) => (
   <div id="home" className={styles.container}>
-    <div className={showHome ? styles.content : styles.contentHidden}>
-      <h1 className={styles.title}>
+    <div className={styles.content}>
+      <h1 className={showHome ? styles.title : styles.titleHidden}>
         {'ryan christoffersen'}
       </h1>
-      <p className={styles.subtitle}>
+      <p className={showHome ? styles.subtitle : styles.subtitleHidden}>
         {'software developer'}
         <span className={styles.divider}>
           {'|'}
@@ -21,6 +21,7 @@ const Home = ({ animateScroll, showHome }) => (
       </p>
       <HomeNav
         animateScroll={animateScroll}
+        showHome={showHome}
       />
     </div>
   </div>

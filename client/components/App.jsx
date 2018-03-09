@@ -2,9 +2,9 @@ import React, { PropTypes } from 'react'
 import About from './About'
 import Connect from './Connect'
 import Home from './Home'
-import Media from '../containers/Media'
+import Media from './Media'
 import Header from './Header'
-import Software from '../containers/Software'
+import Software from './Software'
 import styles from './App.scss'
 
 const App = ({

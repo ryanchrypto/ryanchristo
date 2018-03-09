@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 import styles from './HomeNav.scss'
 
-const HomeNav = ({ animateScroll }) => (
-  <ul className={styles.list}>
+const HomeNav = ({ animateScroll, showHome }) => (
+  <ul className={showHome ? styles.list : styles.listHidden}>
     <li className={styles.item}>
       <button className={styles.link} onClick={() => animateScroll('about')}>
         {'about'}

@@ -3,30 +3,28 @@ import styles from './About.scss'
 
 const About = ({ showAbout }) => (
   <div id="about" className={styles.container}>
+    <h2 className={showAbout ? styles.title : styles.titleHidden}>
+      {'about'}
+    </h2>
     <div className={styles.content}>
-      <h2 className={showAbout ? styles.title : styles.titleHidden}>
-        {'about |'}
-      </h2>
-      <div className={styles.intro}>
-        <img
-          alt="Ryan Christoffersen"
-          className={showAbout ? styles.profile : styles.profileHidden}
-          src="/img/profile.jpg"
-        />
-        <div className={showAbout ? styles.text : styles.textHidden}>
-          <p>
-            <strong>{'Software Developer'}</strong>
-            {'. Currently developing applications on the Ethereum platform. Interested in open source projects and decentralized technology.'}
-          </p>
-          <p>
-            <strong>{'Media Activist'}</strong>
-            {'. Filmed and produced documentaries exploring poverty and microfinance. Interested in use cases of new technology for social justice.'}
-          </p>
-          <p>
-            <strong>{'Critical Thinker'}</strong>
-            {'. Studied classics and critical and cultural theory as an undergraduate. Interested in decentralized governance, globalization and self-sovereignty.'}
-          </p>
-        </div>
+      <img
+        alt="Ryan Christoffersen"
+        className={showAbout ? styles.profile : styles.profileHidden}
+        src="/img/profile.jpg"
+      />
+      <div className={showAbout ? styles.text : styles.textHidden}>
+        <p>
+          <strong>{'Software Developer'}</strong>
+          {'. Currently developing applications on the Ethereum platform. Interested in open source projects and decentralized technology.'}
+        </p>
+        <p>
+          <strong>{'Media Activist'}</strong>
+          {'. Filmed and produced documentaries exploring poverty and microfinance. Interested in use cases of new technology for social justice.'}
+        </p>
+        <p>
+          <strong>{'Critical Thinker'}</strong>
+          {'. Studied classics and critical and cultural theory as an undergraduate. Interested in decentralized governance, globalization and self-sovereignty.'}
+        </p>
       </div>
     </div>
   </div>

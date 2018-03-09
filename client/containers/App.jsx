@@ -36,11 +36,11 @@ class AppContainer extends Component {
   handleScrollEvent() {
 
     // set element location
-    const about = document.getElementById('about').getBoundingClientRect().top
-    const connect = document.getElementById('connect').getBoundingClientRect().top
-    const home = document.getElementById('home').getBoundingClientRect().top
-    const media = document.getElementById('media').getBoundingClientRect().top
-    const software = document.getElementById('software').getBoundingClientRect().top
+    const about = document.getElementById('about').getBoundingClientRect()
+    const connect = document.getElementById('connect').getBoundingClientRect()
+    const home = document.getElementById('home').getBoundingClientRect()
+    const media = document.getElementById('media').getBoundingClientRect()
+    const software = document.getElementById('software').getBoundingClientRect()
 
     // set intial view and show
     let currentView = this.state.currentView
@@ -57,31 +57,31 @@ class AppContainer extends Component {
     } else {
       showHeader = false
     }
-    if (home > -500) {
+    if (home.top > -500) {
       currentView = 'home'
       showHome = true
     } else {
       showHome = false
     }
-    if (about < 500 && about > -500) {
+    if (about.top < 500 && about.bottom > -500) {
       currentView = 'about'
       showAbout = true
     } else {
       showAbout = false
     }
-    if (software < 500 && software > -500) {
+    if (software.top < 500 && software.bottom > -500) {
       currentView = 'software'
       showSoftware = true
     } else {
       showSoftware = false
     }
-    if (media < 500 && media > -500) {
+    if (media.top < 500 && media.bottom > -500) {
       currentView = 'media'
       showMedia = true
     } else {
       showMedia = false
     }
-    if (connect < 500) {
+    if (connect.top < 500) {
       currentView = 'connect'
       showConnect = true
     } else {
