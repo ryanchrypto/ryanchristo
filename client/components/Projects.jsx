@@ -50,7 +50,7 @@ const Projects = ({
       {projects.map(project => (
         <div key={project.id}>
           {selectedId === project.id &&
-            <div className={showProjects ? styles.text : styles.textHidden}>
+            <div className={showProjects ? styles.content : styles.contentHidden}>
               <h3 className={showProjects ? styles.title : styles.titleHidden}>
                 {project.title}
               </h3>
@@ -60,8 +60,14 @@ const Projects = ({
                 key={project.id}
                 src={project.image}
               />
-              <p className={styles.summary}>{project.summary}</p>
-              <p className={styles.summary}>{project.tags}</p>
+              <div className={styles.text}>
+                <p className={styles.tags}>
+                  {project.tags}
+                </p>
+                <p className={styles.summary}>
+                  {project.summary}
+                </p>
+              </div>
               <div className={styles.links}>
                 <a
                   className={styles.link}

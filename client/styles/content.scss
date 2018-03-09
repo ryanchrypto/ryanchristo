@@ -1,19 +1,14 @@
 .container {
   background: rgba(255, 255, 255, 1);
-  padding: 2em 0;
+  padding: 4em 0;
   text-align: center;
-
-  p {
-    padding: 1em 0;
-  }
-
 }
 
 .title {
   animation: contentDownIn 1s forwards;
   color: #333;
   font-family: 'Oswald';
-  font-size: 5em;
+  font-size: 6em;
   font-weight: 300;
   letter-spacing: 2px;
   text-align: center;

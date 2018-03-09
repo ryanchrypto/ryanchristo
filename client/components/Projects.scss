@@ -47,7 +47,7 @@
 
 .slideshow {
   animation: contentUpIn 1s forwards;
-  background: rgba(240, 240, 240, 1);
+  background: rgba(50, 50, 50, 1);
   overflow-x: scroll;
   width: 100vw;
 }
@@ -65,14 +65,15 @@
 }
 
 .image {
-  box-shadow: 3px 3px 3px rgba(100, 100, 100, 0.5);
+  background: rgba(20, 20, 20, 0.5);
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px rgba(20, 20, 20, 0.5);
   opacity: 0.5;
   margin: 2em;
   transition: 0.5s;
   transform: scale(1);
 
   img {
-    border-radius: 2px;
     display: block;
     height: 20em;
   }
@@ -94,6 +95,7 @@
 
 .project {
   animation: contentUpIn 1s forwards;
+  max-height: 100vh;
   width: 100vw;
 }
 
@@ -102,39 +104,54 @@
   animation: contentUpOut 1s forwards;
 }
 
-.projectImage {
-  width: 500px;
-}
-
-.text {
+.content {
   animation: contentUpIn 1s forwards;
-  background: rgba(255, 255, 255, 1);
   font-size: 1.2em;
   font-weight: 300;
   margin: 0 auto;
   max-width: 700px;
-  padding: 2em 10vw;
-  padding-bottom: 5em;
+  padding: 0 10vw;
+  padding-bottom: 2em;
 }
 
-.textHidden {
-  @extend .text;
+.contentHidden {
+  @extend .content;
   animation: contentUpOut 1s forwards;
 }
 
 .title {
   font-family: 'Oswald';
-  font-size: 2.6em;
+  font-size: 2.8em;
   font-weight: 300;
   margin: 0 auto;
   padding: 1em 0;
   text-align: center;
 }
 
+.projectImage {
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px rgba(100, 100, 100, 0.5);
+  width: 500px;
+}
+
+.text {
+  padding: 2em 0;
+}
+
+.tags {
+  color: #333;
+  font-size: 1.2em;
+  font-style: italic;
+  font-weight: 400;
+  padding: 0.5em;
+  text-align: left;
+}
+
 .summary {
   font-size: 1.1em;
   line-height: 1.5em;
-  padding: 2% 0;
+  padding: 0.5em;
   text-align: left;
 }
 

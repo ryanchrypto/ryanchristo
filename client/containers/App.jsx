@@ -63,19 +63,19 @@ class AppContainer extends Component {
     } else {
       showHome = false
     }
-    if (about.top < 500 && about.bottom > -500) {
+    if (about.top < 800 && about.bottom > 200) {
       currentView = 'about'
       showAbout = true
     } else {
       showAbout = false
     }
-    if (software.top < 500 && software.bottom > -500) {
+    if (software.top < 800 && software.bottom > 200) {
       currentView = 'software'
       showSoftware = true
     } else {
       showSoftware = false
     }
-    if (media.top < 500 && media.bottom > -500) {
+    if (media.top < 800 && media.bottom > 200) {
       currentView = 'media'
       showMedia = true
     } else {
