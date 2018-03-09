@@ -2,7 +2,8 @@ const animateSlideshow = (slideshowId, projectId) => {
 
   // determine distance to scroll
   const start = document.getElementById(slideshowId).scrollLeft
-  const end = document.getElementById(projectId).offsetLeft - 450
+  const width = document.getElementById(projectId).clientWidth
+  const end = (document.getElementById(projectId).offsetLeft - (window.innerWidth / 2)) + (width / 2)
   const distance = end - start
 
   // configure scrolling animation

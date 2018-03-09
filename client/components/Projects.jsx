@@ -41,55 +41,53 @@ const Projects = ({
         ))}
       </div>
     </div>
-    <div id={projectsId} className={showProjects ? styles.project : styles.projectHidden}>
+    <div id={projectsId} className={styles.projectContainer}>
       <div className={showProjects ? styles.leftArrowContainer : styles.leftArrowContainerHidden}>
         <button className={styles.leftArrow} onClick={previousProject}>
           {'<'}
         </button>
       </div>
-      {projects.map(project => (
-        <div key={project.id}>
-          {selectedId === project.id &&
-            <div className={showProjects ? styles.content : styles.contentHidden}>
-              <h3 className={showProjects ? styles.title : styles.titleHidden}>
-                {project.title}
-              </h3>
-              <img
-                alt={project.title}
-                className={styles.projectImage}
-                key={project.id}
-                src={project.image}
-              />
-              <div className={styles.text}>
-                <p className={styles.tags}>
-                  {project.tags}
-                </p>
-                <p className={styles.summary}>
-                  {project.summary}
-                </p>
-              </div>
-              <div className={styles.links}>
-                <a
-                  className={styles.link}
-                  href={project.link.production}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project
-                </a>
-                {project.link.repository &&
-                  <a
-                    className={styles.link}
-                    href={project.link.repository}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View GitHub
-                  </a>
-                }
-              </div>
+      {projects.filter(project => project.id === selectedId).map(project => (
+        <div key={project.id} className={styles.project}>
+          <div className={styles.content}>
+            <h3 className={showProjects ? styles.title : styles.titleHidden}>
+              {project.title}
+            </h3>
+            <img
+              alt={project.title}
+              className={showProjects ? styles.projectImage : styles.projectImageHidden}
+              key={project.id}
+              src={project.image}
+            />
+            <div className={showProjects ? styles.text : styles.textHidden}>
+              <p className={styles.tags}>
+                {project.tags}
+              </p>
+              <p className={styles.summary}>
+                {project.summary}
+              </p>
             </div>
-          }
+            <div className={showProjects ? styles.links : styles.linksHidden}>
+              <a
+                className={styles.link}
+                href={project.link.production}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Project
+              </a>
+              {project.link.repository &&
+              <a
+                className={styles.link}
+                href={project.link.repository}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View GitHub
+              </a>
+              }
+            </div>
+          </div>
         </div>
       ))}
       <div className={showProjects ? styles.rightArrowContainer : styles.rightArrowContainerHidden}>
