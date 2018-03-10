@@ -17,10 +17,7 @@
   font-size: 4em;
   font-weight: 300;
   letter-spacing: 2px;
-  padding: 2em;
-  position: absolute;
-  text-align: left;
-  top: 20%;
+  text-align: center;
 }
 
 .titleHidden {
@@ -33,16 +30,8 @@
   color: #FFF;
   font-size: 1.4em;
   line-height: 1.4;
-  padding: 2em;
-  padding-bottom: 4em;
-  position: absolute;
   text-align: center;
-  min-width: 30vw;
-
-  p {
-    padding: 2% 0;
-  }
-
+  width: 100vw;
 }
 
 .contentHidden {
@@ -55,17 +44,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2%;
   text-align: center;
 }
 
 .link {
   color: #FFF;
   font-size: 2em;
-  padding: 20px 12px;
-  position: relative;
+  padding: 0.5em;
   text-decoration: none;
-  transition: 0.25s;
+  transition: 0.5s;
 
   &:hover {
     color: #EEE;
@@ -77,12 +64,16 @@
 
 .email {
   color: #FFF;
+  display: block;
   font-size: 1em;
+  padding: 0.5em;
   text-decoration: none;
-  transition: 0.25s;
+  transition: 0.5s;
 
   &:hover {
     color: #EEE;
+    cursor: pointer;
+    transform: scale(1.1);
   }
 
 }

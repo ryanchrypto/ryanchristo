@@ -4,10 +4,10 @@ import styles from './Connect.scss'
 
 const Connect = ({ showConnect }) => (
   <div id="connect" className={styles.container}>
-    <h2 className={showConnect ? styles.title : styles.titleHidden}>
-      {'connect'}
-    </h2>
     <div className={showConnect ? styles.content : styles.contentHidden}>
+      <h2 className={showConnect ? styles.title : styles.titleHidden}>
+        {'connect'}
+      </h2>
       <div className={styles.links}>
         {links.map(link => (
           <a
