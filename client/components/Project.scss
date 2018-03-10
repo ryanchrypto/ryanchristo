@@ -1,0 +1,143 @@
+@import '../styles/animations.scss';
+
+.projectContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* project */
+
+.project {
+  min-height: calc(100vh - 100px);
+  padding: 2rem 0;
+  width: 80vw;
+}
+
+.projectContent {
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.projectTitle {
+  animation: contentDownIn 1s forwards;
+  font-family: 'Oswald';
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 2rem 0;
+}
+
+.projectTitleHidden {
+  @extend .projectTitle;
+  animation: contentDownOut 1s forwards;
+}
+
+.projectImage {
+  animation: contentLeftIn 1s forwards;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px rgba(100, 100, 100, 0.5);
+  margin: 0 auto;
+  width: 500px;
+}
+
+.projectImageHidden {
+  @extend .projectImage;
+  animation: contentLeftOut 1s forwards;
+}
+
+.projectText {
+  animation: contentRightIn 1s forwards;
+  padding: 2em 0;
+}
+
+.projectTextHidden {
+  @extend .projectText;
+  animation: contentRightOut 1s forwards;
+}
+
+.projectTags {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.projectSummary {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 2rem;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.projectLinks {
+  animation: contentUpIn 1s forwards;
+  text-align: center;
+}
+
+.projectLinksHidden {
+  @extend .projectLinks;
+  animation: contentUpOut 1s forwards;
+}
+
+.projectLink {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 2rem;
+  transition: 0.5s;
+
+  &:hover {
+    color: #666;
+  }
+
+}
+
+/* arrows */
+
+.arrowContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 0 2.5%;
+  width: 10vw;
+  z-index: 5;
+}
+
+.leftArrowContainer {
+  @extend .arrowContainer;
+  animation: contentRightIn 1s forwards;
+  left: 0;
+}
+
+.leftArrowContainerHidden {
+  @extend .leftArrowContainer;
+  animation: contentRightOut 1s forwards;
+}
+
+.rightArrowContainer {
+  @extend .arrowContainer;
+  animation: contentLeftIn 1s forwards;
+  right: 0;
+}
+
+.rightArrowContainerHidden {
+  @extend .rightArrowContainer;
+  animation: contentLeftOut 1s forwards;
+}
+
+.arrow {
+  color: #999;
+  font-family: 'Oswald';
+  font-size: 8rem;
+  font-weight: 300;
+  transition: 0.5s;
+
+  &:hover {
+    color: #000;
+    cursor: pointer;
+  }
+
+}

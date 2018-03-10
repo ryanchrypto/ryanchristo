@@ -1,7 +1,11 @@
 @import '../styles/animations.scss';
-@import '../styles/container.scss';
+@import '../styles/container-2.scss';
 
 .content {
+  padding: 6rem 0;
+}
+
+.summary {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -10,24 +14,23 @@
   padding: 2em 0;
 }
 
-.profile {
+.summaryImage {
   animation: contentRightIn 1s forwards;
   box-shadow: 0 0 2px rgba(100, 100, 100, 1);
-  width: 20em;
+  width: 20rem;
 }
 
-.profileHidden {
-  @extend .profile;
+.summaryImageHidden {
+  @extend .summaryImage;
   animation: contentRightOut 1s forwards;
 }
 
-.text {
+.summaryText {
   animation: contentLeftIn 1s forwards;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   font-weight: 300;
-  margin-left: 2em;
-  padding: 2em;
-  text-align: left;
+  margin-left: 2rem;
+  padding: 2rem;
 
   p {
     padding: 1em 0;
@@ -35,7 +38,32 @@
 
 }
 
-.textHidden {
-  @extend .text;
+.summaryTextHidden {
+  @extend .summaryText;
   animation: contentLeftOut 1s forwards;
+}
+
+.skills {
+  animation: contentUpIn 1s forwards;
+  margin: 0 auto;
+  max-width: 900px;
+
+  h3 {
+    font-family: 'Oswald';
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 1rem;
+  }
+
+}
+
+.skillsHidden {
+  @extend .skills;
+  animation: contentUpOut 1s forwards;
 }

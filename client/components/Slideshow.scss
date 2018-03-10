@@ -1,0 +1,94 @@
+@import '../styles/animations.scss';
+
+.slideshowContainer {
+  margin: 0 auto;
+}
+
+/* */
+
+.index {
+  animation: contentRightIn 1s forwards;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.indexHidden {
+  @extend .index;
+  animation: contentRightOut 1s forwards;
+}
+
+.indexItem {
+  color: #999;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin: 0.5rem;
+  padding: 1em 0.5rem;
+  transition: 0.5s;
+
+  &:hover {
+    color: #000;
+    cursor: pointer;
+  }
+
+}
+
+.activeIndexItem {
+  @extend .indexItem;
+  color: #000;
+}
+
+/* */
+
+.slideshow {
+  animation: contentUpIn 1s forwards;
+  background: rgba(50, 50, 50, 1);
+  overflow-x: scroll;
+  padding: 1em 0;
+  width: 100vw;
+}
+
+.slideshowHidden {
+  @extend .slideshow;
+  animation: contentUpOut 1s forwards;
+}
+
+.slideshowContent {
+  display: inline-block;
+  margin: 0 calc(50vw - 22em); // subtract half of image width and margin from half of view width
+  padding: 0;
+  white-space: nowrap;
+}
+
+.image {
+  background: rgba(20, 20, 20, 0.5);
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px rgba(20, 20, 20, 0.5);
+  opacity: 0.5;
+  margin: 2rem;
+  transition: 0.5s;
+
+  img {
+    display: block;
+    width: 30rem;
+  }
+
+  &:first-child {
+    margin-left: 8rem;
+  }
+
+  &:last-child {
+    margin-right: 8rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+}
+
+.activeImage {
+  @extend .image;
+  opacity: 1;
+  transform: scale(1.1);
+}

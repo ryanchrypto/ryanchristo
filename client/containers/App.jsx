@@ -152,13 +152,13 @@ class AppContainer extends Component {
     return (
       <App
         currentView={this.state.currentView}
+        animateScroll={animateScroll}
         showAbout={this.state.showAbout}
         showConnect={this.state.showConnect}
         showHeader={this.state.showHeader}
         showHome={this.state.showHome}
         showMedia={this.state.showMedia}
         showSoftware={this.state.showSoftware}
-        animateScroll={animateScroll}
       />
     )
   }

@@ -38,6 +38,7 @@ const HomeNav = ({ animateScroll, showHome }) => (
 
 HomeNav.propTypes = {
   animateScroll: PropTypes.func.isRequired,
+  showHome: PropTypes.bool.isRequired,
 }
 
 export default HomeNav

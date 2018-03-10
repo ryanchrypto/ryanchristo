@@ -7,23 +7,45 @@ const About = ({ showAbout }) => (
       {'about'}
     </h2>
     <div className={styles.content}>
-      <img
-        alt="Ryan Christoffersen"
-        className={showAbout ? styles.profile : styles.profileHidden}
-        src="/img/profile.jpg"
-      />
-      <div className={showAbout ? styles.text : styles.textHidden}>
+      <div className={styles.summary}>
+        <img
+          alt="Ryan Christoffersen"
+          className={showAbout ? styles.summaryImage : styles.summaryImageHidden}
+          src="/img/profile.jpg"
+        />
+        <div className={showAbout ? styles.summaryText : styles.summaryTextHidden}>
+          <p>
+            <strong>
+              {'Software Developer'}
+            </strong>
+            {'. Currently developing applications on the Ethereum platform. Interested in open source projects and decentralized technology.'}
+          </p>
+          <p>
+            <strong>
+              {'Media Activist'}
+            </strong>
+            {'. Filmed and produced documentaries exploring poverty and microfinance. Interested in use cases of decentralized technology for social justice.'}
+          </p>
+          <p>
+            <strong>
+              {'Critical Thinker'}
+            </strong>
+            {'. Studied classics and critical and cultural theory as an undergraduate. Interested in decentralized governance, globalization and self-sovereignty.'}
+          </p>
+        </div>
+      </div>
+      <div className={showAbout ? styles.skills : styles.skillsHidden}>
+        <h3>
+          {'Software Skills'}
+        </h3>
         <p>
-          <strong>{'Software Developer'}</strong>
-          {'. Currently developing applications on the Ethereum platform. Interested in open source projects and decentralized technology.'}
+          {'Working on applications connected to the Ethereum blockchain using React, Redux, SCSS, PostCSS, Webpack, Web3, Truffle. Experience with Ruby, Rails, Node, Express, MongoDB, PostgreSQL.'}
         </p>
+        <h3>
+          {'Media Skills'}
+        </h3>
         <p>
-          <strong>{'Media Activist'}</strong>
-          {'. Filmed and produced documentaries exploring poverty and microfinance. Interested in use cases of new technology for social justice.'}
-        </p>
-        <p>
-          <strong>{'Critical Thinker'}</strong>
-          {'. Studied classics and critical and cultural theory as an undergraduate. Interested in decentralized governance, globalization and self-sovereignty.'}
+          {'Exprience working with Adobe software including Lightroom, Photoshop and Premiere. Experience with photography, videography, cinematography, audio recording and video editing.'}
         </p>
       </div>
     </div>

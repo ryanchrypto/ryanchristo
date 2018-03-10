@@ -1,39 +1,13 @@
 @import '../styles/animations.scss';
-
-.container {
-  align-items: center;
-  background: rgba(50, 50, 50, 1);
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  position: relative;
-}
-
-.content {
-  margin-bottom: 12%;
-  text-align: center;
-}
-
-.title {
-  animation: contentDownIn 1s forwards;
-  color: rgba(255, 255, 255, 1);
-  font-family: 'Oswald';
-  font-size: 5em;
-  font-weight: 300;
-}
-
-.titleHidden {
-  @extend .title;
-  animation: contentDownOut 1s forwards;
-}
+@import '../styles/container-1.scss';
 
 .subtitle {
   animation: contentZoomIn 1s forwards;
   color: rgba(200, 200, 200, 1);
   font-family: 'Oswald';
-  font-size: 2.2em;
+  font-size: 2.2rem;
   font-weight: 300;
-  padding-bottom: 1em;
+  padding-bottom: 1rem;
 }
 
 .subtitleHidden {
@@ -42,5 +16,5 @@
 }
 
 .divider {
-  padding: 0.75em;
+  padding: 0.75rem;
 }

@@ -1,2 +1,13 @@
-@import '../styles/animations.scss';
-@import '../styles/container.scss';
+@import '../styles/container-2.scss';
+
+.summary {
+  max-width: 900px;
+  margin: 0 auto;
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 4rem 0;
+  }
+
+}
