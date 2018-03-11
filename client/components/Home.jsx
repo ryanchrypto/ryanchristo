@@ -14,7 +14,7 @@ const Home = ({ animateScroll, showHome }) => (
         <span className={styles.divider}>
           {'|'}
         </span>
-        {'media activist'}
+        {'media creator'}
         <span className={styles.divider}>
           {'|'}
         </span>

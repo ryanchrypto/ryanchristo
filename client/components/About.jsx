@@ -22,7 +22,7 @@ const About = ({ showAbout }) => (
           </p>
           <p>
             <strong>
-              {'Media Activist'}
+              {'Media Creator'}
             </strong>
             {'. Filmed and produced documentaries exploring poverty and microfinance. Interested in use cases of decentralized technology for social justice.'}
           </p>
