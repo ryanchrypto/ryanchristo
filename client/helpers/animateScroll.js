@@ -3,7 +3,7 @@ const animateScroll = (id) => {
   // determine distance to scroll
   const start = window.pageYOffset
   const top = document.getElementById(id).offsetTop
-  const end = id === 'home' ? top : top - 100 // subtract fixed header height if not home
+  const end = id === 'home' || id === 'connect' ? top : top - 100 // subtract fixed header height if not home
   const distance = end - start
 
   // configure scrolling animation

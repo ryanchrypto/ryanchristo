@@ -11,17 +11,26 @@
 }
 
 .link {
-  font-size: 1.2rem;
-  padding: 0.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  padding: 0.75rem;
+
+  &:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+  }
+
 }
 
 .active {
   @extend .link;
-  border-bottom: 2px solid rgba(50, 50, 50, 1);
-  color: rgba(0, 0, 0, 1);
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .divider {
-  font-size: 1.2rem;
-  padding: 0.5rem;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.1rem;
+  padding: 0.75rem;
 }

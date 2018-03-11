@@ -28,11 +28,14 @@ const Project = ({
             src={project.image}
           />
           <div className={showProjects ? styles.projectText : styles.projectTextHidden}>
-            <p className={styles.projectTags}>
-              {project.tags}
+            <p className={styles.projectRole}>
+              {project.role} | {project.dates}
             </p>
             <p className={styles.projectSummary}>
               {project.summary}
+            </p>
+            <p className={styles.projectTags}>
+              {project.tags}
             </p>
           </div>
           <div className={showProjects ? styles.projectLinks : styles.projectLinksHidden}>
