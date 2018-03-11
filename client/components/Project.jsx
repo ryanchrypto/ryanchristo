@@ -74,7 +74,7 @@ Project.propTypes = {
   previousProject: PropTypes.func.isRequired,
   projects: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
       image: PropTypes.string.isRequired,
       link: PropTypes.shape({
         production: PropTypes.string.isRquired,
@@ -85,7 +85,7 @@ Project.propTypes = {
     }).isRequired,
   ).isRequired,
   projectsId: PropTypes.string.isRequired,
-  selectedId: PropTypes.string.isRequired,
+  selectedId: PropTypes.number.isRequired,
   showProjects: PropTypes.bool.isRequired,
 }
 

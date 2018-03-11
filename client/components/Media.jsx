@@ -12,7 +12,7 @@ const Media = ({
     </h2>
     <div className={showMedia ? styles.summary : styles.summaryHidden}>
       <h3>
-        {'Media Overview'}
+        {'Media Experience'}
       </h3>
       <p>
         {'Exprience working with Adobe software including Lightroom, Photoshop and Premiere. Experience with photography, videography, cinematography, audio recording and video editing.'}

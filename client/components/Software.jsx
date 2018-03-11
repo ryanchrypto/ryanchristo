@@ -12,7 +12,7 @@ const Software = ({
     </h2>
     <div className={showSoftware ? styles.summary : styles.summaryHidden}>
       <h3>
-        {'Software Overview'}
+        {'Software Experience'}
       </h3>
       <p>
         {'Working on applications connected to the Ethereum blockchain using React, Redux, SCSS, PostCSS, Webpack, Web3, Truffle. Experience with Ruby, Rails, Node, Express, MongoDB, PostgreSQL.'}
