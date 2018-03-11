@@ -9,32 +9,27 @@ const Slideshow = ({
   slideshowId,
 }) => (
   <div className={styles.slideshowContainer}>
-    <div className={showProjects ? styles.index : styles.indexHidden}>
-      {projects.map(project => (
-        <button
-          key={project.id}
-          className={selectedId === project.id ? styles.activeIndexItem : styles.indexItem}
-          onClick={() => setProject(project)}
-        >
-          {project.title}
-        </button>
-      ))}
-    </div>
     <div id={slideshowId} className={showProjects ? styles.slideshow : styles.slideshowHidden}>
-      <div className={styles.slideshowContent}>
+      <div className={styles.slides}>
         {projects.map(project => (
-          <button
-            id={project.id}
-            key={project.id}
-            className={selectedId === project.id ? styles.activeImage : styles.image}
-            onClick={() => setProject(project)}
-          >
-            <img
-              alt={project.title}
-              key={project.id}
-              src={project.image}
-            />
-          </button>
+          <div key={project.id} id={project.id} className={selectedId === project.id ? styles.activeSlide : styles.slide}>
+            <button
+              className={styles.image}
+              onClick={() => setProject(project)}
+            >
+              <img
+                alt={project.title}
+                className={styles.slideImage}
+                src={project.image}
+              />
+              <div className={styles.slideInfo}>
+                <h3>{project.title}</h3>
+                <h4>{project.role}</h4>
+                <p>{project.dates}</p>
+                <p>{project.tags}</p>
+              </div>
+            </button>
+          </div>
         ))}
       </div>
     </div>
