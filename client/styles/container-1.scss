@@ -13,7 +13,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.25;
+  opacity: 0.2;
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -27,7 +27,7 @@
 
 .title {
   animation: contentDownIn 1s forwards;
-  color: #111;
+  color: rgba(255, 255, 255, 1);
   font-family: 'Oswald';
   font-size: 5rem;
   font-weight: 300;

@@ -11,20 +11,20 @@
 }
 
 .link {
-  border-bottom: 2px solid rgba(20, 20, 20, 0);
-  color: rgba(20, 20, 20, 0.9);
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.4rem;
   padding: 1rem;
 
   &:hover {
-    border-bottom: 2px solid rgba(20, 20, 20, 1);
-    color: rgba(20, 20, 20, 1);
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
   }
 
 }
 
 .divider {
-  color: rgba(20, 20, 20, 1);
+  color: rgba(255, 255, 255, 1);
   font-size: 1.4rem;
   padding: 1rem;
 }
