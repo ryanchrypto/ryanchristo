@@ -24,7 +24,7 @@ const About = ({ showAbout }) => (
             <strong>
               {'Media Creator'}
             </strong>
-            {'. Filmed and produced documentaries exploring poverty and microfinance. Interested in use cases of decentralized technology for social justice.'}
+            {'. Filmed and produced documentaries exploring poverty and microfinance. Interested in use cases of technology for social justice.'}
           </p>
           <p>
             <strong>
