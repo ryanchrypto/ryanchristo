@@ -4,6 +4,7 @@ import styles from './Home.scss'
 
 const Home = ({ animateScroll, showHome }) => (
   <div id="home" className={styles.container}>
+    <div className={styles.background} />
     <div className={styles.content}>
       <h1 className={showHome ? styles.title : styles.titleHidden}>
         {'ryan christoffersen'}

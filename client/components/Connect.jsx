@@ -4,6 +4,7 @@ import styles from './Connect.scss'
 
 const Connect = ({ showConnect }) => (
   <div id="connect" className={styles.container}>
+    <div className={styles.background} />
     <div className={showConnect ? styles.content : styles.contentHidden}>
       <h2 className={showConnect ? styles.title : styles.titleHidden}>
         {'connect'}
