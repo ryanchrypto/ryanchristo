@@ -22,7 +22,7 @@ export default [
       repository: null,
     },
     role: 'Videographer',
-    summary: 'Alleviating Poverty in Vietnam is a short promotional video that explores a day in the life Whole Planet Foundation\'s Field Director, Daniel Zoltani, as he visits one of their partners in Vietnam. Daniel visits Tao Yeu Mai (TYM), the leading microfinance institution in Thai Nguyen Province of Northern Vietnam, and goes out with TYM staff to meet with their clients.',
+    summary: '"Alleviating Poverty in Vietnam is a short promotional video that explores a day in the life Whole Planet Foundation\'s Field Director, Daniel Zoltani, as he visits one of their partners in Vietnam. Daniel visits Tao Yeu Mai (TYM) - the leading microfinance institution in Thai Nguyen Province of Northern Vietnam. Daniel and the TYM staff go out to meet with their clients."',
     tags: 'Cinematography, Photography, Audio Recording, Video Editing',
     title: 'Alleviating Poverty in Vietnam',
     type: 'media',
