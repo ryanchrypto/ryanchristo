@@ -39,23 +39,25 @@ const Project = ({
             </p>
           </div>
           <div className={showProjects ? styles.projectLinks : styles.projectLinksHidden}>
-            <a
-              className={styles.projectLink}
-              href={project.link.production}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Project
-            </a>
+            {project.link.production &&
+              <a
+                className={styles.projectLink}
+                href={project.link.production}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Project
+              </a>
+            }
             {project.link.repository &&
-            <a
-              className={styles.projectLink}
-              href={project.link.repository}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View GitHub
-            </a>
+              <a
+                className={styles.projectLink}
+                href={project.link.repository}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View GitHub
+              </a>
             }
           </div>
         </div>

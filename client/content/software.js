@@ -1,6 +1,6 @@
 export default [
   {
-    id: 9,
+    id: 12,
     dates: '2017',
     image: 'img/software/horizonapp.png',
     link: {
@@ -14,7 +14,7 @@ export default [
     type: 'software',
   },
   {
-    id: 8,
+    id: 11,
     dates: '2017',
     image: 'img/software/ushahidi.png',
     link: {
@@ -28,21 +28,21 @@ export default [
     type: 'software',
   },
   {
-    id: 7,
+    id: 10,
     dates: '2017',
-    image: 'img/software/joglonorthwest.png',
+    image: 'img/software/joglonorthwest_new.png',
     link: {
       production: 'https://joglonorthwest.com',
       repository: null,
     },
-    role: 'Freelance Developer',
-    summary: 'Joglo Northwest is a family owned business. I built my first website for Joglo several years ago using PHP and MySQL. I rebuilt the website in Javascript to accomadate for new ideas and simplify how content is managed and updated. I built the new site using the latest technologies and simple-cms.',
+    role: 'Web Developer',
+    summary: 'Joglo Northwest is a family owned business that buys and sells Indonesian art, furniture and stone. I rebuilt the website in Javascript to accomadate for new ideas and simplify how content is managed and updated. I built the new site using the latest technologies and simple-cms.',
     tags: 'React, Redux, Webpack, PostCSS, SCSS, Node, Express, MongoDB',
     title: 'Joglo Northwest',
     type: 'software',
   },
   {
-    id: 6,
+    id: 9,
     dates: '2017',
     image: 'img/software/simple-cms.png',
     link: {
@@ -56,7 +56,7 @@ export default [
     type: 'software',
   },
   {
-    id: 5,
+    id: 8,
     dates: '2017',
     image: 'img/software/fcc-projects.png',
     link: {
@@ -67,6 +67,48 @@ export default [
     summary: 'After completing a Javascript workshop, I continued learning with freeCodeCamp. The curriculum focuses on full stack Javascript development with React, Node, Express and MongoDB.',
     tags: 'React, Redux, Webpack, PostCSS, SCSS, Node, Express, MongoDB',
     title: 'fcc-projects',
+    type: 'software',
+  },
+  {
+    id: 7,
+    dates: '2014',
+    image: 'img/software/joglonorthwest_old.png',
+    link: {
+      production: null,
+      repository: null,
+    },
+    role: 'Web Developer',
+    summary: 'Joglo Northwest is a family owned business that buys and sells Indonesian art, furniture and stone. I built their gallery website with a custom content management system using HTML, CSS, PHP and SQL making it easy for admin to update content.',
+    tags: 'HTML, CSS, PHP, SQL',
+    title: 'Joglo Northwest',
+    type: 'software',
+  },
+  {
+    id: 6,
+    dates: '2014',
+    image: 'img/software/greekdata.png',
+    link: {
+      production: null,
+      repository: null,
+    },
+    role: 'Web Developer',
+    summary: 'Greek Database was language tool that I built for learning Classical Greek that included a dictionary, vocabulary, conjugation and declension flashcards, and reading exercises.',
+    tags: 'HTML, CSS, PHP, SQL',
+    title: 'Greek Database',
+    type: 'software',
+  },
+  {
+    id: 5,
+    dates: '2013',
+    image: 'img/software/docartnet.png',
+    link: {
+      production: null,
+      repository: null,
+    },
+    role: 'Web Developer',
+    summary: 'Documentary Art Network was one of first web development projects. I built the foundation for a professional network for documentary artists, where users could post stories on documentary artists, discuss project ideas, find people to collaborate with, and buy, sell, rent and exchange equipment.',
+    tags: 'HTML, CSS, PHP, SQL',
+    title: 'Documentary Art Network',
     type: 'software',
   },
 ]
