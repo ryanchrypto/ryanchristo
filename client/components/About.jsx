@@ -22,15 +22,9 @@ const About = ({ showAbout }) => (
           </p>
           <p>
             <strong>
-              {'Media Creator'}
+              {'Visual Storyteller'}
             </strong>
-            {'. Filmed and produced documentaries exploring poverty and microfinance. Interested in use cases of technology for social justice.'}
-          </p>
-          <p>
-            <strong>
-              {'Critical Thinker'}
-            </strong>
-            {'. Studied classics and critical and cultural theory as an undergraduate. Interested in decentralized governance, globalization and self-sovereignty.'}
+            {'. Filmed and produced documentaries exploring poverty and microfinance. Interested in international development and human rights.'}
           </p>
         </div>
       </div>

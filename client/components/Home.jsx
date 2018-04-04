@@ -14,11 +14,7 @@ const Home = ({ animateScroll, showHome }) => (
         <span className={styles.divider}>
           {'|'}
         </span>
-        {'media creator'}
-        <span className={styles.divider}>
-          {'|'}
-        </span>
-        {'critical thinker'}
+        {'visual storyteller'}
       </p>
       <HomeNav
         animateScroll={animateScroll}
