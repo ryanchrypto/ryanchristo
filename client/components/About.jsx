@@ -24,7 +24,7 @@ const About = ({ showAbout }) => (
             <strong>
               {'Visual Storyteller'}
             </strong>
-            {'. Filmed and produced documentaries exploring poverty and microfinance. Interested in international development and human rights.'}
+            {'. Filmed and produced documentaries exploring poverty and microfinance. Interested in human rights and sustainable development.'}
           </p>
         </div>
       </div>
