@@ -15,7 +15,7 @@ const Software = ({
         {'Software Experience'}
       </h3>
       <p>
-        {'Working on applications connected to the Ethereum blockchain using React, Redux, SCSS, PostCSS, Webpack, Web3, Truffle. Experience with Ruby, Rails, Node, Express, MongoDB, PostgreSQL.'}
+        {'Experience developing applications with React, Redux, SCSS, PostCSS, Webpack, Ruby, Rails, Node, Express, MongoDB, PostgreSQL. Currently exploring Web3, Truffle and Ethereum.'}
       </p>
     </div>
     <Projects
