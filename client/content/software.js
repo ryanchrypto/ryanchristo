@@ -1,5 +1,19 @@
 export default [
   {
+    id: 13,
+    dates: '2018',
+    image: 'img/software/chora.png',
+    link: {
+      production: 'https://chora.io',
+      repository: 'https://github.com/choraio',
+    },
+    role: 'Software Developer',
+    summary: 'Chora is an experimental side project in early development. I started working on Chora after finishing a few tutorials on Web3, Truffle and Solidity. I am combining my skills with React, Redux and Webpack to build a client application that interacts with a collection of smart contracts on the Ethereum network.',
+    tags: 'React, Redux, Webpack, PostCSS, SCSS, Web3, Truffle, Solidity, Ethereum',
+    title: 'Chora',
+    type: 'software',
+  },
+  {
     id: 12,
     dates: '2017',
     image: 'img/software/horizonapp.png',
