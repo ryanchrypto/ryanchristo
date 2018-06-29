@@ -1,22 +1,26 @@
 export default [
   {
-    icon: 'fa fa-github',
+    icon: 'fab fa-github',
     link: 'https://github.com/ryanchristo',
   },
   {
-    icon: 'fa fa-linkedin',
-    link: 'https://linkedin.com/in/ryanchristoff',
-  },
-  {
-    icon: 'fa fa-angellist',
+    icon: 'fab fa-angellist',
     link: 'https://angel.co/ryanchristo',
   },
   {
-    icon: 'fa fa-twitter',
+    icon: 'fab fa-linkedin',
+    link: 'https://linkedin.com/in/ryanchristoff',
+  },
+  {
+    icon: 'fab fa-medium',
+    link: 'https://medium.com/@ryanchristo',
+  },
+  {
+    icon: 'fab fa-twitter',
     link: 'https://twitter.com/ryanechristo',
   },
   {
-    icon: 'fa fa-medium',
-    link: 'https://medium.com/@ryanchristo',
+    icon: 'fab fa-youtube',
+    link: 'https://www.youtube.com/channel/UCWeNtrcUgNOnOKno_iuAJFg',
   },
 ]
