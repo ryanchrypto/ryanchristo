@@ -16,11 +16,11 @@ export default [
     link: 'https://medium.com/@ryanchristo',
   },
   {
-    icon: 'fab fa-twitter',
-    link: 'https://twitter.com/ryanechristo',
+    icon: 'fab fa-reddit',
+    link: 'https://www.reddit.com/user/ryanchristo',
   },
   {
-    icon: 'fab fa-youtube',
-    link: 'https://www.youtube.com/channel/UCWeNtrcUgNOnOKno_iuAJFg',
+    icon: 'fab fa-twitter',
+    link: 'https://twitter.com/ryanechristo',
   },
 ]
