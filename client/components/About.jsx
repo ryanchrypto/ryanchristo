@@ -18,7 +18,7 @@ const About = ({ showAbout }) => (
             <strong>
               {'Software Developer'}
             </strong>
-            {'. Currently developing applications on the Ethereum platform. Interested in open source projects and decentralized technology.'}
+            {'. Currently building the future of work at Colony. Interested in open source projects and decentralization.'}
           </p>
           <p>
             <strong>
