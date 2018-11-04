@@ -1,5 +1,19 @@
 export default [
   {
+    id: 14,
+    dates: '2018',
+    image: 'img/software/colony.png',
+    link: {
+      production: 'https://colony.io',
+      repository: 'https://github.com/JoinColony',
+    },
+    role: 'Developer Support Engineer',
+    summary: 'Colony is a platform for open organizations built on Ethereum. Organizations, including communities, projects and small groups, operate on a meritocratic style of governance. I work on developer tools, documentation, intgrations, and provide developer support.',
+    tags: 'React, Redux, Webpack, Web3, Truffle, Solidity, Ethereum',
+    title: 'Colony',
+    type: 'software',
+  },
+  {
     id: 13,
     dates: '2018',
     image: 'img/software/chora.png',
