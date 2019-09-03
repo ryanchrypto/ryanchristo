@@ -1,0 +1,8 @@
+import React from 'react'
+import styles from './Cursor.module.scss'
+
+const Cursor = () => (
+  <div id="cursor" className={styles.cursor} />
+)
+
+export default Cursor
