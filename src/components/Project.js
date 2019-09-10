@@ -38,24 +38,24 @@ const Project = ({
               <p className={styles.projectTags}>{project.tags}</p>
             </div>
             <div className={styles.projectLinks}>
-              {project.link.production && (
+              {project.link.live && (
                 <a
                   className={styles.projectLink}
-                  href={project.link.production}
+                  href={project.link.live}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {'View Project'}
                 </a>
               )}
-              {project.link.repository && (
+              {project.link.repo && (
                 <a
                   className={styles.projectLink}
-                  href={project.link.repository}
+                  href={project.link.repo}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {'View GitHub'}
+                  {'View Source'}
                 </a>
               )}
             </div>
@@ -78,8 +78,8 @@ Project.propTypes = {
       id: PropTypes.number.isRequired,
       image: PropTypes.string.isRequired,
       link: PropTypes.shape({
-        production: PropTypes.string.isRquired,
-        repository: PropTypes.string,
+        live: PropTypes.string.isRquired,
+        repo: PropTypes.string,
       }).isRequired,
       summary: PropTypes.string.isReuquired,
       title: PropTypes.string.isRequired,

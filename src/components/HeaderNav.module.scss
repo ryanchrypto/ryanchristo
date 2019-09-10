@@ -7,20 +7,20 @@
   padding: 0.75rem;
 
   &:hover {
-    border-bottom: 2px solid rgba(255, 255, 255, 1);
-    color: rgba(255, 255, 255, 1);
+    border-bottom: 2px solid #FFF;
+    color: #FFF;
   }
 
 }
 
 .active {
   @extend .link;
-  border-bottom: 2px solid rgba(255, 255, 255, 1);
-  color: rgba(255, 255, 255, 1);
+  border-bottom: 2px solid #FFF;
+  color: #FFF;
 }
 
 .divider {
-  color: rgba(255, 255, 255, 1);
+  color: #FFF;
   font-size: 1.1rem;
   padding: 0.75rem;
 }

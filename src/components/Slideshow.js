@@ -45,7 +45,7 @@ Slideshow.propTypes = {
       id: PropTypes.number.isRequired,
       image: PropTypes.string.isRequired,
       link: PropTypes.shape({
-        production: PropTypes.string.isRquired,
+        project: PropTypes.string.isRquired,
         repository: PropTypes.string,
       }).isRequired,
       summary: PropTypes.string.isReuquired,

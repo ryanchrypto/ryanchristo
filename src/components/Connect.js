@@ -11,6 +11,9 @@ const Connect = ({ showConnect }) => (
       <h2 className={showConnect ? styles.title : styles.titleHidden}>
         {'connect'}
       </h2>
+      <div className={showConnect ? styles.email : styles.emailHidden}>
+        {'ryan [ at ] ryanchristo.com'}
+      </div>
       <div className={showConnect ? styles.links : styles.linksHidden}>
         {links.map(link => (
           <a
@@ -24,12 +27,6 @@ const Connect = ({ showConnect }) => (
           </a>
         ))}
       </div>
-      <a
-        className={showConnect ? styles.email : styles.emailHidden}
-        href="mailto:ryan@ryanchristo.com"
-      >
-        {'ryan@ryanchristo.com'}
-      </a>
     </div>
   </div>
 )

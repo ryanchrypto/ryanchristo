@@ -5,42 +5,40 @@ import styles from './About.module.scss'
 const About = () => (
   <div id="about" className={styles.container}>
     <h2 className={styles.title}>{'about'}</h2>
-    <div className={styles.content}>
-      <div className={styles.summary}>
-        <img
-          alt="Ryan Christoffersen"
-          className={styles.summaryImage}
-          src="img/profile.jpg"
-        />
-        <div className={styles.summaryText}>
-          <p>
-            <strong>{'Software Developer'}</strong>
-            {
-              '. Currently building the future of work at Colony. Interested in open source projects and decentralization.'
-            }
-          </p>
-          <p>
-            <strong>{'Visual Storyteller'}</strong>
-            {
-              '. Filmed and produced documentaries exploring poverty and microfinance. Interested in human rights and sustainable development.'
-            }
-          </p>
-        </div>
-      </div>
-      <div className={styles.skills}>
-        <h3>{'Software Skills'}</h3>
+    <div className={styles.summary}>
+      <img
+        alt="Ryan Christoffersen"
+        className={styles.summaryImage}
+        src="img/profile.jpg"
+      />
+      <div className={styles.summaryText}>
         <p>
+          <strong>{'Software Developer'}</strong>
           {
-            'Experience developing applications with React, Redux, SCSS, PostCSS, Webpack, Ruby, Rails, Node, Express, MongoDB, PostgreSQL. Currently exploring Web3, Truffle and Ethereum.'
+            '. Interested in free (as in freedom) software and decentralized networks.'
           }
         </p>
-        <h3>{'Media Skills'}</h3>
         <p>
+          <strong>{'Visual Storyteller'}</strong>
           {
-            'Exprience working with Adobe software including Lightroom, Photoshop and Premiere. Experience with photography, videography, cinematography, audio recording and video editing.'
+            '. Filmed and produced documentaries exploring poverty and microfinance.'
           }
         </p>
       </div>
+    </div>
+    <div className={styles.skills}>
+      <h3>{'Software Skills'}</h3>
+      <p>
+        {
+          'Experience developing applications and tools with React, Redux, Webpack, Web3, IPFS, Node, Express, Ruby, Rails, MongoDB, PostgreSQL, Solidity, and Ethereum.'
+        }
+      </p>
+      <h3>{'Media Skills'}</h3>
+      <p>
+        {
+          'Experience with photography, videography, cinematography, audio recording, video editing, and working with Adobe Lightroom, Photoshop and Premiere. '
+        }
+      </p>
     </div>
   </div>
 )

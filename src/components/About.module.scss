@@ -1,21 +1,16 @@
 @import '../styles/container-2.scss';
 
-.content {
-  padding: 1rem 0;
-}
-
 .summary {
   align-items: center;
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: 900px;
-  padding: 2em 0;
+  max-width: 800px;
 }
 
 .summaryImage {
   box-shadow: 0 0 2px rgba(100, 100, 100, 1);
-  width: 15rem;
+  width: 12rem;
 }
 
 .summaryText {
@@ -32,11 +27,12 @@
 
 .skills {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 800px;
+  padding: 2em 0;
 
   h3 {
     font-family: 'Oswald';
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 300;
     padding: 1rem;
   }

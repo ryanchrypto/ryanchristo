@@ -39,8 +39,8 @@ Projects.propTypes = {
       id: PropTypes.number.isRequired,
       image: PropTypes.string.isRequired,
       link: PropTypes.shape({
-        production: PropTypes.string.isRquired,
-        repository: PropTypes.string,
+        live: PropTypes.string.isRquired,
+        repo: PropTypes.string,
       }).isRequired,
       summary: PropTypes.string.isReuquired,
       title: PropTypes.string.isRequired,
