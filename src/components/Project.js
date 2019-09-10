@@ -9,16 +9,9 @@ const Project = ({
   projects,
   projectsId,
   selectedId,
-  showProjects,
 }) => (
   <div id={projectsId} className={styles.projectContainer}>
-    <div
-      className={
-        showProjects
-          ? styles.leftArrowContainer
-          : styles.leftArrowContainerHidden
-      }
-    >
+    <div className={styles.leftArrowContainer}>
       <button className={styles.arrow} onClick={previousProject} type="submit">
         {'<'}
       </button>
@@ -28,26 +21,14 @@ const Project = ({
       .map(project => (
         <div key={project.id} className={styles.project}>
           <div className={styles.projectContent}>
-            <h3
-              className={
-                showProjects ? styles.projectTitle : styles.projectTitleHidden
-              }
-            >
-              {project.title}
-            </h3>
+            <h3 className={styles.projectTitle}>{project.title}</h3>
             <img
               alt={project.title}
-              className={
-                showProjects ? styles.projectImage : styles.projectImageHidden
-              }
+              className={styles.projectImage}
               key={project.id}
               src={project.image}
             />
-            <div
-              className={
-                showProjects ? styles.projectText : styles.projectTextHidden
-              }
-            >
+            <div className={styles.projectText}>
               <p className={styles.projectRole}>
                 {project.role}
                 {' | '}
@@ -56,11 +37,7 @@ const Project = ({
               <p className={styles.projectSummary}>{project.summary}</p>
               <p className={styles.projectTags}>{project.tags}</p>
             </div>
-            <div
-              className={
-                showProjects ? styles.projectLinks : styles.projectLinksHidden
-              }
-            >
+            <div className={styles.projectLinks}>
               {project.link.production && (
                 <a
                   className={styles.projectLink}
@@ -68,7 +45,7 @@ const Project = ({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View Project
+                  {'View Project'}
                 </a>
               )}
               {project.link.repository && (
@@ -78,20 +55,14 @@ const Project = ({
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View GitHub
+                  {'View GitHub'}
                 </a>
               )}
             </div>
           </div>
         </div>
       ))}
-    <div
-      className={
-        showProjects
-          ? styles.rightArrowContainer
-          : styles.rightArrowContainerHidden
-      }
-    >
+    <div className={styles.rightArrowContainer}>
       <button className={styles.arrow} onClick={nextProject} type="submit">
         {'>'}
       </button>
@@ -116,7 +87,6 @@ Project.propTypes = {
   ).isRequired,
   projectsId: PropTypes.string.isRequired,
   selectedId: PropTypes.number.isRequired,
-  showProjects: PropTypes.bool.isRequired,
 }
 
 export default Project

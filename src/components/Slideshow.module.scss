@@ -1,21 +1,13 @@
-@import '../styles/animations.scss';
-
 .slideshowContainer {
   margin: 0 auto;
 }
 
 .slideshow {
-  animation: contentUpIn 1s forwards;
   background: rgba(20, 20, 20, 1);
   overflow-x: scroll;
   overflow-y: hidden;
   padding: 2rem 0;
   width: 100vw;
-}
-
-.slideshowHidden {
-  @extend .slideshow;
-  animation: contentUpOut 1s forwards;
 }
 
 .slides {

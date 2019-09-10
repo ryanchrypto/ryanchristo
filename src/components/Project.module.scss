@@ -9,7 +9,9 @@
 /* project */
 
 .project {
+  animation: fadeIn ease 0.5s forwards;
   min-height: calc(100vh - 100px);
+  opacity: 0;
   padding: 2rem 0;
   width: 80vw;
 }
@@ -21,39 +23,21 @@
 }
 
 .projectTitle {
-  animation: contentDownIn 1s forwards;
   font-family: 'Oswald';
   font-size: 2.4rem;
   font-weight: 300;
   padding: 2rem 0;
 }
 
-.projectTitleHidden {
-  @extend .projectTitle;
-  animation: contentDownOut 1s forwards;
-}
-
 .projectImage {
-  animation: contentLeftIn 1s forwards;
   border-radius: 2px;
   box-shadow: 2px 2px 2px rgba(100, 100, 100, 0.5);
   margin: 0 auto;
   width: 500px;
 }
 
-.projectImageHidden {
-  @extend .projectImage;
-  animation: contentLeftOut 1s forwards;
-}
-
 .projectText {
-  animation: contentRightIn 1s forwards;
   padding: 2em 0;
-}
-
-.projectTextHidden {
-  @extend .projectText;
-  animation: contentRightOut 1s forwards;
 }
 
 .projectRole {
@@ -81,14 +65,8 @@
 }
 
 .projectLinks {
-  animation: contentUpIn 1s forwards;
   padding: 1rem 0;
   text-align: center;
-}
-
-.projectLinksHidden {
-  @extend .projectLinks;
-  animation: contentUpOut 1s forwards;
 }
 
 .projectLink {
@@ -121,24 +99,12 @@
 
 .leftArrowContainer {
   @extend .arrowContainer;
-  animation: contentRightIn 1s forwards;
   left: 0;
-}
-
-.leftArrowContainerHidden {
-  @extend .leftArrowContainer;
-  animation: contentRightOut 1s forwards;
 }
 
 .rightArrowContainer {
   @extend .arrowContainer;
-  animation: contentLeftIn 1s forwards;
   right: 0;
-}
-
-.rightArrowContainerHidden {
-  @extend .rightArrowContainer;
-  animation: contentLeftOut 1s forwards;
 }
 
 .arrow {

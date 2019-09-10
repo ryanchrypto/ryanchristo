@@ -6,11 +6,11 @@ import animateScroll from '../helpers/animateScroll'
 import animateSlideshow from '../helpers/animateSlideshow'
 
 class ProjectsContainer extends Component {
-  constructor({ projects }) {
-    super({ projects })
+  constructor(props) {
+    super(props)
     this.state = {
       projectsId: 'software-project',
-      selectedId: projects[0].id,
+      selectedId: props.projects[0].id,
       slideshowId: 'software-slideshow',
     }
     this.nextProject = this.nextProject.bind(this)
@@ -58,7 +58,7 @@ class ProjectsContainer extends Component {
   }
 
   render() {
-    const { projects, showProjects } = this.props
+    const { projects } = this.props
     const { projectsId, selectedId, slideshowId } = this.state
     return (
       <Projects
@@ -68,7 +68,6 @@ class ProjectsContainer extends Component {
         projectsId={projectsId}
         selectedId={selectedId}
         setProject={this.setProject}
-        showProjects={showProjects}
         slideshowId={slideshowId}
       />
     )
@@ -77,7 +76,6 @@ class ProjectsContainer extends Component {
 
 ProjectsContainer.propTypes = {
   projects: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  showProjects: PropTypes.bool.isRequired,
 }
 
 export default ProjectsContainer

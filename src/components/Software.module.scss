@@ -1,8 +1,6 @@
-@import '../styles/animations.scss';
 @import '../styles/container-2.scss';
 
 .summary {
-  animation: contentLeftIn 1s forwards;
   max-width: 900px;
   margin: 0 auto;
   padding-bottom: 4rem;
@@ -21,9 +19,4 @@
     padding: 1rem;
   }
 
-}
-
-.summaryHidden {
-  @extend .summary;
-  animation: contentLeftOut 1s forwards;
 }

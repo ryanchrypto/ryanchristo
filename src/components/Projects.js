@@ -12,7 +12,6 @@ const Projects = ({
   projectsId,
   selectedId,
   setProject,
-  showProjects,
   slideshowId,
 }) => (
   <div className={styles.projects}>
@@ -20,7 +19,6 @@ const Projects = ({
       projects={projects}
       selectedId={selectedId}
       setProject={setProject}
-      showProjects={showProjects}
       slideshowId={slideshowId}
     />
     <Project
@@ -29,7 +27,6 @@ const Projects = ({
       projects={projects}
       projectsId={projectsId}
       selectedId={selectedId}
-      showProjects={showProjects}
     />
   </div>
 )
@@ -52,7 +49,6 @@ Projects.propTypes = {
   projectsId: PropTypes.string.isRequired,
   selectedId: PropTypes.number.isRequired,
   setProject: PropTypes.func.isRequired,
-  showProjects: PropTypes.bool.isRequired,
   slideshowId: PropTypes.string.isRequired,
 }
 

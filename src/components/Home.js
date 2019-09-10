@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import HomeNav from './HomeNav'
 import styles from './Home.module.scss'
 
-const Home = ({ animateScroll, showHome }) => (
+const Home = ({ showHome }) => (
   <div id="home" className={styles.container}>
     <div className={styles.background} />
     <div className={styles.content}>
@@ -16,13 +16,12 @@ const Home = ({ animateScroll, showHome }) => (
         <span className={styles.divider}>{'|'}</span>
         {'visual storyteller'}
       </p>
-      <HomeNav animateScroll={animateScroll} showHome={showHome} />
+      <HomeNav showHome={showHome} />
     </div>
   </div>
 )
 
 Home.propTypes = {
-  animateScroll: PropTypes.func.isRequired,
   showHome: PropTypes.bool.isRequired,
 }
 

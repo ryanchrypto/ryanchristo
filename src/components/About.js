@@ -1,23 +1,18 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import styles from './About.module.scss'
 
-const About = ({ showAbout }) => (
+const About = () => (
   <div id="about" className={styles.container}>
-    <h2 className={showAbout ? styles.title : styles.titleHidden}>{'about'}</h2>
+    <h2 className={styles.title}>{'about'}</h2>
     <div className={styles.content}>
       <div className={styles.summary}>
         <img
           alt="Ryan Christoffersen"
-          className={
-            showAbout ? styles.summaryImage : styles.summaryImageHidden
-          }
+          className={styles.summaryImage}
           src="img/profile.jpg"
         />
-        <div
-          className={showAbout ? styles.summaryText : styles.summaryTextHidden}
-        >
+        <div className={styles.summaryText}>
           <p>
             <strong>{'Software Developer'}</strong>
             {
@@ -32,7 +27,7 @@ const About = ({ showAbout }) => (
           </p>
         </div>
       </div>
-      <div className={showAbout ? styles.skills : styles.skillsHidden}>
+      <div className={styles.skills}>
         <h3>{'Software Skills'}</h3>
         <p>
           {
@@ -49,9 +44,5 @@ const About = ({ showAbout }) => (
     </div>
   </div>
 )
-
-About.propTypes = {
-  showAbout: PropTypes.bool.isRequired,
-}
 
 export default About

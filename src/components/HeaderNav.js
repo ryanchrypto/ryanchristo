@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import animateScroll from '../helpers/animateScroll'
+
 import styles from './HeaderNav.module.scss'
 
-const HeaderNav = ({ currentView, animateScroll }) => (
+const HeaderNav = ({ currentView }) => (
   <ul className={styles.list}>
     <li className={styles.item}>
       <button
@@ -54,7 +56,6 @@ const HeaderNav = ({ currentView, animateScroll }) => (
 
 HeaderNav.propTypes = {
   currentView: PropTypes.string.isRequired,
-  animateScroll: PropTypes.func.isRequired,
 }
 
 export default HeaderNav

@@ -1,14 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import Projects from '../containers/Projects'
 import projects from '../content/media'
 import styles from './Media.module.scss'
 
-const Media = ({ showMedia }) => (
+const Media = () => (
   <div id="media" className={styles.container}>
-    <h2 className={showMedia ? styles.title : styles.titleHidden}>{'media'}</h2>
-    <div className={showMedia ? styles.summary : styles.summaryHidden}>
+    <h2 className={styles.title}>{'media'}</h2>
+    <div className={styles.summary}>
       <h3>{'Media Experience'}</h3>
       <p>
         {
@@ -16,12 +15,8 @@ const Media = ({ showMedia }) => (
         }
       </p>
     </div>
-    <Projects projects={projects} showProjects={showMedia} />
+    <Projects projects={projects} />
   </div>
 )
-
-Media.propTypes = {
-  showMedia: PropTypes.bool.isRequired,
-}
 
 export default Media

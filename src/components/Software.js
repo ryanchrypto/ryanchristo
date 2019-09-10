@@ -1,16 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import Projects from '../containers/Projects'
 import projects from '../content/software'
 import styles from './Software.module.scss'
 
-const Software = ({ showSoftware }) => (
+const Software = () => (
   <div id="software" className={styles.container}>
-    <h2 className={showSoftware ? styles.title : styles.titleHidden}>
-      {'software'}
-    </h2>
-    <div className={showSoftware ? styles.summary : styles.summaryHidden}>
+    <h2 className={styles.title}>{'software'}</h2>
+    <div className={styles.summary}>
       <h3>{'Software Experience'}</h3>
       <p>
         {
@@ -18,12 +15,8 @@ const Software = ({ showSoftware }) => (
         }
       </p>
     </div>
-    <Projects projects={projects} showProjects={showSoftware} />
+    <Projects projects={projects} />
   </div>
 )
-
-Software.propTypes = {
-  showSoftware: PropTypes.bool.isRequired,
-}
 
 export default Software

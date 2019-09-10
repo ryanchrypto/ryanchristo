@@ -3,18 +3,9 @@ import PropTypes from 'prop-types'
 
 import styles from './Slideshow.module.scss'
 
-const Slideshow = ({
-  projects,
-  selectedId,
-  setProject,
-  showProjects,
-  slideshowId,
-}) => (
+const Slideshow = ({ projects, selectedId, setProject, slideshowId }) => (
   <div className={styles.slideshowContainer}>
-    <div
-      id={slideshowId}
-      className={showProjects ? styles.slideshow : styles.slideshowHidden}
-    >
+    <div id={slideshowId} className={styles.slideshow}>
       <div className={styles.slides}>
         {projects.map(project => (
           <div
@@ -63,7 +54,6 @@ Slideshow.propTypes = {
   ).isRequired,
   selectedId: PropTypes.number.isRequired,
   setProject: PropTypes.func.isRequired,
-  showProjects: PropTypes.bool.isRequired,
   slideshowId: PropTypes.string.isRequired,
 }
 

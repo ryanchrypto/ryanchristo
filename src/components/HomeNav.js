@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import animateScroll from '../helpers/animateScroll'
+
 import styles from './HomeNav.module.scss'
 
-const HomeNav = ({ animateScroll, showHome }) => (
+const HomeNav = ({ showHome }) => (
   <ul className={showHome ? styles.list : styles.listHidden}>
     <li className={styles.item}>
       <button
@@ -53,7 +55,6 @@ const HomeNav = ({ animateScroll, showHome }) => (
 )
 
 HomeNav.propTypes = {
-  animateScroll: PropTypes.func.isRequired,
   showHome: PropTypes.bool.isRequired,
 }
 

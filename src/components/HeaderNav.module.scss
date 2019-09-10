@@ -1,14 +1,4 @@
-@import '../styles/animations.scss';
 @import '../styles/navigation.scss';
-
-.list {
-  animation: contentLeftIn 1s forwards;
-}
-
-.listHidden {
-  @extend .list;
-  animation: contentLeftOut 1s forwards;
-}
 
 .link {
   border-bottom: 2px solid rgba(255, 255, 255, 0);

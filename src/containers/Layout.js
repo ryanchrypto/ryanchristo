@@ -1,26 +1,29 @@
 import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
+
 import Layout from '../components/Layout'
-// import Loader from '../components/Loader'
-import animateScroll from '../helpers/animateScroll'
+import Loader from '../components/Loader'
+
+import background1 from '../../static/img/background-1.jpg'
+import background2 from '../../static/img/background-2.jpg'
 
 class LayoutContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
       currentView: 'home',
-      showAbout: false,
+      loaded: 0,
+      loading: true,
       showConnect: false,
       showHeader: false,
       showHome: true,
-      showMedia: false,
-      showSoftware: false,
     }
     this.handleScrollEvent = this.handleScrollEvent.bind(this)
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScrollEvent)
+    this.loadImages()
   }
 
   componentWillUnmount() {
@@ -28,25 +31,14 @@ class LayoutContainer extends Component {
   }
 
   handleScrollEvent() {
-    // set element location
     const about = document.getElementById('about').getBoundingClientRect()
     const connect = document.getElementById('connect').getBoundingClientRect()
     const home = document.getElementById('home').getBoundingClientRect()
     const media = document.getElementById('media').getBoundingClientRect()
     const software = document.getElementById('software').getBoundingClientRect()
 
-    // set intial view and show
-    let {
-      currentView,
-      showAbout,
-      showConnect,
-      showHeader,
-      showHome,
-      showMedia,
-      showSoftware,
-    } = this.state
+    let { currentView, showConnect, showHeader, showHome } = this.state
 
-    // determine view and show
     if (window.scrollY > 500) {
       showHeader = true
     } else {
@@ -60,21 +52,12 @@ class LayoutContainer extends Component {
     }
     if (about.top < 800 && about.bottom > 200) {
       currentView = 'about'
-      showAbout = true
-    } else {
-      showAbout = false
     }
     if (software.top < 800 && software.bottom > 200) {
       currentView = 'software'
-      showSoftware = true
-    } else {
-      showSoftware = false
     }
     if (media.top < 800 && media.bottom > 200) {
       currentView = 'media'
-      showMedia = true
-    } else {
-      showMedia = false
     }
     if (connect.top < 500) {
       currentView = 'connect'
@@ -84,51 +67,65 @@ class LayoutContainer extends Component {
     }
 
     const {
-      stateCurrentView,
-      stateShowAbout,
-      stateShowConnect,
-      stateShowHeader,
-      stateShowHome,
-      stateShowMedia,
-      stateShowSoftware,
+      currentView: stateCurrentView,
+      showConnect: stateShowConnect,
+      showHeader: stateShowHeader,
+      showHome: stateShowHome,
     } = this.state
 
-    // update state if view or show changed
     if (
       currentView !== stateCurrentView ||
-      showAbout !== stateShowAbout ||
       showConnect !== stateShowConnect ||
       showHeader !== stateShowHeader ||
-      showHome !== stateShowHome ||
-      showMedia !== stateShowMedia ||
-      showSoftware !== stateShowSoftware
+      showHome !== stateShowHome
     ) {
       this.setState({
         currentView,
-        showAbout,
         showConnect,
         showHeader,
         showHome,
-        showMedia,
-        showSoftware,
       })
+    }
+  }
+
+  loadImages() {
+    // eslint-disable-next-line no-undef
+    const image1 = new Image()
+    // eslint-disable-next-line no-undef
+    const image2 = new Image()
+
+    image1.src = background1
+    image2.src = background2
+
+    let { loaded } = this.state
+
+    const updateLoading = () => {
+      loaded += 1
+      this.setState({ loaded })
+      if (loaded === 2) {
+        this.setState({ loading: false })
+      }
+    }
+
+    image1.onload = () => {
+      updateLoading()
+    }
+    image2.onload = () => {
+      updateLoading()
     }
   }
 
   render() {
     const {
       currentView,
-      showAbout,
+      loading,
       showConnect,
       showHeader,
       showHome,
-      showMedia,
-      showSoftware,
     } = this.state
 
-    // if (this.state.loading) {
-    //   return <Loader />
-    // }
+    if (loading) return <Loader />
+
     return (
       <>
         <Helmet>
@@ -152,13 +149,9 @@ class LayoutContainer extends Component {
         </Helmet>
         <Layout
           currentView={currentView}
-          animateScroll={animateScroll}
-          showAbout={showAbout}
           showConnect={showConnect}
           showHeader={showHeader}
           showHome={showHome}
-          showMedia={showMedia}
-          showSoftware={showSoftware}
         />
       </>
     )
