@@ -1,5 +1,4 @@
-const animateScroll = (id) => {
-
+const animateScroll = id => {
   // determine distance to scroll
   const start = window.pageYOffset
   const top = document.getElementById(id).offsetTop
@@ -14,13 +13,14 @@ const animateScroll = (id) => {
   let currentTime = 0
 
   // append smooth scroll method
-  Math.determineDestination = (ct, st, dis, dur) => {
-    ct /= (dur / 2)
+  Math.determineDestination = (_ct, _st, _dis, _dur) => {
+    let ct = _ct
+    ct /= _dur / 2
     if (ct < 1) {
-      return dis / 2 * ct * ct + st
+      return (_dis / 2) * ct * ct + _st
     }
-    ct--
-    return -dis / 2 * (ct * (ct - 2) - 1) + st
+    ct -= 1
+    return (-_dis / 2) * (ct * (ct - 2) - 1) + _st
   }
 
   // define animate function
@@ -28,7 +28,12 @@ const animateScroll = (id) => {
     // increment current time
     currentTime += increment
     // set scroll destination value
-    const destination = Math.determineDestination(currentTime, start, distance, duration)
+    const destination = Math.determineDestination(
+      currentTime,
+      start,
+      distance,
+      duration,
+    )
     // scroll to destination value
     window.scroll(0, destination)
     // call self if current time is less than duration
@@ -39,7 +44,6 @@ const animateScroll = (id) => {
 
   // call intial animate
   animate()
-
 }
 
 export default animateScroll

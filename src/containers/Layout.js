@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/Layout'
-import Loader from '../components/Loader'
+// import Loader from '../components/Loader'
 import animateScroll from '../helpers/animateScroll'
 
 class LayoutContainer extends Component {
-
   constructor(props) {
     super(props)
     this.state = {
@@ -29,7 +28,6 @@ class LayoutContainer extends Component {
   }
 
   handleScrollEvent() {
-
     // set element location
     const about = document.getElementById('about').getBoundingClientRect()
     const connect = document.getElementById('connect').getBoundingClientRect()
@@ -38,13 +36,15 @@ class LayoutContainer extends Component {
     const software = document.getElementById('software').getBoundingClientRect()
 
     // set intial view and show
-    let currentView = this.state.currentView
-    let showAbout = this.state.showAbout
-    let showConnect = this.state.showConnect
-    let showHeader = this.state.showHeader
-    let showHome = this.state.showHome
-    let showMedia = this.state.showMedia
-    let showSoftware = this.state.showSoftware
+    let {
+      currentView,
+      showAbout,
+      showConnect,
+      showHeader,
+      showHome,
+      showMedia,
+      showSoftware,
+    } = this.state
 
     // determine view and show
     if (window.scrollY > 500) {
@@ -83,15 +83,25 @@ class LayoutContainer extends Component {
       showConnect = false
     }
 
+    const {
+      stateCurrentView,
+      stateShowAbout,
+      stateShowConnect,
+      stateShowHeader,
+      stateShowHome,
+      stateShowMedia,
+      stateShowSoftware,
+    } = this.state
+
     // update state if view or show changed
     if (
-      currentView !== this.state.currentView ||
-      showAbout !== this.state.showAbout ||
-      showConnect !== this.state.showConnect ||
-      showHeader !== this.state.showHeader ||
-      showHome !== this.state.showHome ||
-      showMedia !== this.state.showMedia ||
-      showSoftware !== this.state.showSoftware
+      currentView !== stateCurrentView ||
+      showAbout !== stateShowAbout ||
+      showConnect !== stateShowConnect ||
+      showHeader !== stateShowHeader ||
+      showHome !== stateShowHome ||
+      showMedia !== stateShowMedia ||
+      showSoftware !== stateShowSoftware
     ) {
       this.setState({
         currentView,
@@ -103,10 +113,19 @@ class LayoutContainer extends Component {
         showSoftware,
       })
     }
-
   }
 
   render() {
+    const {
+      currentView,
+      showAbout,
+      showConnect,
+      showHeader,
+      showHome,
+      showMedia,
+      showSoftware,
+    } = this.state
+
     // if (this.state.loading) {
     //   return <Loader />
     // }
@@ -115,7 +134,11 @@ class LayoutContainer extends Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Ryan Christoffersen</title>
-          <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+          />
           <script>
             {`
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -128,14 +151,14 @@ class LayoutContainer extends Component {
           </script>
         </Helmet>
         <Layout
-          currentView={this.state.currentView}
+          currentView={currentView}
           animateScroll={animateScroll}
-          showAbout={this.state.showAbout}
-          showConnect={this.state.showConnect}
-          showHeader={this.state.showHeader}
-          showHome={this.state.showHome}
-          showMedia={this.state.showMedia}
-          showSoftware={this.state.showSoftware}
+          showAbout={showAbout}
+          showConnect={showConnect}
+          showHeader={showHeader}
+          showHome={showHome}
+          showMedia={showMedia}
+          showSoftware={showSoftware}
         />
       </>
     )

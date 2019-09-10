@@ -24,7 +24,10 @@ const Connect = ({ showConnect }) => (
           </a>
         ))}
       </div>
-      <a className={showConnect ? styles.email : styles.emailHidden} href="mailto:ryan@ryanchristo.com">
+      <a
+        className={showConnect ? styles.email : styles.emailHidden}
+        href="mailto:ryan@ryanchristo.com"
+      >
         {'ryan@ryanchristo.com'}
       </a>
     </div>

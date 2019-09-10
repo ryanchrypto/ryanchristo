@@ -11,13 +11,23 @@ const Slideshow = ({
   slideshowId,
 }) => (
   <div className={styles.slideshowContainer}>
-    <div id={slideshowId} className={showProjects ? styles.slideshow : styles.slideshowHidden}>
+    <div
+      id={slideshowId}
+      className={showProjects ? styles.slideshow : styles.slideshowHidden}
+    >
       <div className={styles.slides}>
         {projects.map(project => (
-          <div key={project.id} id={project.id} className={selectedId === project.id ? styles.activeSlide : styles.slide}>
+          <div
+            key={project.id}
+            id={project.id}
+            className={
+              selectedId === project.id ? styles.activeSlide : styles.slide
+            }
+          >
             <button
               className={styles.image}
               onClick={() => setProject(project)}
+              type="submit"
             >
               <img
                 alt={project.title}

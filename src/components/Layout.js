@@ -25,25 +25,11 @@ const Layout = ({
       animateScroll={animateScroll}
       showHeader={showHeader}
     />
-    <Home
-      animateScroll={animateScroll}
-      showHome={showHome}
-    />
-    <About
-      animateScroll={animateScroll}
-      showAbout={showAbout}
-    />
-    <Software
-      animateScroll={animateScroll}
-      showSoftware={showSoftware}
-    />
-    <Media
-      animateScroll={animateScroll}
-      showMedia={showMedia}
-    />
-    <Connect
-      showConnect={showConnect}
-    />
+    <Home animateScroll={animateScroll} showHome={showHome} />
+    <About animateScroll={animateScroll} showAbout={showAbout} />
+    <Software animateScroll={animateScroll} showSoftware={showSoftware} />
+    <Media animateScroll={animateScroll} showMedia={showMedia} />
+    <Connect showConnect={showConnect} />
   </div>
 )
 

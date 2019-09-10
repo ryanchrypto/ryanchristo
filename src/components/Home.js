@@ -13,15 +13,10 @@ const Home = ({ animateScroll, showHome }) => (
       </h1>
       <p className={showHome ? styles.subtitle : styles.subtitleHidden}>
         {'software developer'}
-        <span className={styles.divider}>
-          {'|'}
-        </span>
+        <span className={styles.divider}>{'|'}</span>
         {'visual storyteller'}
       </p>
-      <HomeNav
-        animateScroll={animateScroll}
-        showHome={showHome}
-      />
+      <HomeNav animateScroll={animateScroll} showHome={showHome} />
     </div>
   </div>
 )

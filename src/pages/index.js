@@ -1,16 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
 
-import Layout from "../containers/Layout"
-import SEO from "../components/SEO"
+import Layout from '../containers/Layout'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Index" />
-    <h1>ryanchristo</h1>
-    <p>This is my index page...</p>
-    <Link to="/blog/">Blog</Link>
-  </Layout>
-)
+const IndexPage = () => <Layout />
 
 export default IndexPage

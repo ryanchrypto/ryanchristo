@@ -6,13 +6,14 @@ import styles from './Header.module.scss'
 
 const Header = ({ currentView, animateScroll, showHeader }) => (
   <header className={showHeader ? styles.header : styles.headerHidden}>
-    <button className={styles.title} onClick={() => animateScroll('home')}>
+    <button
+      className={styles.title}
+      onClick={() => animateScroll('home')}
+      type="submit"
+    >
       {'rc | ryan christoffersen'}
     </button>
-    <HeaderNav
-      currentView={currentView}
-      animateScroll={animateScroll}
-    />
+    <HeaderNav currentView={currentView} animateScroll={animateScroll} />
   </header>
 )
 
