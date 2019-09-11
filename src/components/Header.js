@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import HeaderNav from './HeaderNav'
 
-import animateScroll from '../helpers/animateScroll'
+import { pageScroll } from '../helpers/scroll'
 
 import styles from './Header.module.scss'
 
@@ -11,7 +11,7 @@ const Header = ({ currentView, showHeader }) => (
   <header className={showHeader ? styles.header : styles.headerHidden}>
     <button
       className={styles.title}
-      onClick={() => animateScroll('home')}
+      onClick={() => pageScroll('home')}
       type="submit"
     >
       {'rc | ryan christoffersen'}

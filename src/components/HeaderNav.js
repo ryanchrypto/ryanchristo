@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import animateScroll from '../helpers/animateScroll'
+import { pageScroll } from '../helpers/scroll'
 
 import styles from './HeaderNav.module.scss'
 
@@ -10,7 +10,7 @@ const HeaderNav = ({ currentView }) => (
     <li className={styles.item}>
       <button
         className={currentView === 'about' ? styles.active : styles.link}
-        onClick={() => animateScroll('about')}
+        onClick={() => pageScroll('about')}
         type="submit"
       >
         {'about'}
@@ -19,7 +19,7 @@ const HeaderNav = ({ currentView }) => (
     <li className={styles.item}>
       <button
         className={currentView === 'software' ? styles.active : styles.link}
-        onClick={() => animateScroll('software')}
+        onClick={() => pageScroll('software')}
         type="submit"
       >
         {'software'}
@@ -28,7 +28,7 @@ const HeaderNav = ({ currentView }) => (
     <li className={styles.item}>
       <button
         className={currentView === 'media' ? styles.active : styles.link}
-        onClick={() => animateScroll('media')}
+        onClick={() => pageScroll('media')}
         type="submit"
       >
         {'media'}
@@ -37,7 +37,7 @@ const HeaderNav = ({ currentView }) => (
     <li className={styles.item}>
       <button
         className={currentView === 'connect' ? styles.active : styles.link}
-        onClick={() => animateScroll('connect')}
+        onClick={() => pageScroll('connect')}
         type="submit"
       >
         {'connect'}

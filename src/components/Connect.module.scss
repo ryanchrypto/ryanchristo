@@ -1,8 +1,8 @@
-@import '../styles/animations.scss';
-@import '../styles/container-1.scss';
+@import '../assets/scss/animations.scss';
+@import '../assets/scss/container-1.scss';
 
 .background {
-  background-image: url('../../static/img/background-2.jpg');
+  background-image: url('../assets/img/background-2.jpg');
 }
 
 .links {

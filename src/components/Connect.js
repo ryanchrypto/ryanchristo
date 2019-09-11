@@ -1,8 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import links from '../content/connect'
 import styles from './Connect.module.scss'
+
+const links = [
+  {
+    icon: 'fab fa-github',
+    link: 'https://github.com/ryanchristo',
+  },
+  {
+    icon: 'fab fa-linkedin',
+    link: 'https://linkedin.com/in/ryanechristo',
+  },
+  {
+    icon: 'fab fa-twitter',
+    link: 'https://twitter.com/ryanechristo',
+  },
+]
 
 const Connect = ({ showConnect }) => (
   <div id="connect" className={styles.container}>

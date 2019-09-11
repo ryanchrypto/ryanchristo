@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500|Oswald:300,400');
-@import '../styles/animations.scss';
+@import '../assets/scss/animations.scss';
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -25,7 +25,7 @@ button {
 }
 
 .container {
-  animation: fadeIn ease 0.5s forwards;
+  animation: fadeIn 0.5s ease 0.5s forwards;
   background: rgba(0, 0, 0, 1);
   opacity: 0;
 
