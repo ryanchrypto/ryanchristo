@@ -9,8 +9,8 @@ const links = [
     link: 'https://github.com/ryanchristo',
   },
   {
-    icon: 'fab fa-linkedin',
-    link: 'https://linkedin.com/in/ryanechristo',
+    icon: 'fab fa-telegram',
+    link: 'https://t.me/ryanchristo',
   },
   {
     icon: 'fab fa-twitter',
