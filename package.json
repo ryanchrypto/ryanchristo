@@ -1,32 +1,16 @@
 {
   "name": "ryanchristo",
-  "version": "0.0.0",
-  "author": "Ryan Christoffersen <ryan@ryanchristo.com> (http://ryanchristo.com)",
+  "author": "Ryan Christoffersen <ryan@ryanchristo.com>",
   "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d public -b master",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "serve": "gatsby serve"
-  },
-  "dependencies": {
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "gatsby": "^2.13.73",
-    "gatsby-image": "^2.2.10",
-    "gatsby-plugin-manifest": "^2.2.6",
-    "gatsby-plugin-offline": "^2.2.7",
-    "gatsby-plugin-react-helmet": "^3.1.4",
-    "gatsby-plugin-sass": "^2.1.13",
-    "gatsby-plugin-sharp": "^2.2.13",
-    "gatsby-source-filesystem": "^2.1.11",
-    "gatsby-transformer-sharp": "^2.2.7",
-    "node-sass": "^4.12.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "build": "yarn lerna run build",
+    "develop": "yarn lerna run develop --parallel",
+    "develop:docs": "cd packages/docs && yarn develop",
+    "develop:main": "cd packages/main && yarn develop"
   },
   "devDependencies": {
     "eslint": "^5.12.1",
@@ -34,10 +18,13 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
     "eslint-plugin-standard": "^4.0.0",
+    "lerna": "^3.16.4",
     "prettier": "^1.18.2"
   },
   "repository": {

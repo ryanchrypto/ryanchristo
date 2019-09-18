@@ -1,4 +1,6 @@
 .cache
-.env
 node_modules
 public
+
+lerna-debug.log
+yarn-error.log

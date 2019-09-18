@@ -1,3 +1,3 @@
 # ryanchristo
 
-A simple website and blog
+A personal website
