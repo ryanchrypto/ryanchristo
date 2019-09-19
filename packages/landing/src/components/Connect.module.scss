@@ -1,0 +1,43 @@
+@import '@ryanchristo/core/assets/scss/animations.scss';
+@import '../assets/scss/container-1.scss';
+
+.background {
+  background-image: url('../assets/img/background-2.jpg');
+}
+
+.links {
+  animation: contentUpIn 1s forwards;
+}
+
+.linksHidden {
+  @extend .links;
+  animation: contentUpOut 1s forwards;
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  font-size: 2.6rem;
+  padding: 1rem;
+  transition: 0.5s;
+
+  &:hover {
+    color: #FFF;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+}
+
+.email {
+  animation: contentZoomIn 1s forwards;
+  color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+.emailHidden {
+  @extend .email;
+  animation: contentZoomOut 1s forwards;
+}

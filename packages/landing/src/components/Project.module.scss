@@ -1,0 +1,122 @@
+@import '@ryanchristo/core/assets/scss/animations.scss';
+
+.projectContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* project */
+
+.project {
+  animation: fadeIn ease 0.5s forwards;
+  min-height: calc(100vh - 100px);
+  opacity: 0;
+  padding: 2rem 0;
+  width: 80vw;
+}
+
+.projectContent {
+  margin: 0 auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.projectTitle {
+  font-family: 'Oswald';
+  font-size: 2.6rem;
+  font-weight: 300;
+  padding: 2rem 0;
+}
+
+.projectImage {
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px rgba(100, 100, 100, 0.5);
+  margin: 0 auto;
+  width: 500px;
+}
+
+.projectText {
+  padding: 2em 0;
+}
+
+.projectRole {
+  font-family: 'Oswald';
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.projectSummary {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 2rem;
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.projectTags {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  padding: 1rem 0;
+  text-align: left;
+}
+
+.projectLinks {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.projectLink {
+  background: rgba(20, 20, 20, 1);
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1rem;
+  padding: 0.6rem 1.2rem;
+  transition: 0.5s;
+
+  &:hover {
+    background: rgba(20, 20, 20, 0.8);
+  }
+
+}
+
+/* arrows */
+
+.arrowContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 0 2.5%;
+  width: 10vw;
+  z-index: 5;
+}
+
+.leftArrowContainer {
+  @extend .arrowContainer;
+  left: 0;
+}
+
+.rightArrowContainer {
+  @extend .arrowContainer;
+  right: 0;
+}
+
+.arrow {
+  color: rgba(20, 20, 20, 1);
+  font-family: 'Oswald';
+  font-size: 8rem;
+  font-weight: 300;
+  transition: 0.5s;
+
+  &:hover {
+    color: rgba(20, 20, 20, 0.8);
+    cursor: pointer;
+  }
+
+}

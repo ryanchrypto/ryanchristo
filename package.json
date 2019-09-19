@@ -10,7 +10,8 @@
     "build": "./scripts/build.sh",
     "develop": "yarn lerna run develop --parallel",
     "develop:docs": "cd packages/docs && yarn develop",
-    "develop:main": "cd packages/main && yarn develop"
+    "develop:main": "cd packages/main && yarn develop",
+    "serve": "./scripts/serve.sh"
   },
   "devDependencies": {
     "eslint": "^5.12.1",
@@ -25,7 +26,8 @@
     "eslint-plugin-react-hooks": "^1.6.0",
     "eslint-plugin-standard": "^4.0.0",
     "lerna": "^3.16.4",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "serve": "^11.1.0"
   },
   "repository": {
     "type": "git",
