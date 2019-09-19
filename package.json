@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "yarn lerna run build",
+    "build": "./scripts/build.sh",
     "develop": "yarn lerna run develop --parallel",
     "develop:docs": "cd packages/docs && yarn develop",
     "develop:main": "cd packages/main && yarn develop"
