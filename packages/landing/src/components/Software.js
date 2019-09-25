@@ -13,11 +13,11 @@ const projects = [
       live: 'https://colony.io',
       repo: 'https://github.com/JoinColony',
     },
-    role: 'Developer Relations',
+    role: 'Software Developer',
     summary:
-      'Colony is a platform for open organizations built on Ethereum. I help build and maintain developer tools, write documentation, explore integrations, and manage developer relations.',
+      'Colony is a platform for open organizations built on Ethereum. I build and maintain developer tools, write documentation, explore integrations, and manage developer relations.',
     tags:
-      'React, Redux, SCSS, Gatsby, Webpack, Web3, Truffle, Solidity, Ethereum',
+      'JavaScript, React, Redux, SCSS, Webpack, IPFS, Web3, Truffle, Solidity, Ethereum',
     title: 'Colony',
     type: 'software',
   },
@@ -31,8 +31,9 @@ const projects = [
     },
     role: 'Software Developer',
     summary:
-      'Chora is a side project that started out as a means to explore Ethereum. The intial focus was "software for decentralized organizations" but it remains a sandbox in its true form.',
-    tags: 'React, Redux, SCSS, Webpack, Web3, Truffle, Solidity, Ethereum',
+      'Chora is a side project that started out as a means to explore Ethereum. The intial focus was "software for decentralized organizations" but the project is a sandbox in its true form.',
+    tags:
+      'JavaScript, React, Redux, SCSS, Webpack, IPFS, Web3, Truffle, Solidity, Ethereum',
     title: 'Chora',
     type: 'software',
   },
@@ -47,7 +48,8 @@ const projects = [
     role: 'Full Stack Developer',
     summary:
       'Horizon App uses groups and mutual friends to help members find people and places to stay. I built the web application, rebuilt the latest version of the API, and integrated email services.',
-    tags: 'React, Redux, LESS, Webpack, Ruby, Rails, PostgreSQL, Redis',
+    tags:
+      'JavaScript, React, Redux, LESS, Webpack, Ruby, Rails, PostgreSQL, Redis',
     title: 'Horizon App',
     type: 'software',
   },
@@ -62,7 +64,7 @@ const projects = [
     role: 'Volunteer Developer',
     summary:
       'Ushahidi is a crowdsourcing application that makes it easy to collect and visualize data on a map. I volunteered for three months implementing features and fixing bugs. ',
-    tags: 'AngularJS, CSS, PHP',
+    tags: 'JavaScript, AngularJS, CSS, PHP',
     title: 'Ushahidi',
     type: 'software',
   },
@@ -77,7 +79,8 @@ const projects = [
     role: 'Full Stack Developer',
     summary:
       'Joglo Northwest is a small business that buys and sells Indonesian art, furniture and stone. I rebuilt their website and content management system using simple-cms as a foundation.',
-    tags: 'React, Redux, SCSS, PostCSS, Webpack, Node, Express, MongoDB',
+    tags:
+      'JavaScript, React, Redux, SCSS, PostCSS, Webpack, Node, Express, MongoDB',
     title: 'Joglo Northwest',
     type: 'software',
   },
@@ -92,7 +95,8 @@ const projects = [
     role: 'Full Stack Developer',
     summary:
       'After working through the freeCodeCamp projects, I built simple-cms to test my skills on a larger project, which was a content management system for small businesses and freelancers.',
-    tags: 'React, Redux, SCSS, PostCSS, Webpack, Node, Express, MongoDB',
+    tags:
+      'JavaScript, React, Redux, SCSS, PostCSS, Webpack, Node, Express, MongoDB',
     title: 'simple-cms',
     type: 'software',
   },
@@ -107,7 +111,8 @@ const projects = [
     role: 'Full Stack Developer',
     summary:
       'In order to advance my skills in JavaScript, I worked my way through the freeCodeCamp projects. The projects focus on full stack development with React, Node, Express, and MongoDB.',
-    tags: 'React, Redux, SCSS, PostCSS, Webpack, Node, Express, MongoDB',
+    tags:
+      'JavaScript, React, Redux, SCSS, PostCSS, Webpack, Node, Express, MongoDB',
     title: 'fcc-projects',
     type: 'software',
   },
@@ -122,7 +127,7 @@ const projects = [
     role: 'Web Developer',
     summary:
       'Joglo Northwest is a small business that buys and sells Indonesian art, furniture, and stone. The project included a simple user-facing website and a custom built content management system.',
-    tags: 'HTML, CSS, PHP, SQL',
+    tags: 'HTML, CSS, JavaScript, PHP, SQL',
     title: 'Joglo Northwest',
     type: 'software',
   },
@@ -137,7 +142,7 @@ const projects = [
     role: 'Web Developer',
     summary:
       'Greek Database was a tool for learning Classical Greek. It included a dictionary, reading excercises, and flashcards for practicing vocabulary, verb conjugations, and noun declensions.',
-    tags: 'HTML, CSS, PHP, SQL',
+    tags: 'HTML, CSS, JavaScript, PHP, SQL',
     title: 'Greek Database',
     type: 'software',
   },
@@ -152,7 +157,7 @@ const projects = [
     role: 'Web Developer',
     summary:
       'Documentary Art Network was a professional network for documentary artists. Users could post stories, discuss ideas, find people to collaborate with, and rent or exchange equipment.',
-    tags: 'HTML, CSS, PHP, SQL',
+    tags: 'HTML, CSS, JavaScript, PHP, SQL',
     title: 'Documentary Art Network',
     type: 'software',
   },

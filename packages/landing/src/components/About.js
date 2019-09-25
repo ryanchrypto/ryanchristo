@@ -32,13 +32,13 @@ const About = () => (
       <h3>{'Software Skills'}</h3>
       <p>
         {
-          'Experience developing applications and tools with React, Redux, Webpack, Web3, IPFS, Node, Express, Ruby, Rails, MongoDB, PostgreSQL, Solidity, and Ethereum.'
+          'Experience with JavaScript, React, Redux, Webpack, Node, Express, MongoDB, Ruby, Rails, PostgreSQL, IPFS, Web3, Truffle, Solidity, and Ethereum.'
         }
       </p>
       <h3>{'Media Skills'}</h3>
       <p>
         {
-          'Experience with photography, videography, cinematography, audio recording, video editing, and working with Adobe Lightroom, Photoshop and Premiere. '
+          'Experience with production, photography, videography, cinematography, video editing, and Adobe Software including Lightroom, Photoshop and Premiere. '
         }
       </p>
     </div>
