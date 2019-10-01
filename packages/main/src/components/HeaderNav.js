@@ -3,16 +3,16 @@ import PropTypes from 'prop-types'
 
 import { pageScroll } from '@ryanchristo/core/helpers/scroll'
 
-import styles from './HomeNav.module.scss'
+import styles from './HeaderNav.module.scss'
 
-const wordsUrl =
-  process.env.NODE_ENV === 'production' ? '/words' : 'http://localhost:8080'
+const docsUrl =
+  process.env.NODE_ENV === 'production' ? '/docs' : 'http://localhost:8080'
 
-const HomeNav = ({ showHome }) => (
-  <ul className={showHome ? styles.list : styles.listHidden}>
+const HeaderNav = ({ currentView }) => (
+  <ul className={styles.list}>
     <li className={styles.item}>
       <button
-        className={styles.link}
+        className={currentView === 'about' ? styles.active : styles.link}
         onClick={() => pageScroll('about')}
         type="submit"
       >
@@ -21,7 +21,7 @@ const HomeNav = ({ showHome }) => (
     </li>
     <li className={styles.item}>
       <button
-        className={styles.link}
+        className={currentView === 'software' ? styles.active : styles.link}
         onClick={() => pageScroll('software')}
         type="submit"
       >
@@ -30,7 +30,7 @@ const HomeNav = ({ showHome }) => (
     </li>
     <li className={styles.item}>
       <button
-        className={styles.link}
+        className={currentView === 'media' ? styles.active : styles.link}
         onClick={() => pageScroll('media')}
         type="submit"
       >
@@ -39,7 +39,7 @@ const HomeNav = ({ showHome }) => (
     </li>
     <li className={styles.item}>
       <button
-        className={styles.link}
+        className={currentView === 'connect' ? styles.active : styles.link}
         onClick={() => pageScroll('connect')}
         type="submit"
       >
@@ -50,15 +50,15 @@ const HomeNav = ({ showHome }) => (
       <span className={styles.divider}>{'|'}</span>
     </li>
     <li className={styles.item}>
-      <a className={styles.link} href={wordsUrl} rel="noopener noreferrer">
-        {'words'}
+      <a className={styles.link} href={docsUrl} rel="noopener noreferrer">
+        {'docs'}
       </a>
     </li>
   </ul>
 )
 
-HomeNav.propTypes = {
-  showHome: PropTypes.bool.isRequired,
+HeaderNav.propTypes = {
+  currentView: PropTypes.string.isRequired,
 }
 
-export default HomeNav
+export default HeaderNav

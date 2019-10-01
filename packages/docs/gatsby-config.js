@@ -18,14 +18,13 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'ryanchristo',
-        short_name: 'ryanchristo',
         icon: './src/assets/img/logo.png',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'documents',
+        name: 'docs',
         path: '../../docs',
       },
     },

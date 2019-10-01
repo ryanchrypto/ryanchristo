@@ -35,10 +35,14 @@ export const query = graphql`
         keywords
       }
     }
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___date] }
+      filter: { frontmatter: { draft: { ne: true } } }
+    ) {
       edges {
         node {
           frontmatter {
+            type
             slug
             title
             date(formatString: "MMMM DD, YYYY")
