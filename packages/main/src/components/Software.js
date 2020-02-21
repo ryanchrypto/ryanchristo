@@ -15,9 +15,9 @@ const projects = [
     },
     role: 'Software Developer, Protocol Researcher',
     summary:
-      'ChainSafe is a company that focuses on building web3 infrastucture and tools for a wide variety of blockchain protocols. I work on Gossamer, a blockchain framework with node implementations built from the specification for the Polakdot Host and funded by the Web3 Foundation.',
+      'ChainSafe is a team of developers building web3 infrastucture and tools for a variety of decentralized protocols. I work on Gossamer, a blockchain framework written in Go based on the specification for the Polkadot Host with node implementations for different chains within the Polkadot ecosystem.',
     tags:
-      'Go, WebAssebly, Substrate, Polkadot',
+      'Go, WASM, Substrate, Polkadot',
     title: 'ChainSafe',
     type: 'software',
   },
@@ -29,7 +29,7 @@ const projects = [
       live: 'https://colony.io',
       repo: 'https://github.com/JoinColony',
     },
-    role: 'Software Developer',
+    role: 'Software Developer, Developer Relations',
     summary:
       'Colony is a platform for open organizations built on Ethereum. I helped build and maintain developer tools, wrote documentation, explored integrations, and managed developer relations.',
     tags:

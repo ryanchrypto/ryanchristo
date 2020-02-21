@@ -32,7 +32,7 @@ const About = () => (
       <h3>{'Software Skills'}</h3>
       <p>
         {
-          'Experience with JavaScript, React, Redux, Webpack, Node, Express, MongoDB, Ruby, Rails, PostgreSQL, IPFS, Web3, Truffle, Solidity, and Ethereum.'
+          'Experience with JavaScript, React, Redux, Webpack, Node, Express, MongoDB, Ruby, Rails, PostgreSQL, IPFS, Truffle, Solidity, Ethereum, Go, Rust, WASM, Substrate, Polkadot.'
         }
       </p>
       <h3>{'Media Skills'}</h3>
