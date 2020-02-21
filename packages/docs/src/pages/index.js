@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import PrimaryLayout from '@ryanchristo/core/layouts/PrimaryLayout'
+import MainLayout from '@ryanchristo/core/layouts/MainLayout'
 
 import Documents from '../components/Documents'
 
 const DocumentsPage = ({ data }) => (
-  <PrimaryLayout data={data}>
+  <MainLayout data={data}>
     <Documents data={data} />
-  </PrimaryLayout>
+  </MainLayout>
 )
 
 DocumentsPage.propTypes = {

@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './Document.module.scss'
 
-const indexUrl = process.env.NODE_ENV === 'production' ? '/words' : '/'
+const indexUrl = process.env.NODE_ENV === 'production' ? '/docs' : '/'
 
 const Document = ({ data }) => {
   const { markdownRemark } = data

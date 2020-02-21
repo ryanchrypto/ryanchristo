@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
-import PrimaryLayout from '@ryanchristo/core/layouts/PrimaryLayout'
+import MainLayout from '@ryanchristo/core/layouts/MainLayout'
 
 import Landing from '../components/Landing'
 
 const LandingPage = ({ data }) => (
-  <PrimaryLayout data={data}>
+  <MainLayout data={data}>
     <Landing />
-  </PrimaryLayout>
+  </MainLayout>
 )
 
 LandingPage.propTypes = {

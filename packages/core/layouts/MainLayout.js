@@ -2,9 +2,9 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
-import './PrimaryLayout.scss'
+import './MainLayout.scss'
 
-const PrimaryLayout = ({ children, data }) => (
+const MainLayout = ({ children, data }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
@@ -33,7 +33,7 @@ const PrimaryLayout = ({ children, data }) => (
   </div>
 )
 
-PrimaryLayout.propTypes = {
+MainLayout.propTypes = {
   children: PropTypes.shape({}).isRequired,
   data: PropTypes.shape({
     site: PropTypes.shape({
@@ -46,4 +46,4 @@ PrimaryLayout.propTypes = {
   }).isRequired,
 }
 
-export default PrimaryLayout
+export default MainLayout

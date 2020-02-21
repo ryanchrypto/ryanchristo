@@ -6,8 +6,24 @@ import styles from './Software.module.scss'
 
 const projects = [
   {
+    id: 15,
+    dates: '2019 - Present',
+    image: 'img/software/chainsafe.png',
+    link: {
+      live: 'https://chainsafe.io',
+      repo: 'https://github.com/ChainSafe',
+    },
+    role: 'Software Developer, Protocol Researcher',
+    summary:
+      'ChainSafe is a company that focuses on building web3 infrastucture and tools for a wide variety of blockchain protocols. I work on Gossamer, a blockchain framework with node implementations built from the specification for the Polakdot Host and funded by the Web3 Foundation.',
+    tags:
+      'Go, WebAssebly, Substrate, Polkadot',
+    title: 'ChainSafe',
+    type: 'software',
+  },
+  {
     id: 14,
-    dates: '2018 - Present',
+    dates: '2018 - 2019',
     image: 'img/software/colony.png',
     link: {
       live: 'https://colony.io',
@@ -15,9 +31,9 @@ const projects = [
     },
     role: 'Software Developer',
     summary:
-      'Colony is a platform for open organizations built on Ethereum. I build and maintain developer tools, write documentation, explore integrations, and manage developer relations.',
+      'Colony is a platform for open organizations built on Ethereum. I helped build and maintain developer tools, wrote documentation, explored integrations, and managed developer relations.',
     tags:
-      'JavaScript, React, Redux, SCSS, Webpack, IPFS, Web3, Truffle, Solidity, Ethereum',
+      'JavaScript, React, Redux, SCSS, Webpack, Gatsby, IPFS, Web3, Truffle, Solidity, Ethereum',
     title: 'Colony',
     type: 'software',
   },
@@ -31,9 +47,9 @@ const projects = [
     },
     role: 'Software Developer',
     summary:
-      'Chora is a side project that started out as a means to explore Ethereum. The intial focus was "software for decentralized organizations" but the project is a sandbox in its true form.',
+      'Chora is a side project that started out as a means to explore Ethereum. The intial focus was "software for decentralized organizations" but the project has expanded to "web3 tools and infrastucture".',
     tags:
-      'JavaScript, React, Redux, SCSS, Webpack, IPFS, Web3, Truffle, Solidity, Ethereum',
+      'JavaScript, React, Redux, SCSS, Webpack, IPFS, Web3, Truffle, Solidity, Ethereum, Rust, Substrate, Polkadot',
     title: 'Chora',
     type: 'software',
   },
