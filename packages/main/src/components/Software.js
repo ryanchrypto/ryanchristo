@@ -15,7 +15,7 @@ const projects = [
     },
     role: 'Software Developer, Protocol Researcher',
     summary:
-      'ChainSafe is a team of developers building web3 infrastucture and tools for a variety of decentralized protocols. I work on Gossamer, a blockchain framework written in Go based on the specification for the Polkadot Host with node implementations for different chains within the Polkadot ecosystem.',
+      'ChainSafe is a team of developers building web3 infrastucture and tools for a variety of decentralized protocols. I work on Gossamer, a blockchain framework written in Go based on the specification for the Polkadot Host, a framework for building blockchains within the Polkadot ecosystem.',
     tags:
       'Go, WASM, Substrate, Polkadot',
     title: 'ChainSafe',
