@@ -1,0 +1,15 @@
+.container {
+  composes: container from "../../styles/page.css";
+}
+
+.content {
+  composes: content from "../../styles/page.css";
+}
+
+.item {
+  composes: item from "../../styles/page.css";
+}
+
+.item img {
+  width: 225px !important;
+}

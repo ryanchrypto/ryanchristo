@@ -1,0 +1,32 @@
+/* footer */
+
+.footer {
+  background: var(--background-primary);
+  bottom: 0;
+  box-shadow: var(--box-shadow);
+  height: var(--footer-height);
+  position: fixed;
+  width: 100vw;
+}
+
+.footer ul {
+  align-items: center;
+  display: flex;
+  height: inherit;
+  justify-content: center;
+}
+
+.footer li {
+  align-items: center;
+  display: flex;
+  height: inherit;
+  justify-content: center;
+  margin: 0 0.75em;
+}
+
+@media (max-width: 850px) {
+  .footer li {
+    font-size: 14px;
+    margin: 0.5em;
+  }
+}

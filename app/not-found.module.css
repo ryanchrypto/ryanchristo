@@ -1,0 +1,24 @@
+/* page */
+
+.page {
+  background: var(--background-primary);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.page div {
+  margin-bottom: 2%;
+}
+
+.page h1 {
+  color: var(--color-theme);
+  font-size: 2.5em;
+}
+
+.page h1,
+.page h2 {
+  margin: 0.5em 0;
+}
