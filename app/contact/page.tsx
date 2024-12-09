@@ -11,7 +11,7 @@ const ContactPage = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <div>
-        <h1>{"contact"}</h1>
+          <h1>{"contact"}</h1>
           <p>
             {
               "I try to take a minimalist approach to social media and I usually prefer to stay connected with friends using one of the following options:"
@@ -37,7 +37,7 @@ const ContactPage = () => {
           </ul>
           <p>
             {
-              'For social media and other public platforms, the following is a complete list of accounts that are intended to be public or easily discoverable:'
+              "For social media and other public platforms, the following is a complete list of accounts that are intended to be public (i.e. they use my name and they provide access to public content and/or information about me):"
             }
           </p>
           <ul>
@@ -133,16 +133,6 @@ const ContactPage = () => {
             </li>
             <li>
               <a
-                href="https://lu.ma/user/ryanchristo"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                {"luma"}
-              </a>
-              <i>{" - historically for events"}</i>
-            </li>
-            <li>
-              <a
                 href="https://hackmd.io/@ryanchristo"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -165,7 +155,7 @@ const ContactPage = () => {
           <p>
             <i>
               {
-                "And no, I do not have an account on Facebook, Instagram, or TikTok. This is a complete list. If you see an account that is not on the list, please let me know so that I can celebrate my celebrity status and take action if necessary."
+                "And no, I do not have an account on Facebook, Instagram, TikTok, etc. This is a complete list. If you see an account that is not on the list (especially an account impersonating me), let me know so that I can take action if necessary."
               }
             </i>
           </p>
