@@ -19,7 +19,7 @@ const AboutPage = () => {
           <h1>{"about"}</h1>
           <p>
             {
-              "I was born and raised in the Cascadia bioregion. I grew up on a small island playing competitive sports and experimental rock."
+              "I was born and raised in the Pacific Northwest. I grew up on an island playing competitive sports and experimental rock music."
             }
           </p>
           <p>

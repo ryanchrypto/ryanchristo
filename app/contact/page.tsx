@@ -37,7 +37,7 @@ const ContactPage = () => {
           </ul>
           <p>
             {
-              "For social media and other public platforms, the following is a complete list of accounts that are intended to be public (i.e. they use my name and they provide access to public content and/or information about me):"
+              "For social media and other public platforms, the following is a complete list of active public accounts that I own or operate (i.e. accounts that are easily discoverable, use my name, and share content that I produce):"
             }
           </p>
           <ul>
@@ -155,7 +155,7 @@ const ContactPage = () => {
           <p>
             <i>
               {
-                "And no, I do not have an account on Facebook, Instagram, TikTok, etc. This is a complete list. If you see an account that is not on the list (especially an account impersonating me), let me know so that I can take action if necessary."
+                "And no, I do not have an account on Facebook, Instagram, TikTok, etc. This is a complete list. If you see an account that is not on the list, please let me know so that I celebrate my celebrity status and take action if necessary."
               }
             </i>
           </p>
