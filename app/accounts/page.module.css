@@ -1,0 +1,20 @@
+.container {
+  composes: container from "../../styles/page.css";
+}
+
+.content {
+  composes: content from "../../styles/page.css";
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+.item {
+  composes: item from "../../styles/page.css";
+}
+
+.item img {
+  width: 225px !important;
+}
+
+.content div > ul > li > i {
+  color: rgba(255, 255, 255, 0.6);
+}
