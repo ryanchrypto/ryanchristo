@@ -14,27 +14,22 @@ const TextPage = () => {
           <h1>{"text"}</h1>
           <p>
             {
-              "I've been writing various forms of technical documentation and proposals throughout my tech career but I'm now looking for ways to (re)expand my thinking and writing. I'm currently exploring the following topics:"
+              "I've been writing various forms of technical documentation and proposals throughout my career in tech but I'm now looking for ways to (re)expand my thinking and writing. I'm currently exploring the following topics:"
             }
           </p>
           <ul>
             <li>
               {
-                "rights of nature, ecological institutions, and interspecies mutualism"
+                "rights of nature, ecological agency, and interspecies mutualism"
               }
             </li>
             <li>
               {
-                "dark forest theory in relation to privacy, intelligence, and the internet"
+                "dark forest theory in relation to politics, privacy, and the internet"
               }
             </li>
+            <li>{"capitalist realism, accelationsim, postmodernism, metamodernism"}</li>
           </ul>
-          <p>
-            {
-              "If you're interested in exploring any of the above topics alongside me, feel free to reach out. I'm also open to receive recommendations and to connect with anyone who can assist me with editing and reviews."
-            }
-          </p>
-          <br />
           <p>
             <i>
               {

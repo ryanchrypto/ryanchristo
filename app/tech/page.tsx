@@ -36,7 +36,7 @@ const TechPage = () => {
           </p>
           <p>
             {
-              "I managed websites, databases, and servers for small businesses and non-profit organizations before starting a tech career in 2016."
+              "I managed websites, databases, and servers for small businesses and non-profit organizations before starting a career in tech in 2016."
             }
           </p>
           <p>

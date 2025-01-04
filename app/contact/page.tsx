@@ -14,7 +14,7 @@ const ContactPage = () => {
           <h1>{"contact"}</h1>
           <p>
             {
-              "I try to take a minimalist approach to social media and usually prefer to stay connected using one of the following options:"
+              "I try to take a minimalist approach to communication platforms and usually prefer to stay connected using one of the following options:"
             }
           </p>
           <ul>
@@ -32,7 +32,7 @@ const ContactPage = () => {
             </li>
             <li>
               {"Phone"}
-              {": [ only when necessary ]"}
+              {": [ only if/when necessary ]"}
             </li>
           </ul>
         </div>

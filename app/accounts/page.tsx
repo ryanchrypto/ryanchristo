@@ -14,7 +14,7 @@ const AccountsPage = () => {
           <h1>{"accounts"}</h1>
           <p>
             {
-              "For social media and other public platforms, the following is a complete list of public accounts that I own or operate:"
+              "For social media and other public platforms, the following is a complete list of public accounts that I currently own or operate:"
             }
           </p>
           <ul>
@@ -70,16 +70,6 @@ const AccountsPage = () => {
             </li> */}
             <li>
               <a
-                href="https://www.youtube.com/@ryanchristo"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                {"youtube"}
-              </a>
-              <i>{" - mostly for research"}</i>
-            </li>
-            <li>
-              <a
                 href="https://hackmd.io/@ryanchristo"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -97,6 +87,16 @@ const AccountsPage = () => {
                 {"medium"}
               </a>
               <i>{" - historically for work"}</i>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@ryanchristo"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {"youtube"}
+              </a>
+              <i>{" - mostly for research"}</i>
             </li>
             <li>
               <a
@@ -132,8 +132,16 @@ const AccountsPage = () => {
           <p>
             <i>
               {
-                "I do not have an account on X, Instagram, Facebook, etc. This is a complete list. If you see an account that is impersonating me, please let me know."
+                "This list does not include semi-public messaging platforms (e.g. Signal, Telegram, Discord) or project-specific forums for technical discussions."}
+            </i>
+          </p>
+          <p>
+            <i>
+              {
+                "I currently do not have an account on X, Instagram, Facebook, Tik Tok, etc. If you see a public account that is not on the list, please "
               }
+              <a href="/contact">{"let me know"}</a>
+              {"."}
             </i>
           </p>
         </div>
