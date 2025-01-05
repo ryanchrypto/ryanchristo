@@ -14,7 +14,7 @@ const AccountsPage = () => {
           <h1>{"accounts"}</h1>
           <p>
             {
-              "For social media and other public platforms, the following is a complete list of public accounts that I currently own or operate:"
+              "For social media and other public platforms, the following is a complete list of accounts that I currently own or operate:"
             }
           </p>
           <ul>
@@ -132,13 +132,14 @@ const AccountsPage = () => {
           <p>
             <i>
               {
-                "This list does not include semi-public messaging platforms (e.g. Signal, Telegram, Discord) or project-specific forums for technical discussions."}
+                "This list does not include messaging platforms (e.g. Signal, Telegram, Discord) or project-specific forums for technical and governance discussions."
+              }
             </i>
           </p>
           <p>
             <i>
               {
-                "I currently do not have an account on X, Instagram, Facebook, Tik Tok, etc. If you see a public account that is not on the list, please "
+                "I currently do not have an account on X, Instagram, Facebook, TikTok, etc. If you see a suspicious account that is not on the list, please "
               }
               <a href="/contact">{"let me know"}</a>
               {"."}
